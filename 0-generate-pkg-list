@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This script generates a preliminary list of packages for the release manager
+
+. release-common.sh
+
+for branch in "${branches[@]}"; do
+    for dver in el5 el6; do
+        echo "RPM's slated for release in osg-$branch-$dver-release"
+        koji-tag-diff osg-$branch-$dver-testing osg-$branch-$dver-release
+        echo
+    done
+done

@@ -1,0 +1,90 @@
+#!/bin/bash
+
+# This script encompasses steps 3 and 4 of https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/HowToCutRelease
+
+. release-common.sh
+
+##################################
+# Promote osg-version to testing #
+##################################
+
+for dver in el5 el6; do
+    tag=osg-$majorver-$dver-testing
+    pkg=osg-version-$version-1.$osgver.$dver
+    osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
+    if [ $? -eq 1 ]; then
+        echo "Promoting $pkg into $tag..."
+        osg-koji tag-pkg $tag $pkg
+    else
+        echo "$pkg already tagged in $tag"
+    fi
+done
+
+#####################
+# Check pre-release #
+#####################
+
+prerelease=()
+for branch in "${branches[@]}"; do
+    for dver in el5 el6; do
+        prerelease+=("osg-$branch-$dver-prerelease")
+    done
+done
+
+for tag in "${prerelease[@]}"; do
+    while :
+    do
+        echo "Packages in $tag"
+        output=$(osg-koji list-tagged --quiet $tag)
+        if [[ -n $output ]]; then
+            echo "WARNING: $tag IS NOT EMPTY."
+            echo "$output"
+            read -p "Press [Enter] when $tag is empty..."
+            continue
+        else
+            break
+        fi
+    done
+    echo
+done
+
+######################
+# Build release list #
+######################
+
+for branch in "${branches[@]}"; do
+    for dver in el5 el6; do
+        output_file=$branch-pkgs-to-release-$dver
+        echo "Diffing $dver to $output_file..."
+        koji-tag-diff osg-$branch-$dver-testing osg-$branch-$dver-release > $output_file
+    done
+done
+
+echo ""
+echo "Edit the *-pkgs-to-release-* files to remove packages not intended for this release."
+echo "Please verify that osg-version RPM is in your set of packages for the release."
+echo "Also verify that if there is a new version of osg-tested-internal to include it."
+read -p "Press [Enter] when done editing..."
+
+########################
+# Populate pre-release #
+########################
+
+for branch in "${branches[@]}"; do
+    for dver in el5 el6; do
+        file="$branch-pkgs-to-release-$dver"
+        repo="osg-$branch-$dver-prerelease"
+        
+        if [ -f $file ]; then
+            echo "Tagging $repo..."
+            xargs --arg-file=$file osg-koji tag-pkg $repo
+            echo -e "\nRegenerating $repo..."
+            osg-koji regen-repo $repo
+        else
+            echo "Missing file '$file', skipped!"
+            echo $repo
+        fi
+
+        echo
+    done
+done
