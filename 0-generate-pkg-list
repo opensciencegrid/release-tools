@@ -1,8 +1,28 @@
 #!/bin/bash
 
-# This script generates a preliminary list of packages for the release manager
+# This script promotes osg-version to testing and generates a preliminary list of packages for the release manager
 
 . release-common.sh
+
+##################################
+# Promote osg-version to testing #
+##################################
+
+for dver in el5 el6; do
+    tag=osg-$majorver-$dver-testing
+    pkg=osg-version-$version-1.$osgver.$dver
+    osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
+    if [ $? -eq 1 ]; then
+        echo "Promoting $pkg into $tag..."
+        osg-koji tag-pkg $tag $pkg
+    else
+        echo "$pkg already tagged in $tag"
+    fi
+done
+
+#############################
+# Generate list of packages #
+#############################
 
 for branch in "${branches[@]}"; do
     for dver in el5 el6; do
