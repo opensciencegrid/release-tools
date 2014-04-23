@@ -2,12 +2,12 @@
 set -e
 
 usage () {
-  echo "usage: $(basename "$0") [--pre] 3.X.Y [3.X.Z]"
+  echo "usage: $(basename "$0") [--bare] 3.X.Y [3.X.Z]"
   echo "   eg: $(basename "$0") 3.2.7 3.2.8"
   echo
   echo "Lists packages updated from osg releases 3.X.Y to 3.X.Z"
   echo "If only one osg release is listed, compare to the previous release."
-  echo "Use '--pre' to wrap the output in a <pre> html tag"
+  echo "Use '--bare' list 1 package per line, without wrapping in a <pre> tag"
   exit
 }
 
@@ -27,9 +27,9 @@ pre_wrap () {
   echo '</pre>'
 }
 
-FILTER=cat
+FILTER=pre_wrap
 case $1 in
-  --pre ) FILTER=pre_wrap; shift;;
+  --bare ) FILTER=cat; shift;;
 esac
 
 case $# in
