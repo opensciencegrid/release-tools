@@ -14,7 +14,7 @@ usage () {
 dvers=(el5 el6)
 
 list_tag () {
-  osg-koji list-tagged --latest --quiet "$1" | awk '{print $1}'
+  osg-koji list-tagged --latest --quiet --rpms "$1" | grep -v '\.src$'
 }
 
 tag_diff () {
