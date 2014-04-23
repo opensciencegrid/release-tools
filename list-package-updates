@@ -1,0 +1,53 @@
+#!/bin/bash
+set -e
+
+usage () {
+  echo "usage: $(basename "$0") [--pre] 3.X.Y [3.X.Z]"
+  echo "   eg: $(basename "$0") 3.2.7 3.2.8"
+  echo
+  echo "Lists packages updated from osg releases 3.X.Y to 3.X.Z"
+  echo "If only one osg release is listed, compare to the previous release."
+  echo "Use '--pre' to wrap the output in a <pre> html tag"
+  exit
+}
+
+dvers=(el5 el6)
+
+list_tag () {
+  osg-koji list-tagged --latest --quiet "$1" | awk '{print $1}'
+}
+
+tag_diff () {
+  fgrep -vxf <(list_tag "$1") <(list_tag "$2")
+}
+
+pre_wrap () {
+  echo '<pre>'
+  xargs
+  echo '</pre>'
+}
+
+FILTER=cat
+case $1 in
+  --pre ) FILTER=pre_wrap; shift;;
+esac
+
+case $# in
+  1 ) [[ $1 =~ ^[3-9]\.[0-9]\.[0-9]+$ ]] || usage
+      ser=${1%.*}
+      rel=${1##*.}
+      v1=$ser.$((rel-1))
+      v2=$1 ;;
+  2 ) [[ $1 =~ ^[3-9]\.[0-9]\.[0-9]+$ ]] || usage
+      [[ $2 =~ ^[3-9]\.[0-9]\.[0-9]+$ ]] || usage
+      v1=$1
+      v2=$2 ;;
+  * ) usage ;;
+esac
+
+for dver in ${dvers[@]}; do
+  tag1=osg-${v1%.*}-$dver-release-$v1
+  tag2=osg-${v2%.*}-$dver-release-$v2
+  tag_diff $tag1 $tag2
+done | perl -lpe 's/(-[^-]+){2}$//' | sort -u | $FILTER
+
