@@ -40,6 +40,8 @@ done
 
 for branch in "${branches[@]}"; do
     for dver in el5 el6; do
+        echo "Locking osg-$branch-$dver-release"
+        osg-koji edit-tag --lock osg-$branch-$dver-release
         echo "Locking osg-$branch-$dver-release-$version"
         osg-koji edit-tag --lock osg-$branch-$dver-release-$version
         echo
