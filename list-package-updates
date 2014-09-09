@@ -2,23 +2,26 @@
 set -e
 
 usage () {
-  echo "usage: $(basename "$0") [--bare] 3.X.Y [3.X.Z]"
+  echo "usage: $(basename "$0") [--bare] [--upcoming] 3.X.Y [3.X.Z]"
   echo "   eg: $(basename "$0") 3.2.7 3.2.8"
   echo
   echo "Lists packages updated from osg releases 3.X.Y to 3.X.Z"
   echo "If only one osg release is listed, compare to the previous release."
-  echo "Use '--bare' list 1 package per line, without wrapping in a <pre> tag"
+  echo
+  echo "Use --upcoming to list packages from osg-upcoming-release-3.X.Y repos."
+  echo "Use --bare to list 1 package per line, without wrapping in <pre> tags."
   exit
 }
 
 dvers=(el5 el6)
 
 list_tag () {
-  osg-koji list-tagged --latest --quiet --rpms "$1" | grep -v '\.src$'
+  osg-koji list-tagged --latest --quiet --rpms "$1" | grep -v '\.src$' \
+  | grep -v '^GenericError: No such entry in table tag:' || :
 }
 
 tag_diff () {
-  fgrep -vxf <(list_tag "$1") <(list_tag "$2")
+  fgrep -vxf <(list_tag "$1") <(list_tag "$2") || :
 }
 
 pre_wrap () {
@@ -28,9 +31,13 @@ pre_wrap () {
 }
 
 FILTER=pre_wrap
+SERIES=
+while [[ $1 = -* ]]; do
 case $1 in
-  --bare ) FILTER=cat; shift;;
+  --bare     ) FILTER=cat;      shift;;
+  --upcoming ) SERIES=upcoming; shift;;
 esac
+done
 
 case $# in
   1 ) [[ $1 =~ ^[3-9]\.[0-9]\.[0-9]+$ ]] || usage
@@ -46,8 +53,8 @@ case $# in
 esac
 
 for dver in ${dvers[@]}; do
-  tag1=osg-${v1%.*}-$dver-release-$v1
-  tag2=osg-${v2%.*}-$dver-release-$v2
+  tag1=osg-${SERIES:-${v1%.*}}-$dver-release-$v1
+  tag2=osg-${SERIES:-${v2%.*}}-$dver-release-$v2
   tag_diff $tag1 $tag2
 done | perl -lpe 's/(-[^-]+){2}$//' | sort -u | $FILTER
 
