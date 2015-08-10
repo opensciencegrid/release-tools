@@ -7,7 +7,7 @@
 ####################################
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         echo '==========================================================================='
         echo "Unlocking osg-$branch-$dver-release"
         osg-koji edit-tag --unlock osg-$branch-$dver-release
@@ -27,7 +27,7 @@ done
 ############################
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         echo "Cloning osg-$branch-$dver-release to osg-$branch-$dver-release-$version"
         osg-koji clone-tag osg-$branch-$dver-release osg-$branch-$dver-release-$version
         echo
@@ -39,7 +39,7 @@ done
 ##############
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         echo "Locking osg-$branch-$dver-release"
         osg-koji edit-tag --lock osg-$branch-$dver-release
         echo "Locking osg-$branch-$dver-release-$version"
@@ -53,7 +53,7 @@ done
 ###############
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         echo "Regenerating osg-$branch-$dver-release-$version"
         osg-koji regen-repo --nowait osg-$branch-$dver-release-$version
         echo
@@ -67,7 +67,7 @@ done
 echo "Writing lists of packages and RPM's for release notes..."
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver
         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | sort -u > $branch-release-note-rpms-$dver
     done
@@ -86,7 +86,7 @@ if [ ! -d /p/vdt/public/html/release-info/ ]; then
 fi
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         cp move-to-$branch-release-$dver $version-updated-$branch-$dver.txt
         osg-koji list-tagged --quiet --latest osg-$branch-$dver-release | awk '{print $1}' > $version-packages-$branch-$dver.txt
         xargs --arg-file $version-packages-$branch-$dver.txt osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | sort > $version-rpms-$branch-$dver.txt

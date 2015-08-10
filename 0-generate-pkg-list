@@ -8,8 +8,9 @@
 # Promote osg-version to testing #
 ##################################
 
-for dver in el5 el6; do
-    for tag in testing prerelease; do
+for dver in "${dvers[@]}"; do
+    for repo in testing prerelease; do
+        tag=osg-$majorver-$dver-$repo
         pkg=osg-version-$version-1.$osgver.$dver
         osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
         if [ $? -eq 1 ]; then
@@ -26,7 +27,7 @@ done
 #############################
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         echo "RPM's slated for release in osg-$branch-$dver-release"
         koji-tag-diff osg-$branch-$dver-testing osg-$branch-$dver-release
         echo

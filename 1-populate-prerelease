@@ -10,7 +10,7 @@
 
 prerelease=()
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         prerelease+=("osg-$branch-$dver-prerelease")
     done
 done
@@ -37,7 +37,7 @@ done
 ######################
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         output_file=$branch-pkgs-to-release-$dver
         echo "Diffing $dver to $output_file..."
         koji-tag-diff osg-$branch-$dver-testing osg-$branch-$dver-release > $output_file
@@ -55,7 +55,7 @@ read -p "Press [Enter] when done editing..."
 ########################
 
 for branch in "${branches[@]}"; do
-    for dver in el5 el6; do
+    for dver in "${dvers[@]}"; do
         file="$branch-pkgs-to-release-$dver"
         repo="osg-$branch-$dver-prerelease"
         

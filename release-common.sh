@@ -48,6 +48,12 @@ done
 majorver=`sed -r 's/\.[0-9]+$//' <<< $version`
 osgver="osg`sed 's/\.//' <<< $majorver`"
 
+# Handle distro version differences between OSG versions
+dvers=(el6 el7)
+if [ $majorver == '3.2' ]; then
+    dvers+=(el5)
+fi
+
 branches=($majorver)
 if [ $upcoming -eq 1 ]; then
     branches+=('upcoming')
