@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This script encompasses Day 1 of https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/HowToCutRelease
+
+. release-common.sh
+
+for branch in "${branches[@]}"; do
+    for dver in "${dvers[@]}"; do
+        tag="osg-$branch-$dver-prerelease"
+        echo -e "\nContents of $tag:"
+        echo -e "==================================="
+        osg-koji list-tagged --quiet $tag
+    done
+done
+
