@@ -9,7 +9,7 @@ for branch in "${branches[@]}"; do
         tag="osg-$branch-$dver-prerelease"
         echo -e "\nContents of $tag:"
         echo -e "==================================="
-        osg-koji list-tagged --quiet $tag
+        osg-koji list-tagged --quiet $tag | awk '{print $1}'
     done
 done
 
