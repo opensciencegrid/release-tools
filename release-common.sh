@@ -49,9 +49,12 @@ majorver=`sed -r 's/\.[0-9]+$//' <<< $version`
 osgver="osg`sed 's/\.//' <<< $majorver`"
 
 # Handle distro version differences between OSG versions
-dvers=(el6 el7)
 if [ $majorver == '3.2' ]; then
-    dvers+=(el5)
+    dvers=(el5 el6)
+elif [ $majorver == '3.3' ]; then
+    dvers+=(el6 el7)
+else
+    die 'Unrecognized major version. Acceptable release series are 3.2.x and 3.3.x'
 fi
 
 branches=($majorver)
