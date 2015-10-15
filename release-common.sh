@@ -18,6 +18,7 @@ if [ $# -lt 1 ]; then
 fi
 
 upcoming=0
+DRY_RUN=
 
 while [ $# -ne 0 ];
 do
@@ -28,6 +29,10 @@ do
             ;;
         -u|--upcoming)
             upcoming=1
+            shift
+            ;;
+        -n|--dry-run)
+            DRY_RUN='echo $'
             shift
             ;;
         -*)

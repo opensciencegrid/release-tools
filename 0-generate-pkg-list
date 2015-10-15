@@ -15,7 +15,7 @@ for dver in "${dvers[@]}"; do
         osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
         if [ $? -eq 1 ]; then
             echo "Promoting $pkg into $tag..."
-            osg-koji tag-pkg $tag $pkg
+            $DRY_RUN osg-koji tag-pkg $tag $pkg
         else
             echo "$pkg already tagged in $tag"
         fi
