@@ -32,8 +32,8 @@ for branch in "${branches[@]}"; do
         koji-tag-diff osg-$branch-$dver-testing osg-$branch-$dver-release
         echo
 
-        echo "Development RPM's *not* slated for release"
-        koji-tag-diff osg-$branch-$dver-development osg-$branch-$dver-testing
+        echo "Development builds ahead of testing -- *not* slated for release"
+        ./osg-pkgs-behind-tag osg-$branch-$dver-{testing,development}
         echo
     done
 done
