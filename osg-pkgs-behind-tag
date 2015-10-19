@@ -48,7 +48,6 @@ for arg in sys.argv[1:]:
         pkgset.add(arg)
     elif arg == '--':
         pkgset = set()
-        break
     elif re.search(tagpat, arg):
         tags.append(arg)
     elif arg == '--color':
