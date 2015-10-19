@@ -31,7 +31,8 @@ use_color = sys.stdout.isatty()
 show_all  = False
 tags = []
 
-tagpat = r'^osg-([3-9]\.[0-9]|upcoming)-el[5-9]-(development|testing|release)$'
+tagpat = (r'^osg-([3-9]\.[0-9]|upcoming)-el[5-9]-(development|testing|release)'
+          r'(-[3-9]\.\d\.\d+)?$')
 
 def usage():
     print __doc__.format(os.path.basename(__file__))
