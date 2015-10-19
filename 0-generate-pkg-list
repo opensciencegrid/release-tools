@@ -29,11 +29,13 @@ done
 for branch in "${branches[@]}"; do
     for dver in "${dvers[@]}"; do
         echo "RPM's slated for release in osg-$branch-$dver-release"
-        koji-tag-diff osg-$branch-$dver-testing osg-$branch-$dver-release
+        slated=$(koji-tag-diff osg-$branch-$dver-{testing,release})
+        echo "$slated"
         echo
 
-        echo "Development builds ahead of testing -- *not* slated for release"
-        ./osg-pkgs-behind-tag osg-$branch-$dver-{testing,development}
+        slist=$(echo "$slated" | tail -n +2 | perl -lpe 's/(-[^-]+){2}$//')
+        echo "Slated packages in testing, behind current development versions"
+        ./osg-pkgs-behind-tag osg-$branch-$dver-{testing,development} -- $slist
         echo
     done
 done
