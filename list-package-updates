@@ -2,7 +2,7 @@
 set -e
 
 usage () {
-  echo "usage: $(basename "$0") [--bare] [--upcoming] 3.X.Y [3.X.Z]"
+  echo "usage: $(basename "$0") [--bare] [-u|--upcoming] 3.X.Y [3.X.Z]"
   echo "   eg: $(basename "$0") 3.2.7 3.2.8"
   echo
   echo "Lists packages updated from osg releases 3.X.Y to 3.X.Z"
@@ -34,8 +34,8 @@ FILTER=pre_wrap
 SERIES=
 while [[ $1 = -* ]]; do
 case $1 in
-  --bare     ) FILTER=cat;      shift;;
-  --upcoming ) SERIES=upcoming; shift;;
+  --bare        ) FILTER=cat;      shift;;
+  -u|--upcoming ) SERIES=upcoming; shift;;
 esac
 done
 
