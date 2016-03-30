@@ -4,12 +4,15 @@
 
 . release-common.sh
 
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
+for ver in ${versions[@]}; do
+    branch=$(osg_release $ver)
+    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    for dver in ${dvers[@]}; do
         tag="osg-$branch-$dver-prerelease"
         echo -e "\nContents of $tag:"
         echo -e "==================================="
-        osg-koji list-tagged --quiet $tag | awk '{print $1}'
+        $DRY_RUN osg-koji list-tagged --quiet $tag | awk '{print $1}'
     done
 done
+
 
