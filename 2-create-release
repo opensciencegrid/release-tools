@@ -2,98 +2,67 @@
 
 . release-common.sh
 
-####################################
-# Push from pre-release to release #
-####################################
-
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
-        echo '==========================================================================='
-        echo "Unlocking osg-$branch-$dver-release"
-        osg-koji edit-tag --unlock osg-$branch-$dver-release
-        echo
-
-        echo '==========================================================================='
-        echo "Moving packages from osg-$branch-$dver-prerelease to osg-$branch-$dver-release"
-        osg-koji list-tagged --quiet osg-$branch-$dver-prerelease | awk '{print $1}' > move-to-$branch-release-$dver
-        xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg osg-$branch-$dver-prerelease osg-$branch-$dver-release
-
-        echo
-    done
-done
-
-############################
-# Create new release repos #
-############################
-
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
-        echo "Cloning osg-$branch-$dver-release to osg-$branch-$dver-release-$version"
-        osg-koji clone-tag osg-$branch-$dver-release osg-$branch-$dver-release-$version
-        echo
-    done
-done
-
-##############
-# Lock repos #
-##############
-
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
-        echo "Locking osg-$branch-$dver-release"
-        osg-koji edit-tag --lock osg-$branch-$dver-release
-        echo "Locking osg-$branch-$dver-release-$version"
-        osg-koji edit-tag --lock osg-$branch-$dver-release-$version
-        echo
-    done
-done
-
-###############
-# Regen repos #
-###############
-
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
-        echo "Regenerating osg-$branch-$dver-release-$version"
-        osg-koji regen-repo --nowait osg-$branch-$dver-release-$version
-        echo
-    done
-done
-
-#######################
-# Write release notes #
-#######################
-
-echo "Writing lists of packages and RPM's for release notes..."
-
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
-        awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver
-        xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | sort -u > $branch-release-note-rpms-$dver
-    done
-done
-
-###############
-# Update info #
-###############
-
-echo "Updating info tracked for releases..."
-
 if [ ! -d /p/vdt/public/html/release-info/ ]; then
-    echo not on UW\'s AFS...
-    echo Enter username and machine name to use for scp, e.g. matyas@ingwe.cs.wisc.edu
+    echo "Not on UW\'s AFS..."
+    echo "Enter username and machine name to use for scp, e.g. matyas@ingwe.cs.wisc.edu"
     read rusermachine
 fi
 
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
-        cp move-to-$branch-release-$dver $version-updated-$branch-$dver.txt
-        osg-koji list-tagged --quiet --latest osg-$branch-$dver-release | awk '{print $1}' > $version-packages-$branch-$dver.txt
-        xargs --arg-file $version-packages-$branch-$dver.txt osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | sort > $version-rpms-$branch-$dver.txt
-        if [ -d /p/vdt/public/html/release-info/ ]; then
-            cp $version-updated-$branch-$dver.txt $version-packages-$branch-$dver.txt $version-rpms-$branch-$dver.txt /p/vdt/public/html/release-info/
+for ver in ${versions[@]}; do
+    branch=$(osg_release $ver)
+    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    for dver in ${dvers[@]}; do
+        prerelease_repo=osg-$branch-$dver-prerelease
+        release_repo=osg-$branch-$dver-release
+
+        # Push from pre-release to release
+        echo '==========================================================================='
+        echo "Unlocking $release_repo"
+        osg-koji edit-tag --unlock $release_repo
+        echo
+
+        echo '==========================================================================='
+        echo "Moving packages from $prerelease_repo to $release_repo"
+        osg-koji list-tagged --quiet $prerelease_repo | awk '{print $1}' > move-to-$branch-release-$dver
+        xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo
+
+        echo
+
+        # Create new release repo
+        if [[ $branch == 'upcoming' ]]; then
+            latest_version=$(echo ${versions[@]} | sed s'/ /\n/' | sort -V | head -n1)
+            versioned_release_repo=osg-$branch-$dver-release-$latest_version
         else
-            scp $version-updated-$branch-$dver.txt $version-packages-$branch-$dver.txt $version-rpms-$branch-$dver.txt $rusermachine:/p/vdt/public/html/release-info/
+            versioned_release_repo=osg-$branch-$dver-release-$ver
+        fi
+        echo "Cloning $release_repo to $versioned_release_repo"
+        osg-koji clone-tag $release_repo $versioned_release_repo
+        echo
+
+        # Lock repos
+        echo "Locking $release_repo"
+        osg-koji edit-tag --lock $release_repo
+        echo "Locking $versioned_release_repo"
+        osg-koji edit-tag --lock $versioned_release_repo
+        echo
+
+        # Regen repos
+        echo "Regenerating $versioned_release_repo"
+        osg-koji regen-repo --nowait $versioned_release_repo
+        echo
+
+        # Write release notes
+        awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver
+         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | sort -u > $branch-release-note-rpms-$dver
+
+        # Update info
+        cp move-to-$branch-release-$dver $ver-updated-$branch-$dver.txt
+        osg-koji list-tagged --quiet --latest $release_repo | awk '{print $1}' > $ver-packages-$branch-$dver.txt
+        xargs --arg-file $version-packages-$branch-$dver.txt osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | sort > $ver-rpms-$branch-$dver.txt
+        if [ -d /p/vdt/public/html/release-info/ ]; then
+            cp $ver-updated-$branch-$dver.txt $ver-packages-$branch-$dver.txt $ver-rpms-$branch-$dver.txt /p/vdt/public/html/release-info/
+        else
+            scp $ver-updated-$branch-$dver.txt $ver-packages-$branch-$dver.txt $ver-rpms-$branch-$dver.txt $rusermachine:/p/vdt/public/html/release-info/
         fi
     done
 done
