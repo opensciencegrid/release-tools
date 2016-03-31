@@ -2,7 +2,7 @@
 
 . release-common.sh
 
-if [ ! -d /p/vdt/public/html/release-info/ ]; then
+if [[ ! -d /p/vdt/public/html/release-info/ && $DRY_RUN -eq 0 ]]; then
     echo "Not on UW\'s AFS..."
     echo "Enter username and machine name to use for scp, e.g. matyas@ingwe.cs.wisc.edu"
     read rusermachine
@@ -18,13 +18,13 @@ for ver in ${versions[@]}; do
         # Push from pre-release to release
         echo '==========================================================================='
         echo "Unlocking $release_repo"
-        osg-koji edit-tag --unlock $release_repo
+        run_cmd "osg-koji edit-tag --unlock $release_repo"
         echo
 
         echo '==========================================================================='
         echo "Moving packages from $prerelease_repo to $release_repo"
-        osg-koji list-tagged --quiet $prerelease_repo | awk '{print $1}' > move-to-$branch-release-$dver
-        xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo
+        run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch-release-$dver"
+        run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
 
         echo
 
@@ -36,33 +36,33 @@ for ver in ${versions[@]}; do
             versioned_release_repo=osg-$branch-$dver-release-$ver
         fi
         echo "Cloning $release_repo to $versioned_release_repo"
-        osg-koji clone-tag $release_repo $versioned_release_repo
+        run_cmd "osg-koji clone-tag $release_repo $versioned_release_repo"
         echo
 
         # Lock repos
         echo "Locking $release_repo"
-        osg-koji edit-tag --lock $release_repo
+        run_cmd "osg-koji edit-tag --lock $release_repo"
         echo "Locking $versioned_release_repo"
-        osg-koji edit-tag --lock $versioned_release_repo
+        run_cmd "osg-koji edit-tag --lock $versioned_release_repo"
         echo
 
         # Regen repos
         echo "Regenerating $versioned_release_repo"
-        osg-koji regen-repo --nowait $versioned_release_repo
+        run_cmd "osg-koji regen-repo --nowait $versioned_release_repo"
         echo
 
         # Write release notes
-        awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver
-         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | sort -u > $branch-release-note-rpms-$dver
+        run_cmd "awk '{ print \"   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=\" \$1 \"][\" \$1 \"]]\"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver"
+         run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | perl -p -e \"s/\.(noarch|src|i386|x86_64)\.rpm//\" | sort -u > $branch-release-note-rpms-$dver"
 
         # Update info
-        cp move-to-$branch-release-$dver $ver-updated-$branch-$dver.txt
-        osg-koji list-tagged --quiet --latest $release_repo | awk '{print $1}' > $ver-packages-$branch-$dver.txt
-        xargs --arg-file $version-packages-$branch-$dver.txt osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | sort > $ver-rpms-$branch-$dver.txt
+        run_cmd "cp move-to-$branch-release-$dver $ver-updated-$branch-$dver.txt"
+        run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $ver-packages-$branch-$dver.txt"
+        run_cmd "xargs --arg-file $ver-packages-$branch-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $ver-rpms-$branch-$dver.txt"
         if [ -d /p/vdt/public/html/release-info/ ]; then
-            cp $ver-updated-$branch-$dver.txt $ver-packages-$branch-$dver.txt $ver-rpms-$branch-$dver.txt /p/vdt/public/html/release-info/
+            run_cmd "cp $ver-updated-$branch-$dver.txt $ver-packages-$branch-$dver.txt $ver-rpms-$branch-$dver.txt /p/vdt/public/html/release-info/"
         else
-            scp $ver-updated-$branch-$dver.txt $ver-packages-$branch-$dver.txt $ver-rpms-$branch-$dver.txt $rusermachine:/p/vdt/public/html/release-info/
+            run_cmd "scp $ver-updated-$branch-$dver.txt $ver-packages-$branch-$dver.txt $ver-rpms-$branch-$dver.txt $rusermachine:/p/vdt/public/html/release-info/"
         fi
     done
 done

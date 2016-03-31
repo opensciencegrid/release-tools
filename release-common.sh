@@ -27,6 +27,20 @@ osg_dvers () {
     fi
 }
 
+run_cmd () {
+    # Runs command and appends the command string to a rescue file
+    # Expects double quoted string (be sure to escape chars that you don't want
+    # evaluated by bash when being echoed to the rescue file e.g. '\$1' or '\"')
+    # cmd=`sed s'/\*/\\\*/ <<< $1` # hack to prevent * from being shell expanded
+    cmd=$1
+    if [[ $DRY_RUN -eq 1 ]]; then
+        echo "$cmd"
+    else
+        $cmd
+        echo $cmd >> "$original_cmd.rescue"
+    fi
+}
+
 pkg_dist () {
     osgversion=$1
     dver=$2
@@ -44,8 +58,9 @@ if [ $# -lt 1 ]; then
     die
 fi
 
-DRY_RUN=''
+DRY_RUN=0
 versions=()
+original_cmd=$0
 
 while [ $# -ne 0 ];
 do
@@ -55,7 +70,7 @@ do
             die
             ;;
         -d|--dry-run)
-            DRY_RUN='echo $'
+            DRY_RUN=1
             shift
             ;;
         -*)
@@ -72,3 +87,9 @@ do
             fi
     esac
 done
+
+if [[ ${versions[@]} == 'upcoming' ]]; then
+    usage
+    die "Upcoming promotions must be accompanied by at least one version number"
+fi
+

@@ -11,7 +11,7 @@ for ver in ${versions[@]}; do
         tag="osg-$branch-$dver-prerelease"
         echo -e "\nContents of $tag:"
         echo -e "==================================="
-        $DRY_RUN osg-koji list-tagged --quiet $tag | awk '{print $1}'
+        run_cmd "osg-koji list-tagged --quiet $tag | awk '{print \$1}'"
     done
 done
 
