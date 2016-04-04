@@ -16,12 +16,10 @@ for ver in ${versions[@]}; do
         release_repo=osg-$branch-$dver-release
 
         # Push from pre-release to release
-        echo '==========================================================================='
-        echo "Unlocking $release_repo"
+        echo -e "Unlocking $release_repo"
         run_cmd "osg-koji edit-tag --unlock $release_repo"
         echo
 
-        echo '==========================================================================='
         echo "Moving packages from $prerelease_repo to $release_repo"
         run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch-release-$dver"
         run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
@@ -66,3 +64,5 @@ for ver in ${versions[@]}; do
         fi
     done
 done
+
+cleanup_on_success

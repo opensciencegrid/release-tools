@@ -28,17 +28,29 @@ osg_dvers () {
 }
 
 run_cmd () {
-    # Runs command and appends the command string to a rescue file
-    # Expects double quoted string (be sure to escape chars that you don't want
-    # evaluated by bash when being echoed to the rescue file e.g. '\$1' or '\"')
-    # cmd=`sed s'/\*/\\\*/ <<< $1` # hack to prevent * from being shell expanded
+    # Runs command(s) (accepting pipes and redirection!) and appends the command
+    # string to a rescue file if successful. Prints cmd to stdout if user
+    # specifies -d/--dry-run. Expects double quoted string (be sure to escape
+    # chars that you don't want evaluated by bash when being echoed to the rescue
+    # file e.g. '\$1' or '\"')
     cmd=$1
     if [[ $DRY_RUN -eq 1 ]]; then
         echo "$cmd"
     else
-        $cmd
-        echo $cmd >> "$original_cmd.rescue"
+        grep "$cmd" $rescue_file > /dev/null 2>&1
+        if [[ $? -ne 0 ]]; then
+            eval $cmd
+            if [[ $? -eq 0 ]]; then
+                echo "$cmd" >> $rescue_file
+            else
+                exit 1
+            fi
+        fi
     fi
+}
+
+cleanup_on_success () {
+    rm $rescue_file
 }
 
 pkg_dist () {
@@ -58,9 +70,14 @@ if [ $# -lt 1 ]; then
     die
 fi
 
+########
+# MAIN #
+########
+
 DRY_RUN=0
 versions=()
 original_cmd=$0
+rescue_file=$original_cmd.rescue
 
 while [ $# -ne 0 ];
 do
@@ -93,3 +110,4 @@ if [[ ${versions[@]} == 'upcoming' ]]; then
     die "Upcoming promotions must be accompanied by at least one version number"
 fi
 
+[ -e $rescue_file ] && echo "Found rescue file, picking up after the last successful command..." || touch $rescue_file

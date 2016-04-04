@@ -49,3 +49,5 @@ for ver in ${versions[@]}; do
         echo
     done
 done
+
+cleanup_on_success
