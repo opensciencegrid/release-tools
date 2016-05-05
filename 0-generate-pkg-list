@@ -35,7 +35,7 @@ for ver in ${versions[@]}; do
     for dver in ${dvers[@]}; do
         echo "RPM's slated for release in osg-$branch-$dver-release"
         slated_cmd="koji-tag-diff osg-$branch-$dver-{testing,release}"
-        slated=$(eval $slated_cmd)
+        slated=$(eval $slated_cmd | tail -n +2)
         if [[ $DRY_RUN -eq 1 ]]; then
             echo $slated_cmd
         else
@@ -43,7 +43,7 @@ for ver in ${versions[@]}; do
         fi
         echo
 
-        slist=$(echo "$slated" | tail -n +2 | perl -lpe 's/(-[^-]+){2}$//')
+        slist=$(echo "$slated" | perl -lpe 's/(-[^-]+){2}$//' | tr '\n' ' ')
         echo "Slated packages in testing behind current development versions"
         run_cmd "osg-pkgs-behind-tag osg-$branch-$dver-{testing,development} -- $slist"
         echo
