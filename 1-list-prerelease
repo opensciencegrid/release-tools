@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# This script encompasses Day 1 of https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/HowToCutRelease
+# Generate a list of packages in pre-release for comparison against the release
+# list put together by the OSG Release Coordinator
 
 . release-common.sh
 
