@@ -12,6 +12,10 @@ usage () {
     echo -e "\t-d, --dry-run\tPrint the commands that would be run"
 }
 
+print_header () {
+    echo -e "\033[1;33m$1\033[0m"
+}
+
 osg_release () {
     osgversion=$1
     sed -r 's/\.[0-9]+$//' <<< $osgversion
@@ -110,4 +114,4 @@ if [[ ${versions[@]} == 'upcoming' ]]; then
     die "Upcoming promotions must be accompanied by at least one version number"
 fi
 
-[ -e $rescue_file ] && echo "Found rescue file, picking up after the last successful command..." || touch $rescue_file
+[ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" || touch $rescue_file

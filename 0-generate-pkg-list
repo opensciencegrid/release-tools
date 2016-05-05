@@ -16,14 +16,16 @@ for ver in ${versions[@]/upcoming/}; do # We don't build osg-version for upcomin
             pkg=osg-version-$ver-1.$(pkg_dist $ver $dver)
             osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
             if [ $? -eq 1 ]; then
-                echo "Promoting $pkg into $tag..."
+                print_header "Promoting $pkg into $tag..."
                 run_cmd "osg-koji tag-pkg $tag $pkg"
             else
-                echo "$pkg already tagged in $tag"
+                print_header "$pkg already tagged in $tag"
             fi
         done
     done
 done
+
+echo
 
 # #############################
 # # Generate list of packages #
@@ -33,7 +35,7 @@ for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
     for dver in ${dvers[@]}; do
-        echo "RPM's slated for release in osg-$branch-$dver-release"
+        print_header "RPM's slated for release in osg-$branch-$dver-release"
         slated_cmd="koji-tag-diff osg-$branch-$dver-{testing,release}"
         slated=$(eval $slated_cmd | tail -n +2)
         if [[ $DRY_RUN -eq 1 ]]; then
@@ -44,7 +46,7 @@ for ver in ${versions[@]}; do
         echo
 
         slist=$(echo "$slated" | perl -lpe 's/(-[^-]+){2}$//' | tr '\n' ' ')
-        echo "Slated packages in testing behind current development versions"
+        print_header "Slated packages in testing behind current development versions"
         run_cmd "osg-pkgs-behind-tag osg-$branch-$dver-{testing,development} -- $slist"
         echo
     done
