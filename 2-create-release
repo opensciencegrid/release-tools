@@ -33,8 +33,7 @@ for ver in ${versions[@]}; do
 
         # Create new release repo
         if [[ $branch == 'upcoming' ]]; then
-            latest_version=$(echo ${versions[@]} | sed s'/ /\n/' | sort -V | head -n1)
-            versioned_release_repo=osg-$branch-$dver-release-$latest_version
+            versioned_release_repo=osg-$branch-$dver-release-$upcoming_version
         else
             versioned_release_repo=osg-$branch-$dver-release-$ver
         fi

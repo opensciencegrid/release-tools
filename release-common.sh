@@ -31,6 +31,11 @@ osg_dvers () {
     fi
 }
 
+is_rel_ver () {
+    grep -E '^3\.[2-3]+\.[0-9]+$' <<< $1 > /dev/null 2>&1
+    echo $?
+}
+
 run_cmd () {
     # Runs command(s) (accepting pipes and redirection!) and appends the command
     # string to a rescue file if successful. Prints cmd to stdout if user
@@ -99,7 +104,7 @@ do
             die "unknown option: $1"
             ;;
         *)
-            if [[ $1 =~ ^3\.[2-3]+\.[0-9]+$ || $1 == 'upcoming' ]]; then
+            if [[ $(is_rel_ver $1) -eq '0' || $1 == 'upcoming' ]]; then
                 versions+=($1)
                 shift
             else
@@ -109,9 +114,19 @@ do
     esac
 done
 
-if [[ ${versions[@]} == 'upcoming' ]]; then
-    usage
-    die "Upcoming promotions must be accompanied by at least one version number"
+# Get the OSG version to associate with the upcoming release
+grep 'upcoming' <<< ${versions[@]} > /dev/null 2>&1
+if [[ $? -eq 0 ]]; then
+    # get the latest version provided
+    upcoming_version=$(echo ${versions[@]} | sed s'/ /\n/' | sort -V | tail -n1)
+
+    has_upcoming_version=$(is_rel_ver $upcoming_version)
+    # user has only specified upcoming
+    while [ $has_upcoming_version != 0 ]; do
+        echo "What release version should upcoming be associated with?"
+        read upcoming_version
+        has_upcoming_version=$(is_rel_ver $upcoming_version)
+    done
 fi
 
 [ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" || touch $rescue_file
