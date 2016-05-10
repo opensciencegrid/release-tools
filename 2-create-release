@@ -15,6 +15,9 @@ fi
 
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
+    if [[ $branch == 'upcoming' ]]; then
+        ver=$upcoming_version
+    fi
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
     for dver in ${dvers[@]}; do
         prerelease_repo=osg-$branch-$dver-prerelease
@@ -32,11 +35,7 @@ for ver in ${versions[@]}; do
         echo
 
         # Create new release repo
-        if [[ $branch == 'upcoming' ]]; then
-            versioned_release_repo=osg-$branch-$dver-release-$upcoming_version
-        else
-            versioned_release_repo=osg-$branch-$dver-release-$ver
-        fi
+        versioned_release_repo=osg-$branch-$dver-release-$ver
         print_header "Cloning $release_repo to $versioned_release_repo"
         run_cmd "osg-koji clone-tag $release_repo $versioned_release_repo"
         echo
