@@ -52,4 +52,7 @@ for ver in ${versions[@]}; do
     done
 done
 
-cleanup_on_success
+# Don't remove rescue files if user is troubleshooting
+if [ $DRY_RUN -eq 0 ]; then
+    cleanup_on_success
+fi
