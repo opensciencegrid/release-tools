@@ -31,7 +31,6 @@ for ver in ${versions[@]}; do
         print_header "Moving packages from $prerelease_repo to $release_repo"
         run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch-release-$dver"
         run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
-
         echo
 
         # Create new release repo
@@ -43,7 +42,8 @@ for ver in ${versions[@]}; do
         # Lock repos
         print_header "Locking $release_repo"
         run_cmd "osg-koji edit-tag --lock $release_repo"
-        print_header "\nLocking $versioned_release_repo"
+        echo
+        print_header "Locking $versioned_release_repo"
         run_cmd "osg-koji edit-tag --lock $versioned_release_repo"
         echo
 
