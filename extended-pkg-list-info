@@ -10,7 +10,7 @@
 
 for branch in "${branches[@]}"; do
     for dver in "${dvers[@]}"; do
-        echo "RPM's slated for release in osg-$branch-$dver-release"
+        echo "RPMs slated for release in osg-$branch-$dver-release"
         ./osg-pkgs-behind-tag osg-$branch-$dver-{release,testing}
         echo
 

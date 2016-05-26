@@ -35,7 +35,7 @@ for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
     for dver in ${dvers[@]}; do
-        print_header "RPM's slated for release in osg-$branch-$dver-release"
+        print_header "RPMs slated for release in osg-$branch-$dver-release"
         slated_cmd="koji-tag-diff osg-$branch-$dver-{testing,release}"
         slated=$(eval $slated_cmd | tail -n +2)
         if [[ $DRY_RUN -eq 1 ]]; then
