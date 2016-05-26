@@ -39,5 +39,3 @@ else
 fi
 
 rm prerelease slated
-
-cleanup_on_success
