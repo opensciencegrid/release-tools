@@ -27,6 +27,32 @@ osg_dvers () {
     fi
 }
 
+run_cmd () {
+    # Runs command(s) (accepting pipes and redirection!) and appends the command
+    # string to a rescue file if successful. Prints cmd to stdout if user
+    # specifies -d/--dry-run. Expects double quoted string (be sure to escape
+    # chars that you don't want evaluated by bash when being echoed to the rescue
+    # file e.g. '\$1' or '\"')
+    cmd=$1
+    if [[ $DRY_RUN -eq 1 ]]; then
+        echo "$cmd"
+    else
+        grep "$cmd" $rescue_file > /dev/null 2>&1
+        if [[ $? -ne 0 ]]; then
+            eval $cmd
+            if [[ $? -eq 0 ]]; then
+                echo "$cmd" >> $rescue_file
+            else
+                exit 1
+            fi
+        fi
+    fi
+}
+
+cleanup_on_success () {
+    rm $rescue_file
+}
+
 pkg_dist () {
     osgversion=$1
     dver=$2
@@ -44,8 +70,14 @@ if [ $# -lt 1 ]; then
     die
 fi
 
-DRY_RUN=''
+########
+# MAIN #
+########
+
+DRY_RUN=0
 versions=()
+original_cmd=$0
+rescue_file=$original_cmd.rescue
 
 while [ $# -ne 0 ];
 do
@@ -55,7 +87,7 @@ do
             die
             ;;
         -d|--dry-run)
-            DRY_RUN='echo $'
+            DRY_RUN=1
             shift
             ;;
         -*)
@@ -72,3 +104,10 @@ do
             fi
     esac
 done
+
+if [[ ${versions[@]} == 'upcoming' ]]; then
+    usage
+    die "Upcoming promotions must be accompanied by at least one version number"
+fi
+
+[ -e $rescue_file ] && echo "Found rescue file, picking up after the last successful command..." || touch $rescue_file
