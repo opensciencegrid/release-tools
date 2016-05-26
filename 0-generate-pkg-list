@@ -8,33 +8,38 @@
 # Promote osg-version to testing #
 ##################################
 
-for dver in "${dvers[@]}"; do
-    for repo in testing prerelease; do
-        tag=osg-$majorver-$dver-$repo
-        pkg=osg-version-$version-1.$osgver.$dver
-        osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
-        if [ $? -eq 1 ]; then
-            echo "Promoting $pkg into $tag..."
-            $DRY_RUN osg-koji tag-pkg $tag $pkg
-        else
-            echo "$pkg already tagged in $tag"
-        fi
+for ver in ${versions[@]/upcoming/}; do # We don't build osg-version for upcoming
+    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    for dver in "${dvers[@]}"; do
+        for repo in testing prerelease; do
+            tag=osg-$(osg_release $ver)-$dver-$repo
+            pkg=osg-version-$ver-1.$(pkg_dist $ver $dver)
+            osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
+            if [ $? -eq 1 ]; then
+                echo "Promoting $pkg into $tag..."
+                $DRY_RUN osg-koji tag-pkg $tag $pkg
+            else
+                echo "$pkg already tagged in $tag"
+            fi
+        done
     done
 done
 
-#############################
-# Generate list of packages #
-#############################
+# #############################
+# # Generate list of packages #
+# #############################
 
-for branch in "${branches[@]}"; do
-    for dver in "${dvers[@]}"; do
+for ver in ${versions[@]}; do
+    branch=$(osg_release $ver)
+    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    for dver in ${dvers[@]}; do
         echo "RPM's slated for release in osg-$branch-$dver-release"
         slated=$(koji-tag-diff osg-$branch-$dver-{testing,release})
         echo "$slated"
         echo
 
         slist=$(echo "$slated" | tail -n +2 | perl -lpe 's/(-[^-]+){2}$//')
-        echo "Slated packages in testing, behind current development versions"
+        echo "Slated packages in testing behind current development versions"
         ./osg-pkgs-behind-tag osg-$branch-$dver-{testing,development} -- $slist
         echo
     done

@@ -6,10 +6,37 @@ die () {
 }
 
 usage () {
-    echo "usage: `basename $0` [options] VERSION"
+    echo "usage: `basename $0` [options] <VERSION 1> [<VERSION 2>...<VERSION N>]"
     echo "Options:"
     echo -e "\t-h, --help\tPrint this message"
-    echo -e "\t-u, --upcoming\tAlso populate upcoming pre-release"
+    echo -e "\t-d, --dry-run\tPrint the commands that would be run"
+}
+
+osg_release () {
+    osgversion=$1
+    sed -r 's/\.[0-9]+$//' <<< $osgversion
+}
+
+osg_dvers () {
+    osgversion=$1
+    branch=$(osg_release $osgversion)
+    if [[ $branch == '3.2' ]]; then
+        echo el5 el6
+    elif [[ $branch == '3.3' || $branch == 'upcoming' ]]; then
+        echo el6 el7
+    fi
+}
+
+pkg_dist () {
+    osgversion=$1
+    dver=$2
+
+    if [[ $osgversion == 'upcoming' ]]; then
+        echo "osgup.$dver"
+    else
+        branch=$(osg_release $osgversion)
+        echo "osg$(sed 's/\.//' <<< $branch).$dver"
+    fi
 }
 
 if [ $# -lt 1 ]; then
@@ -17,8 +44,8 @@ if [ $# -lt 1 ]; then
     die
 fi
 
-upcoming=0
-DRY_RUN=
+DRY_RUN=''
+versions=()
 
 while [ $# -ne 0 ];
 do
@@ -27,11 +54,7 @@ do
             usage
             die
             ;;
-        -u|--upcoming)
-            upcoming=1
-            shift
-            ;;
-        -n|--dry-run)
+        -d|--dry-run)
             DRY_RUN='echo $'
             shift
             ;;
@@ -40,29 +63,12 @@ do
             die "unknown option: $1"
             ;;
         *)
-            if [[ $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-                version=$1
+            if [[ $1 =~ ^3\.[2-3]+\.[0-9]+$ || $1 == 'upcoming' ]]; then
+                versions+=($1)
                 shift
             else
                 usage
-                die "unkown parameter: $1"
+                die "unknown parameter: $1"
             fi
     esac
 done
-
-majorver=`sed -r 's/\.[0-9]+$//' <<< $version`
-osgver="osg`sed 's/\.//' <<< $majorver`"
-
-# Handle distro version differences between OSG versions
-if [[ $majorver = 3.2 ]]; then
-    dvers=(el5 el6)
-elif [[ $majorver = 3.3 ]]; then
-    dvers+=(el6 el7)
-else
-    die 'Unrecognized major version. Acceptable release series are 3.2.x and 3.3.x'
-fi
-
-branches=($majorver)
-if [ $upcoming -eq 1 ]; then
-    branches+=('upcoming')
-fi
