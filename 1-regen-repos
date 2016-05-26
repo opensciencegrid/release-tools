@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Solves 404 error messages when retrieving packages for building the tarballs
+
+. release-common.sh
+
+for ver in ${versions[@]}; do
+    branch=$(osg_release $ver)
+    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    for dver in ${dvers[@]}; do
+        run_cmd "osg-koji regen-repo osg-$branch-$dver-release-build" # avoid pkg 404 errors
+    done
+done
