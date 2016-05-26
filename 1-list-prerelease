@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# This script encompasses Day 1 of https://twiki.opensciencegrid.org/bin/view/SoftwareTeam/HowToCutRelease
+# Generate a list of packages in pre-release for comparison against the release
+# list put together by the OSG Release Coordinator
 
 . release-common.sh
 
@@ -9,7 +10,7 @@ for ver in ${versions[@]}; do
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
     for dver in ${dvers[@]}; do
         tag="osg-$branch-$dver-prerelease"
-        echo -e "\nContents of $tag:"
+        print_header "\nContents of $tag:"
         run_cmd "osg-koji list-tagged --quiet $tag | awk '{print \$1}'"
     done
 done

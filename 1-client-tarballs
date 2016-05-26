@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Run this script on an EL6 Fermicloud VM to generate the client tarballs
+# and copy them over to UW's AFS
+
+. release-common.sh
+
+if [ $(whoami) != 'root' ]; then
+    usage
+    die "Script must be run as root"
+fi
+
+if [[ $DRY_RUN -eq 0 ]]; then
+    echo "Enter username and machine name to use for scp, e.g. matyas@ingwe.cs.wisc.edu"
+    read rusermachine
+fi
+
+print_header "Preparing tools for tarball generation"
+run_cmd "yum -y install git yum-priorities"
+pushd /tmp
+run_cmd "git clone --depth 1 https://github.com/opensciencegrid/tarball-client"
+
+# drop upcoming from versions since they don't get their own tarballs
+versions=(${versions[@]/upcoming/})
+
+# Build tarballs
+for ver in ${versions[@]}; do
+    branch=$(osg_release $ver)
+    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    for dver in ${dvers[@]}; do
+        run_cmd "osg-koji regen-repo osg-$branch-$dver-release-build" # avoid pkg 404 errors
+    done
+    print_header "Generating $branch tarballs"
+    run_cmd "tarball-client/make-client-tarball --osgver=$branch --prerelease --all"
+
+    print_header "Copying $branch tarballs to $rusermachine"
+    for arch in i386 x86_64; do
+        run_cmd "scp -p *$ver*.$arch.tar.gz $rusermachine:/p/vdt/public/html/tarball-client/$branch/$arch"
+    done
+done
+
+popd
