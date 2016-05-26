@@ -95,7 +95,7 @@ do
             usage
             die
             ;;
-        -d|--dry-run)
+        -n|--dry-run)
             DRY_RUN=1
             shift
             ;;
