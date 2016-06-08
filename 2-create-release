@@ -6,6 +6,7 @@
 # Write release notes and update information on UW's AFS
 
 . release-common.sh
+detect_rescue_file
 
 if [[ ! -d /p/vdt/public/html/release-info/ && $DRY_RUN -eq 0 ]]; then
     print_header "Not on UW's AFS..."

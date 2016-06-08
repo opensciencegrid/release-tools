@@ -58,6 +58,12 @@ run_cmd () {
     fi
 }
 
+detect_rescue_file () {
+    rescue_file=$original_cmd.rescue
+    [ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" \
+            || touch $rescue_file
+}
+
 cleanup_on_success () {
     rm $rescue_file
 }
@@ -86,7 +92,6 @@ fi
 DRY_RUN=0
 versions=()
 original_cmd=$0
-rescue_file=$original_cmd.rescue
 
 while [ $# -ne 0 ];
 do
@@ -128,5 +133,3 @@ if [[ $? -eq 0 ]]; then
         has_upcoming_version=$(is_rel_ver $upcoming_version)
     done
 fi
-
-[ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" || touch $rescue_file
