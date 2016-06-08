@@ -4,6 +4,7 @@
 # and copy them over to UW's AFS
 
 . release-common.sh
+detect_rescue_file
 
 if [ $(whoami) != 'root' ]; then
     usage

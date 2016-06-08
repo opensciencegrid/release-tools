@@ -3,6 +3,7 @@
 # This script promotes osg-version to testing and generates a preliminary list of packages for the release manager
 
 . release-common.sh
+detect_rescue_file
 
 ##################################
 # Promote osg-version to testing #
