@@ -7,10 +7,6 @@
 
 final_msg=""
 
-# Make pipes so we can diff package lists
-mkfifo prerelease
-mkfifo slated
-
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
@@ -20,8 +16,8 @@ for ver in ${versions[@]}; do
         rel_tag=$tag_prefix-release
 
         # Get lists of packages from release list and compare them to what's currently in prerelease
-        osg-koji list-tagged --quiet $prerel_tag | awk '{print $1}' > prerelease &
-        awk "/^RPMs.*$rel_tag/ {flag=1;next} /^[[:space:]]*$/ { flag=0 } flag { print }" release-list > slated &
+        osg-koji list-tagged --quiet $prerel_tag | awk '{print $1}' > prerelease
+        awk "/^RPMs.*$rel_tag/ {flag=1;next} /^[[:space:]]*$/ { flag=0 } flag { print }" release-list > slated
         pkg_diff=$(diff -u slated prerelease)
 
         # If there are differences between prerelease and slated, print them at the end
