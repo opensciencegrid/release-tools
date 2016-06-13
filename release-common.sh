@@ -123,8 +123,7 @@ done
 grep 'upcoming' <<< ${versions[@]} > /dev/null 2>&1
 if [[ $? -eq 0 ]]; then
     # get the latest version provided
-    upcoming_version=$(echo ${versions[@]} | sed s'/ /\n/' | sort -V | tail -n1)
-
+    upcoming_version=$(echo ${versions[@]} | tr ' ' '\n' | grep -v upcoming | sort -V | tail -n1)
     has_upcoming_version=$(is_rel_ver $upcoming_version)
     # user has only specified upcoming
     while [ $has_upcoming_version != 0 ]; do
