@@ -1,3 +1,8 @@
+# This list contains the expected list of packages for the next OSG release and
+# should be updated by the release manager after receiving input from the
+# software list. 1-verify-prerelease expects the format of this file to be the
+# same as the output from 0-generate-pkg-list.
+
 RPMs slated for release in osg-3.2-el5-release
 igtf-ca-certs-1.74-1.osg32.el5
 osg-ca-certs-1.55-1.osg32.el5
