@@ -5,6 +5,11 @@
 
 . release-common.sh
 
+if [[ `git log -1 --format=%cd --date=relative release-list | xargs -I {} date -d {} +%s` \
+          -lt `date -d '8 days ago' +%s` ]]; then
+    die "release-list older than 8 days. Run 'git pull'. If the issue persists, contact the release manager."
+fi
+
 final_msg=""
 
 for ver in ${versions[@]}; do
