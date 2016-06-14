@@ -71,7 +71,7 @@ for ver in ${versions[@]}; do
 done
 
 # Copy release info files over to AFS
-release_files=awk '/\.txt$/ {print $NF}' $rescue_file
+release_files=`awk '/\.txt$/ {print $NF}' $rescue_file`
 print_header "Copying files over to UW's AFS"
 if [ -d /p/vdt/public/html/release-info/ ]; then
     run_cmd "cp $release_files /p/vdt/public/html/release-info/"
