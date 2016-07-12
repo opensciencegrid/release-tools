@@ -56,11 +56,6 @@ for ver in ${versions[@]}; do
         # Write release notes
         awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver
         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | sort -u > $branch-release-note-rpms-$dver
-        if [[ $branch == 'upcoming' ]]; then
-            list-package-updates -u $ver > $branch-release-note-rpm-updates-$dver
-        else
-            list-package-updates $ver > $branch-release-note-rpm-updates-$dver
-        fi
 
         # Update info
         run_cmd "cp move-to-$branch-release-$dver $ver-updated-$branch-$dver.txt"
@@ -68,6 +63,13 @@ for ver in ${versions[@]}; do
         run_cmd "xargs --arg-file $ver-packages-$branch-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $ver-rpms-$branch-$dver.txt"
         echo
     done
+
+    # RPM update release-notes don't need to specify the dver
+    if [[ $branch == 'upcoming' ]]; then
+        list-package-updates -u $ver > $branch-release-note-rpm-updates
+    else
+        list-package-updates $ver > $branch-release-note-rpm-updates
+    fi
 done
 
 # Copy release info files over to AFS
