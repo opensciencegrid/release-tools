@@ -9,7 +9,7 @@ usage () {
     echo "usage: `basename $0` [options] <VERSION 1> [<VERSION 2>...<VERSION N>]"
     echo "Options:"
     echo -e "\t-h, --help\tPrint this message"
-    echo -e "\t-d, --dry-run\tPrint the commands that would be run"
+    echo -e "\t-n, --dry-run\tPrint the commands that would be run"
 }
 
 print_header () {
