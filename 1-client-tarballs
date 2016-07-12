@@ -32,7 +32,7 @@ for ver in ${versions[@]}; do
 
     print_header "Copying $branch tarballs to $rusermachine"
     for arch in i386 x86_64; do
-        run_cmd "scp -p *$ver*.$arch.tar.gz $rusermachine:/p/vdt/public/html/tarball-client/$branch/$arch"
+        run_cmd "rsync -tavz *$ver*.$arch.tar.gz $rusermachine:/p/vdt/public/html/tarball-client/$branch/$arch"
     done
 done
 
