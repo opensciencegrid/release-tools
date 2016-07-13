@@ -76,7 +76,9 @@ print_header "Copying files over to UW's AFS"
 if [ -d /p/vdt/public/html/release-info/ ]; then
     run_cmd "cp $release_files /p/vdt/public/html/release-info/"
 else
-    run_cmd "scp $release_files $rusermachine:/p/vdt/public/html/release-info/"
+    # run_cmd does not play nice with commands requiring user input. we don't
+    # need to keep track anyway since this is the last command
+    rsync -avz $release_files $rusermachine:/p/vdt/public/html/release-info/
 fi
 
 # Don't remove rescue files if user is troubleshooting
