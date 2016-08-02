@@ -28,14 +28,17 @@ versions=(${versions[@]/upcoming/})
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     print_header "Generating $branch tarballs"
-    run_cmd "tarball-client/make-client-tarball --osgver=$branch --prerelease --all"
-
-    print_header "Copying $branch tarballs to $rusermachine"
     for arch in i386 x86_64; do
-        run_cmd "scp -p *$ver*.$arch.tar.gz $rusermachine:/p/vdt/public/html/tarball-client/$branch/$arch"
+        tarball_dir="tarballs/$branch/$arch"
+        mkdir -p $tarball_dir
+        pushd $tarball_dir
+        run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --prerelease --all"
+        popd
     done
 done
 
+print_header "Copying tarballs to $rusermachine"
+run_cmd "rsync -av tarballs/ $rusermachine:/p/vdt/public/html/tarball-client/"
 popd
 
 # Don't remove rescue files if user is troubleshooting
