@@ -38,7 +38,7 @@ for ver in ${versions[@]}; do
 done
 
 print_header "Copying tarballs to $rusermachine"
-run_cmd "rsync -tavz tarballs/ $rusermachine:/p/vdt/public/html/tarball-client/"
+run_cmd "rsync -av tarballs/ $rusermachine:/p/vdt/public/html/tarball-client/"
 popd
 
 # Don't remove rescue files if user is troubleshooting
