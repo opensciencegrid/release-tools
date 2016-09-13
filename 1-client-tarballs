@@ -28,12 +28,11 @@ versions=(${versions[@]/upcoming/})
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     print_header "Generating $branch tarballs"
+    run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --all --prerelease"
     for arch in i386 x86_64; do
         tarball_dir="tarballs/$branch/$arch"
-        mkdir -p $tarball_dir
-        pushd $tarball_dir
-        run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --prerelease --all"
-        popd
+        run_cmd "mkdir -p $tarball_dir"
+        run_cmd "mv osg*client-$branch*$arch*.tar.gz $tarball_dir"
     done
 done
 
