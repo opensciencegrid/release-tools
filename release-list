@@ -4,172 +4,60 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-release
-blahp-1.18.25.bosco-1.osg33.el6
-condor-8.4.8-1.2.osg33.el6
-glideinwms-3.2.15-1.osg33.el6
-glite-ce-cream-client-api-c-1.15.4-2.2.osg33.el6
-glite-ce-wsdl-1.15.1-1.1.osg33.el6
-glite-lbjp-common-gsoap-plugin-3.2.12-1.1.osg33.el6
-glite-lbjp-common-gss-3.2.16-1.osg33.el6
-globus-authz-3.12-1.osg33.el6
-globus-authz-callout-error-3.5-2.osg33.el6
-globus-callout-3.14-1.osg33.el6
-globus-common-16.4-1.osg33.el6
-globus-ftp-client-8.29-1.1.osg33.el6
-globus-ftp-control-6.10-1.1.osg33.el6
-globus-gass-cache-9.8-1.osg33.el6
-globus-gass-cache-program-6.5-2.osg33.el6
-globus-gass-copy-9.19-1.osg33.el6
-globus-gass-server-ez-5.7-2.osg33.el6
-globus-gass-transfer-8.9-1.osg33.el6
-globus-gatekeeper-10.10-1.1.osg33.el6
-globus-gfork-4.8-1.osg33.el6
-globus-gram-audit-4.4-2.osg33.el6
-globus-gram-client-13.13-1.osg33.el6
-globus-gram-client-tools-11.8-1.osg33.el6
-globus-gram-job-manager-14.27-3.1.osg33.el6
-globus-gram-job-manager-callout-error-3.5-2.osg33.el6
-globus-gram-job-manager-condor-2.5-2.1.osg33.el6
-globus-gram-job-manager-fork-2.4-2.1.osg33.el6
-globus-gram-job-manager-lsf-2.6-2.1.osg33.el6
-globus-gram-job-manager-scripts-6.7-2.osg33.el6
-globus-gram-protocol-12.12-3.osg33.el6
-globus-gridftp-server-10.4-1.2.osg33.el6
-globus-gridftp-server-control-4.1-1.2.osg33.el6
-globus-gridmap-callout-error-2.4-2.osg33.el6
-globus-gsi-callback-5.8-1.osg33.el6
-globus-gsi-cert-utils-9.12-1.osg33.el6
-globus-gsi-credential-7.9-1.osg33.el6
-globus-gsi-openssl-error-3.5-2.osg33.el6
-globus-gsi-proxy-core-7.9-1.osg33.el6
-globus-gsi-proxy-ssl-5.8-1.osg33.el6
-globus-gsi-sysconfig-6.9-1.osg33.el6
-globus-gss-assist-10.15-1.osg33.el6
-globus-gssapi-error-5.4-2.osg33.el6
-globus-gssapi-gsi-12.1-1.osg33.el6
-globus-io-11.5-1.osg33.el6
-globus-openssl-module-4.6-2.osg33.el6
-globus-proxy-utils-6.15-1.osg33.el6
-globus-rsl-10.10-1.osg33.el6
-globus-scheduler-event-generator-5.11-1.1.osg33.el6
-globus-simple-ca-4.22-1.osg33.el6
-globus-usage-4.4-2.osg33.el6
-globus-xio-5.12-1.1.osg33.el6
-globus-xio-pipe-driver-3.8-1.osg33.el6
-globus-xio-popen-driver-3.5-2.osg33.el6
-globus-xio-udt-driver-1.23-1.osg33.el6
-globus-xioperf-4.4-2.osg33.el6
-gratia-probe-1.17.0-2.osg33.el6
-gums-1.5.2-9.osg33.el6
-htcondor-ce-2.0.8-2.osg33.el6
-lcas-lcmaps-gt4-interface-0.3.1-1.2.osg33.el6
-myproxy-6.1.18-1.1.osg33.el6
-osg-build-1.7.1-1.osg33.el6
-osg-ca-generator-1.2.0-1.osg33.el6
-osg-configure-1.4.2-2.osg33.el6
-osg-gridftp-3.3-3.osg33.el6
-osg-gridftp-hdfs-3.3-4.osg33.el6
-osg-gridftp-xrootd-3.3-3.osg33.el6
-osg-pki-tools-1.2.19-1.osg33.el6
-osg-test-1.8.4-1.osg33.el6
-osg-tested-internal-3.3-13.osg33.el6
-osg-version-3.3.16-1.osg33.el6
-rsv-gwms-tester-1.1.2-1.osg33.el6
-vo-client-68-2.osg33.el6
-xrootd-dsi-3.0.4-22.osg33.el6
+blahp-1.18.26.bosco-1.osg33.el6
+condor-8.4.9-1.osg33.el6
+condor-cron-1.1.1-2.osg33.el6
+cvmfs-2.3.2-1.osg33.el6
+cvmfs-config-osg-1.2-5.osg33.el6
+cvmfs-x509-helper-0.9-1.osg33.el6
+frontier-squid-2.7.STABLE9-27.1.osg33.el6
+globus-gatekeeper-10.10-1.2.osg33.el6
+gratia-probe-1.17.0-2.3.osg33.el6
+htcondor-ce-2.0.9-4.osg33.el6
+osg-control-1.1.0-1.osg33.el6
+osg-oasis-7-5.osg33.el6
+osg-test-1.9.0-1.osg33.el6
+osg-tested-internal-3.3-15.osg33.el6
+osg-version-3.3.17-1.osg33.el6
+rsv-perfsonar-1.1.4-1.osg33.el6
+vo-client-69-1.osg33.el6
+xrootd-4.4.0-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-release
-blahp-1.18.25.bosco-1.osg33.el7
-condor-8.4.8-1.2.osg33.el7
-glideinwms-3.2.15-1.osg33.el7
-glite-ce-cream-client-api-c-1.15.4-2.2.osg33.el7
-glite-ce-wsdl-1.15.1-1.1.osg33.el7
-glite-lbjp-common-gsoap-plugin-3.2.12-1.1.osg33.el7
-glite-lbjp-common-gss-3.2.16-1.osg33.el7
-globus-authz-3.12-1.osg33.el7
-globus-authz-callout-error-3.5-2.osg33.el7
-globus-callout-3.14-1.osg33.el7
-globus-common-16.4-1.osg33.el7
-globus-ftp-client-8.29-1.1.osg33.el7
-globus-ftp-control-6.10-1.1.osg33.el7
-globus-gass-cache-9.8-1.osg33.el7
-globus-gass-cache-program-6.5-2.osg33.el7
-globus-gass-copy-9.19-1.osg33.el7
-globus-gass-server-ez-5.7-2.osg33.el7
-globus-gass-transfer-8.9-1.osg33.el7
-globus-gatekeeper-10.10-1.1.osg33.el7
-globus-gfork-4.8-1.osg33.el7
-globus-gram-audit-4.4-2.osg33.el7
-globus-gram-client-13.13-1.osg33.el7
-globus-gram-client-tools-11.8-1.osg33.el7
-globus-gram-job-manager-14.27-3.1.osg33.el7
-globus-gram-job-manager-callout-error-3.5-2.osg33.el7
-globus-gram-job-manager-condor-2.5-2.1.osg33.el7
-globus-gram-job-manager-fork-2.4-2.1.osg33.el7
-globus-gram-job-manager-lsf-2.6-2.1.osg33.el7
-globus-gram-job-manager-scripts-6.7-2.osg33.el7
-globus-gram-protocol-12.12-3.osg33.el7
-globus-gridftp-server-10.4-1.2.osg33.el7
-globus-gridftp-server-control-4.1-1.2.osg33.el7
-globus-gridmap-callout-error-2.4-2.osg33.el7
-globus-gsi-callback-5.8-1.osg33.el7
-globus-gsi-cert-utils-9.12-1.osg33.el7
-globus-gsi-credential-7.9-1.osg33.el7
-globus-gsi-openssl-error-3.5-2.osg33.el7
-globus-gsi-proxy-core-7.9-1.osg33.el7
-globus-gsi-proxy-ssl-5.8-1.osg33.el7
-globus-gsi-sysconfig-6.9-1.osg33.el7
-globus-gss-assist-10.15-1.osg33.el7
-globus-gssapi-error-5.4-2.osg33.el7
-globus-gssapi-gsi-12.1-1.osg33.el7
-globus-io-11.5-1.osg33.el7
-globus-openssl-module-4.6-2.osg33.el7
-globus-proxy-utils-6.15-1.osg33.el7
-globus-rsl-10.10-1.osg33.el7
-globus-scheduler-event-generator-5.11-1.1.osg33.el7
-globus-simple-ca-4.22-1.osg33.el7
-globus-usage-4.4-2.osg33.el7
-globus-xio-5.12-1.1.osg33.el7
-globus-xio-pipe-driver-3.8-1.osg33.el7
-globus-xio-popen-driver-3.5-2.osg33.el7
-globus-xio-udt-driver-1.23-1.osg33.el7
-globus-xioperf-4.4-2.osg33.el7
-gratia-probe-1.17.0-2.osg33.el7
-gums-1.5.2-9.osg33.el7
-htcondor-ce-2.0.8-2.osg33.el7
-lcas-lcmaps-gt4-interface-0.3.1-1.2.osg33.el7
-myproxy-6.1.18-1.1.osg33.el7
-osg-build-1.7.1-1.osg33.el7
-osg-ca-generator-1.2.0-1.osg33.el7
-osg-configure-1.4.2-2.osg33.el7
-osg-gridftp-3.3-3.osg33.el7
-osg-gridftp-hdfs-3.3-4.osg33.el7
-osg-gridftp-xrootd-3.3-3.osg33.el7
-osg-pki-tools-1.2.19-1.osg33.el7
-osg-test-1.8.4-1.osg33.el7
-osg-tested-internal-3.3-13.osg33.el7
-osg-version-3.3.16-1.osg33.el7
-rsv-gwms-tester-1.1.2-1.osg33.el7
-vo-client-68-2.osg33.el7
-xrootd-dsi-3.0.4-22.osg33.el7
+blahp-1.18.26.bosco-1.osg33.el7
+condor-8.4.9-1.osg33.el7
+condor-cron-1.1.1-2.osg33.el7
+cvmfs-2.3.2-1.osg33.el7
+cvmfs-config-osg-1.2-5.osg33.el7
+cvmfs-x509-helper-0.9-1.osg33.el7
+frontier-squid-2.7.STABLE9-27.1.osg33.el7
+globus-gatekeeper-10.10-1.2.osg33.el7
+gratia-probe-1.17.0-2.3.osg33.el7
+htcondor-ce-2.0.9-4.osg33.el7
+osg-control-1.1.0-1.osg33.el7
+osg-oasis-7-5.osg33.el7
+osg-test-1.9.0-1.osg33.el7
+osg-tested-internal-3.3-15.osg33.el7
+osg-version-3.3.17-1.osg33.el7
+vo-client-69-1.osg33.el7
+xrootd-4.4.0-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-upcoming-el6-release
-blahp-1.18.25.bosco-1.osgup.el6
-condor-8.5.6-1.1.osgup.el6
+blahp-1.18.26.bosco-1.osgup.el6
+condor-8.5.7-1.osgup.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
 
 RPMs slated for release in osg-upcoming-el7-release
-blahp-1.18.25.bosco-1.osgup.el7
-condor-8.5.6-1.1.osgup.el7
+blahp-1.18.26.bosco-1.osgup.el7
+condor-8.5.7-1.osgup.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
-
