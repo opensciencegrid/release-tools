@@ -3,11 +3,6 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-osg-version-3.3.17-1.osg33.el6 already tagged in osg-3.3-el6-testing
-osg-version-3.3.17-1.osg33.el6 already tagged in osg-3.3-el6-prerelease
-osg-version-3.3.17-1.osg33.el7 already tagged in osg-3.3-el7-testing
-osg-version-3.3.17-1.osg33.el7 already tagged in osg-3.3-el7-prerelease
-
 RPMs slated for release in osg-3.3-el6-release
 blahp-1.18.26.bosco-1.osg33.el6
 condor-8.4.9-1.osg33.el6
@@ -18,6 +13,7 @@ cvmfs-x509-helper-0.9-1.osg33.el6
 frontier-squid-2.7.STABLE9-27.1.osg33.el6
 globus-gatekeeper-10.10-1.2.osg33.el6
 gratia-probe-1.17.0-2.3.osg33.el6
+htcondor-ce-2.0.9-4.osg33.el6
 osg-control-1.1.0-1.osg33.el6
 osg-oasis-7-5.osg33.el6
 osg-test-1.9.0-1.osg33.el6
@@ -40,6 +36,7 @@ cvmfs-x509-helper-0.9-1.osg33.el7
 frontier-squid-2.7.STABLE9-27.1.osg33.el7
 globus-gatekeeper-10.10-1.2.osg33.el7
 gratia-probe-1.17.0-2.3.osg33.el7
+htcondor-ce-2.0.9-4.osg33.el7
 osg-control-1.1.0-1.osg33.el7
 osg-oasis-7-5.osg33.el7
 osg-test-1.9.0-1.osg33.el7
@@ -51,3 +48,16 @@ xrootd-4.4.0-1.osg33.el7
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
+RPMs slated for release in osg-upcoming-el6-release
+blahp-1.18.26.bosco-1.osgup.el6
+condor-8.5.7-1.osgup.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
+
+RPMs slated for release in osg-upcoming-el7-release
+blahp-1.18.26.bosco-1.osgup.el7
+condor-8.5.7-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
