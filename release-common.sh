@@ -50,7 +50,7 @@ run_cmd () {
     if [[ $DRY_RUN -eq 1 ]]; then
         echo "$cmd"
     else
-        grep "$cmd" $rescue_file > /dev/null 2>&1
+        grep -F "$cmd" $rescue_file > /dev/null 2>&1
         if [[ $? -ne 0 ]]; then
             eval $cmd
             if [[ $? -eq 0 ]]; then
