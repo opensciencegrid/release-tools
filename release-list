@@ -13,7 +13,7 @@ cvmfs-x509-helper-0.9-1.osg33.el6
 frontier-squid-2.7.STABLE9-27.1.osg33.el6
 globus-gatekeeper-10.10-1.2.osg33.el6
 gratia-probe-1.17.0-2.3.osg33.el6
-htcondor-ce-2.0.9-4.osg33.el6
+htcondor-ce-2.0.10-1.osg33.el6
 osg-control-1.1.0-1.osg33.el6
 osg-oasis-7-5.osg33.el6
 osg-test-1.9.0-1.osg33.el6
@@ -36,7 +36,7 @@ cvmfs-x509-helper-0.9-1.osg33.el7
 frontier-squid-2.7.STABLE9-27.1.osg33.el7
 globus-gatekeeper-10.10-1.2.osg33.el7
 gratia-probe-1.17.0-2.3.osg33.el7
-htcondor-ce-2.0.9-4.osg33.el7
+htcondor-ce-2.0.10-1.osg33.el7
 osg-control-1.1.0-1.osg33.el7
 osg-oasis-7-5.osg33.el7
 osg-test-1.9.0-1.osg33.el7
