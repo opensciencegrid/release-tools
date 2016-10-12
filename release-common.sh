@@ -6,10 +6,14 @@ die () {
 }
 
 usage () {
-    echo "usage: `basename $0` [options] <VERSION 1> [<VERSION 2>...<VERSION N>]"
+    script_name=`basename $original_cmd`
+    echo "usage: $script_name [options] <VERSION 1> [<VERSION 2>...<VERSION N>]"
     echo "Options:"
-    echo -e "\t-h, --help\tPrint this message"
+    if [[ $script_name == "2-create-release" ]]; then
+        echo -e "\t-d, --data\tPerform a data-only release"
+    fi
     echo -e "\t-n, --dry-run\tPrint the commands that would be run"
+    echo -e "\t-h, --help\tPrint this message"
 }
 
 print_header () {
@@ -80,18 +84,19 @@ pkg_dist () {
     fi
 }
 
-if [ $# -lt 1 ]; then
-    usage
-    die
-fi
-
 ########
 # MAIN #
 ########
 
 DRY_RUN=0
+DATA=0
 versions=()
 original_cmd=$0
+
+if [ $# -lt 1 ]; then
+    usage
+    die
+fi
 
 while [ $# -ne 0 ];
 do
@@ -103,6 +108,14 @@ do
         -n|--dry-run)
             DRY_RUN=1
             shift
+            ;;
+        -d|--data)
+            if [[ $original_cmd != "2-create-release" ]]; then
+                usage
+                die "unknown option: $1"
+            else
+                $DATA=1
+            fi
             ;;
         -*)
             usage
