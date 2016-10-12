@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Unlock the release repos and move the pre-release packages into them.
-# Create a version-specific release tag
-# Lock and regenerate the release repos
+# Create a version-specific release tag (for non-data-only releases)
+# Lock the release repos
 # Write release notes and update information on UW's AFS
 
 . release-common.sh
