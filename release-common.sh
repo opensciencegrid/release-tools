@@ -63,7 +63,7 @@ run_cmd () {
 }
 
 detect_rescue_file () {
-    rescue_file=$original_cmd.rescue
+    rescue_file=`pwd`/$original_cmd.rescue
     [ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" \
             || touch $rescue_file
 }
