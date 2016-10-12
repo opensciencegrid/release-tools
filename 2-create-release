@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Unlock the release repos and move the pre-release packages into them.
-# Create a version-specific release tag
-# Lock and regenerate the release repos
+# Create a version-specific release tag (for non-data-only releases)
+# Lock the release repos
 # Write release notes and update information on UW's AFS
 
 . release-common.sh
@@ -24,6 +24,11 @@ for ver in ${versions[@]}; do
         prerelease_repo=osg-$branch-$dver-prerelease
         release_repo=osg-$branch-$dver-release
 
+        # Write data-specific release notes
+        if [ $DATA -eq 1 ]; then
+            branch=$branch-data
+        fi
+
         # Push from pre-release to release
         print_header "Unlocking $release_repo"
         run_cmd "osg-koji edit-tag --unlock $release_repo"
@@ -34,24 +39,21 @@ for ver in ${versions[@]}; do
         run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
         echo
 
-        # Create new release repo
-        versioned_release_repo=osg-$branch-$dver-release-$ver
-        print_header "Cloning $release_repo to $versioned_release_repo"
-        run_cmd "osg-koji clone-tag $release_repo $versioned_release_repo"
-        echo
+        if [ $DATA -eq 0 ]; then
+            # Create new release repo for non-data releases
+            versioned_release_repo=osg-$branch-$dver-release-$ver
+            print_header "Cloning $release_repo to $versioned_release_repo"
+            run_cmd "osg-koji clone-tag $release_repo $versioned_release_repo"
+            echo
+        fi
 
-        # Lock repos
-        print_header "Locking $release_repo"
-        run_cmd "osg-koji edit-tag --lock $release_repo"
-        echo
-        print_header "Locking $versioned_release_repo"
-        run_cmd "osg-koji edit-tag --lock $versioned_release_repo"
-        echo
-
-        # Regen repos
-        print_header "Regenerating $versioned_release_repo"
-        run_cmd "osg-koji regen-repo --nowait $versioned_release_repo"
-        echo
+        # Lock repos (data-only releases leave the versioned repos untouched
+        # for historical integrity)
+        for repo in $release_repo $versioned_release_repo; do
+            print_header "Locking $repo"
+            run_cmd "osg-koji edit-tag --lock $repo"
+            echo
+        done
 
         # Write release notes
         awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch-release-$dver > $branch-release-note-packages-$dver
@@ -65,7 +67,7 @@ for ver in ${versions[@]}; do
     done
 
     # RPM update release-notes don't need to specify the dver
-    if [[ $branch == 'upcoming' ]]; then
+    if [[ $branch =~ .*upcoming.* ]]; then
         list-package-updates -u $ver > $branch-release-note-rpm-updates
     else
         list-package-updates $ver > $branch-release-note-rpm-updates
