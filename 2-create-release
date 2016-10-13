@@ -84,6 +84,7 @@ else
     # need to keep track anyway since this is the last command
     rsync -avz $release_files $rusermachine:/p/vdt/public/html/release-info/
 fi
+check_file_transfer_rc $?
 
 # Don't remove rescue files if user is troubleshooting
 if [ $DRY_RUN -eq 0 ]; then

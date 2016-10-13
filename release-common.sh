@@ -50,7 +50,7 @@ run_cmd () {
     if [[ $DRY_RUN -eq 1 ]]; then
         echo "$cmd"
     else
-        grep "$cmd" $rescue_file > /dev/null 2>&1
+        grep -F "$cmd" $rescue_file > /dev/null 2>&1
         if [[ $? -ne 0 ]]; then
             eval $cmd
             if [[ $? -eq 0 ]]; then
@@ -62,8 +62,17 @@ run_cmd () {
     fi
 }
 
+check_file_transfer_rc () {
+    # Exit script if files fail to copy over so we can use the rescue file
+    # mechanism to resend the files
+    if [ $1 -ne 0 ]; then
+        echo -e "\033[1;31mFailed to copy release notes to AFS. Re-run $original_cmd\033[0m"
+        exit 1
+    fi
+}
+
 detect_rescue_file () {
-    rescue_file=$original_cmd.rescue
+    rescue_file=`pwd`/$original_cmd.rescue
     [ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" \
             || touch $rescue_file
 }
