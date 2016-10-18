@@ -12,8 +12,12 @@ detect_rescue_file
 for ver in ${versions[@]/upcoming/}; do # We don't build osg-version for upcoming
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
     for dver in "${dvers[@]}"; do
-        for repo in testing prerelease; do
+        for repo in release testing prerelease; do
             tag=osg-$(osg_release $ver)-$dver-$repo
+            # If there is already a versioned release tag, we don't
+            # have to worry about tagging osg-version
+            osg-koji list-tagged $tag-$ver > /dev/null 2>&1 && break
+
             pkg=osg-version-$ver-1.$(pkg_dist $ver $dver)
             osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
             if [ $? -eq 1 ]; then
