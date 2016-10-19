@@ -119,11 +119,12 @@ do
             shift
             ;;
         -d|--data)
-            if [[ $original_cmd != "2-create-release" ]]; then
+            if [[ $original_cmd =~ .*2-create-release ]]; then
+                DATA=1
+                shift
+            else
                 usage
                 die "unknown option: $1"
-            else
-                $DATA=1
             fi
             ;;
         -*)
