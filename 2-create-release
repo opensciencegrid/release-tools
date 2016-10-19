@@ -54,8 +54,11 @@ for ver in ${versions[@]}; do
         done
 
         # Write release notes
-        awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' move-to-$branch$data_rel-release-$dver > $branch$data_rel-release-note-packages-$dver
-        xargs --arg-file move-to-$branch$data_rel-release-$dver osg-koji buildinfo | fgrep "/mnt" | xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | sort -u > $branch$data_rel-release-note-rpms-$dver
+        awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' \
+            move-to-$branch$data_rel-release-$dver > $branch$data_rel-release-note-packages-$dver
+        xargs --arg-file move-to-$branch$data_rel-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
+            xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | \
+            sort -u > $branch$data_rel-release-note-rpms-$dver
 
         # Update info
         run_cmd "cp move-to-$branch$data_rel-release-$dver $ver-updated-$branch$data_rel-$dver.txt"
