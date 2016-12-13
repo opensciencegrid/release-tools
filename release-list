@@ -32,3 +32,15 @@ rsv-3.14.0-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
+
+RPMs slated for release in osg-upcoming-el6-release
+frontier-squid-3.5.22-2.1.osgup.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
+
+RPMs slated for release in osg-upcoming-el7-release
+frontier-squid-3.5.22-2.1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
