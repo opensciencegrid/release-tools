@@ -6,10 +6,9 @@ die () {
 }
 
 usage () {
-    script_name=`basename $original_cmd`
     echo "usage: $script_name [options] <VERSION 1> [<VERSION 2>...<VERSION N>]"
     echo "Options:"
-    if [[ $script_name == "2-create-release" ]]; then
+    if [[ $script_name == "2-create-release" ]] || [[ $script_name == "0-generate-pkg-list" ]]; then
         echo -e "\t-d, --data\tPerform a data-only release"
     fi
     echo -e "\t-n, --dry-run\tPrint the commands that would be run"
@@ -66,13 +65,13 @@ check_file_transfer_rc () {
     # Exit script if files fail to copy over so we can use the rescue file
     # mechanism to resend the files
     if [ $1 -ne 0 ]; then
-        echo -e "\033[1;31mFailed to copy release notes to AFS. Re-run $original_cmd\033[0m"
+        echo -e "\033[1;31mFailed to copy release notes to AFS. Re-run $script_name\033[0m"
         exit 1
     fi
 }
 
 detect_rescue_file () {
-    rescue_file=`pwd`/$original_cmd.rescue
+    rescue_file=`pwd`/$script_name.rescue
     [ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" \
             || touch $rescue_file
 }
@@ -100,7 +99,7 @@ pkg_dist () {
 DRY_RUN=0
 DATA=0
 versions=()
-original_cmd=$0
+script_name=$(basename $0)
 
 if [ $# -lt 1 ]; then
     usage
@@ -119,7 +118,7 @@ do
             shift
             ;;
         -d|--data)
-            if [[ $original_cmd =~ .*2-create-release ]]; then
+            if [[ $script_name == "2-create-release" ]] || [[ $script_name == "0-generate-pkg-list" ]]; then
                 DATA=1
                 shift
             else
