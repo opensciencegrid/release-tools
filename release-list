@@ -4,55 +4,17 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-release
-blahp-1.18.28.bosco-2.osg33.el6
-condor-8.4.10-1.osg33.el6
-globus-ftp-control-7.7-1.osg33.el6
-globus-gridftp-server-11.8-1.1.osg33.el6
-gratia-probe-1.17.2-1.osg33.el6
-gridftp-hdfs-0.5.4-25.5.osg33.el6
-osg-ce-3.3-10.osg33.el6
-osg-configure-1.5.4-1.osg33.el6
-osg-test-1.10.0-1.osg33.el6
-osg-version-3.3.20-1.osg33.el6
-voms-2.0.14-1.2.osg33.el6
-xrootd-4.5.0-2.osg33.el6
-zookeeper-3.4.3+15-1.cdh4.0.1.p0.4.osg33.el6
+igtf-ca-certs-1.79-1.osg33.el6
+osg-ca-certs-1.59-1.osg33.el6
+vo-client-70-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-release
-blahp-1.18.28.bosco-2.osg33.el7
-condor-8.4.10-1.osg33.el7
-globus-ftp-control-7.7-1.osg33.el7
-globus-gridftp-server-11.8-1.1.osg33.el7
-gratia-probe-1.17.2-1.osg33.el7
-gridftp-hdfs-0.5.4-25.5.osg33.el7
-osg-ce-3.3-10.osg33.el7
-osg-configure-1.5.4-1.osg33.el7
-osg-test-1.10.0-1.osg33.el7
-osg-version-3.3.20-1.osg33.el7
-voms-2.0.14-1.2.osg33.el7
-xrootd-4.5.0-2.osg33.el7
-zookeeper-3.4.3+15-1.cdh4.0.1.p0.4.osg33.el7
+igtf-ca-certs-1.79-1.osg33.el7
+osg-ca-certs-1.59-1.osg33.el7
+vo-client-70-1.osg33.el7
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development
-
-RPMs slated for release in osg-upcoming-el6-release
-blahp-1.18.28.bosco-2.osgup.el6
-condor-8.5.8-1.osgup.el6
-frontier-squid-3.5.23-3.1.osgup.el6
-singularity-2.2-1.osgup.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
-
-RPMs slated for release in osg-upcoming-el7-release
-blahp-1.18.28.bosco-2.osgup.el7
-condor-8.5.8-1.osgup.el7
-frontier-squid-3.5.23-3.1.osgup.el7
-singularity-2.2-1.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
+No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
