@@ -24,17 +24,14 @@ for ver in ${versions[@]}; do
         prerelease_repo=osg-$branch-$dver-prerelease
         release_repo=osg-$branch-$dver-release
 
-        # Write data-specific release notes
-        [ $DATA -eq 1 ] && data_rel=-data
-
         # Push from pre-release to release
         print_header "Unlocking $release_repo"
         run_cmd "osg-koji edit-tag --unlock $release_repo"
         echo
 
         print_header "Moving packages from $prerelease_repo to $release_repo"
-        run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch$data_rel-release-$dver"
-        run_cmd "xargs --arg-file move-to-$branch$data_rel-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
+        run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch-release-$dver"
+        run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
         echo
 
         if [ $DATA -eq 0 ]; then
@@ -43,6 +40,8 @@ for ver in ${versions[@]}; do
             print_header "Cloning $release_repo to $versioned_release_repo"
             run_cmd "osg-koji clone-tag $release_repo $versioned_release_repo"
             echo
+        else
+            data_rel=-$DATA # for writing data-specific release notes
         fi
 
         # Lock repos (data-only releases leave the versioned repos untouched
@@ -55,15 +54,15 @@ for ver in ${versions[@]}; do
 
         # Write release notes
         awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' \
-            move-to-$branch$data_rel-release-$dver > $branch$data_rel-release-note-packages-$dver
-        xargs --arg-file move-to-$branch$data_rel-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
+            move-to-$branch-release-$dver > $branch-release-note-packages-$dver
+        xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
             xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | \
-            sort -u > $branch$data_rel-release-note-rpms-$dver
+            sort -u > $branch-release-note-rpms-$dver
 
         # Update info
-        run_cmd "cp move-to-$branch$data_rel-release-$dver $ver-updated-$branch$data_rel-$dver.txt"
-        run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $ver-packages-$branch$data_rel-$dver.txt"
-        run_cmd "xargs --arg-file $ver-packages-$branch$data_rel-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $ver-rpms-$branch$data_rel-$dver.txt"
+        run_cmd "cp move-to-$branch-release-$dver $ver$data_rel-updated-$branch$-$dver.txt"
+        run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $ver$data_rel-packages-$branch-$dver.txt"
+        run_cmd "xargs --arg-file $ver$data_rel-packages-$branch-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $ver$data_rel-rpms-$branch$data_rel-$dver.txt"
         echo
     done
 
@@ -71,7 +70,7 @@ for ver in ${versions[@]}; do
     if [[ $branch =~ .*upcoming.* ]]; then
         list-package-updates -u $ver > $branch-release-note-rpm-updates
     else
-        list-package-updates $ver > $branch$data_rel-release-note-rpm-updates
+        list-package-updates $ver > $branch-release-note-rpm-updates
     fi
 done
 
