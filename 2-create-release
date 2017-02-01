@@ -42,6 +42,7 @@ for ver in ${versions[@]}; do
             echo
         else
             data_rel=-$DATA # for writing data-specific release notes
+            data_option="--since " # option for list-package-updates for data releases
         fi
 
         # Lock repos (data-only releases leave the versioned repos untouched
@@ -70,7 +71,7 @@ for ver in ${versions[@]}; do
     if [[ $branch =~ .*upcoming.* ]]; then
         list-package-updates -u $ver > $branch-release-note-rpm-updates
     else
-        list-package-updates $ver > $branch-release-note-rpm-updates
+        list-package-updates $data_option$ver > $branch-release-note-rpm-updates
     fi
 done
 
