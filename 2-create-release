@@ -30,7 +30,7 @@ for ver in ${versions[@]}; do
         echo
 
         print_header "Moving packages from $prerelease_repo to $release_repo"
-        run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch-release-$dver"
+        pkgs_to_release $branch $dver > move-to-$branch-release-$dver
         run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
         echo
 
