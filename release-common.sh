@@ -8,11 +8,9 @@ die () {
 usage () {
     echo "usage: $script_name [options] <VERSION 1> [<VERSION 2>...<VERSION N>]"
     echo "Options:"
-    if [[ $script_name == "2-create-release" ]] || [[ $script_name == "0-generate-pkg-list" ]]; then
-        echo -e "\t-d, --data\tPerform a data-only release"
-    fi
-    echo -e "\t-n, --dry-run\tPrint the commands that would be run"
-    echo -e "\t-h, --help\tPrint this message"
+    echo -e "\t-d REVISION, --data REVISION\tSpecify the REVISION of the data-only release"
+    echo -e "\t-n, --dry-run\t\t\tPrint the commands that would be run"
+    echo -e "\t-h, --help\t\t\tPrint this message"
 }
 
 print_header () {
@@ -118,13 +116,12 @@ do
             shift
             ;;
         -d|--data)
-            if [[ $script_name == "2-create-release" ]] || [[ $script_name == "0-generate-pkg-list" ]]; then
-                DATA=1
-                shift
-            else
-                usage
-                die "unknown option: $1"
+            shift
+            DATA=$1
+            if ! [[ $DATA =~ ^[2-9]$ ]]; then
+                die "Unexpected revision number: $DATA"
             fi
+            shift
             ;;
         -*)
             usage
