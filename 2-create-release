@@ -30,7 +30,7 @@ for ver in ${versions[@]}; do
         echo
 
         print_header "Moving packages from $prerelease_repo to $release_repo"
-        run_cmd "osg-koji list-tagged --quiet $prerelease_repo | awk '{print \$1}' > move-to-$branch-release-$dver"
+        pkgs_to_release $branch $dver > move-to-$branch-release-$dver
         run_cmd "xargs --arg-file move-to-$branch-release-$dver osg-koji move-pkg $prerelease_repo $release_repo"
         echo
 
@@ -42,6 +42,7 @@ for ver in ${versions[@]}; do
             echo
         else
             data_rel=-$DATA # for writing data-specific release notes
+            data_option="--since " # option for list-package-updates for data releases
         fi
 
         # Lock repos (data-only releases leave the versioned repos untouched
@@ -70,7 +71,7 @@ for ver in ${versions[@]}; do
     if [[ $branch =~ .*upcoming.* ]]; then
         list-package-updates -u $ver > $branch-release-note-rpm-updates
     else
-        list-package-updates $ver > $branch-release-note-rpm-updates
+        list-package-updates $data_option$ver > $branch-release-note-rpm-updates
     fi
 done
 
