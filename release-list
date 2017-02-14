@@ -17,7 +17,9 @@ osg-version-3.3.21-1.osg33.el6
 rsv-perfsonar-1.2.1-1.osg33.el6
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
+Package  osg-3.3-el6-testing  osg-3.3-el6-development
+-------  -------------------  -----------------------
+cvmfs    2.3.2-1.1            2.3.3-1
 
 RPMs slated for release in osg-3.3-el7-release
 condor-8.4.11-1.osg33.el7
@@ -32,4 +34,18 @@ osg-update-vos-1.3.0-1.osg33.el7
 osg-version-3.3.21-1.osg33.el7
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
+Package  osg-3.3-el7-testing  osg-3.3-el7-development
+-------  -------------------  -----------------------
+cvmfs    2.3.2-1.1            2.3.3-1
+
+RPMs slated for release in osg-upcoming-el6-release
+singularity-2.2.1-1.osgup.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
+
+RPMs slated for release in osg-upcoming-el7-release
+singularity-2.2.1-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
