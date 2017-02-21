@@ -61,7 +61,7 @@ for ver in ${versions[@]}; do
             sort -u > $branch-release-note-rpms-$dver
 
         # Update info
-        run_cmd "cp move-to-$branch-release-$dver $ver$data_rel-updated-$branch$-$dver.txt"
+        run_cmd "cp move-to-$branch-release-$dver $ver$data_rel-updated-$branch-$dver.txt"
         run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $ver$data_rel-packages-$branch-$dver.txt"
         run_cmd "xargs --arg-file $ver$data_rel-packages-$branch-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $ver$data_rel-rpms-$branch$data_rel-$dver.txt"
         echo
