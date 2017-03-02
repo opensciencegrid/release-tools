@@ -4,15 +4,17 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-release
-igtf-ca-certs-1.80-1.osg33.el6
-osg-ca-certs-1.60-1.osg33.el6
+igtf-ca-certs-1.81-1.osg33.el6
+osg-ca-certs-1.61-1.osg33.el6
+vo-client-71-4.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-release
-igtf-ca-certs-1.80-1.osg33.el7
-osg-ca-certs-1.60-1.osg33.el7
+igtf-ca-certs-1.81-1.osg33.el7
+osg-ca-certs-1.61-1.osg33.el7
+vo-client-71-4.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
