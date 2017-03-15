@@ -5,6 +5,9 @@
 . release-common.sh
 detect_rescue_file
 
+# drop upcoming from versions since they don't get their own tarballs
+versions=(${versions[@]/upcoming/})
+
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
