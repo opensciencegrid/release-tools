@@ -3,6 +3,15 @@
 # Compare the list of packages in pre-release for against the release
 # list put together by the OSG Release Coordinator
 
+# make sure osg-koji is available before starting
+command -v osg-koji 2>&1 >/dev/null
+if [[ $? -ne 0 ]];
+then
+    echo "osg-koji not in PATH"
+    exit 1
+fi
+
+
 . release-common.sh
 
 if [[ `git log -1 --format=%cd --date=relative release-list | xargs -I {} date -d {} +%s` \

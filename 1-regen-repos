@@ -2,6 +2,14 @@
 
 # Solves 404 error messages when retrieving packages for building the tarballs
 
+# make sure osg-koji is available before starting
+command -v osg-koji 2>&1 >/dev/null
+if [[ $? -ne 0 ]];
+then
+    echo "osg-koji not in PATH"
+    exit 1
+fi
+
 . release-common.sh
 detect_rescue_file
 
