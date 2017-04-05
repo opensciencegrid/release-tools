@@ -46,6 +46,7 @@ run_cmd () {
     cmd=$1
     if [[ $DRY_RUN -eq 1 ]]; then
         echo "$cmd"
+        echo "$cmd" >> $rescue_file
     else
         grep -F "$cmd" $rescue_file > /dev/null 2>&1
         if [[ $? -ne 0 ]]; then
