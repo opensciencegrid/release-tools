@@ -54,7 +54,7 @@ for ver in ${versions[@]}; do
         done
 
         # Write release notes
-        awk '{ print "   * [[https://koji-hub.batlab.org/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' \
+        awk '{ print "   * [[https://koji.chtc.wisc.edu/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' \
             move-to-$branch-release-$dver > $branch-release-note-packages-$dver
         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
             xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | \
