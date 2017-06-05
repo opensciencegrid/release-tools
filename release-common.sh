@@ -25,15 +25,13 @@ osg_release () {
 osg_dvers () {
     osgversion=$1
     branch=$(osg_release $osgversion)
-    if [[ $branch == '3.2' ]]; then
-        echo el5 el6
-    elif [[ $branch == '3.3' || $branch == 'upcoming' ]]; then
+    if [[ $branch == '3.3' || $branch == '3.4' || $branch == 'upcoming' ]]; then
         echo el6 el7
     fi
 }
 
 is_rel_ver () {
-    grep -E '^3\.[2-3]+\.[0-9]+$' <<< $1 > /dev/null 2>&1
+    grep -E '^3\.[3-4]+\.[0-9]+$' <<< $1 > /dev/null 2>&1
     echo $?
 }
 
