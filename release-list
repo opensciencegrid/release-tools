@@ -4,17 +4,194 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-release
-vo-client-73-1.osg33.el6
+emi-trustmanager-tomcat-3.0.0-15.osg33.el6
+glideinwms-3.2.19-1.osg33.el6
+globus-xio-5.12-1.2.osg33.el6
+htcondor-ce-2.2.0-1.osg33.el6
+osg-build-1.10.0-1.osg33.el6
+osg-ca-scripts-1.1.6-1.osg33.el6
+osg-ce-3.3-13.osg33.el6
+osg-configure-1.8.1-2.osg33.el6
+osg-gridftp-3.3-4.osg33.el6
+osg-update-vos-1.4.0-1.osg33.el6
+osg-version-3.3.25-1.osg33.el6
+voms-admin-server-2.7.0-1.22.osg33.el6
+xrootd-4.6.1-1.osg33.el6
 
 Slated packages in testing behind current development versions
-Package  osg-3.3-el6-testing  osg-3.3-el6-development
--------  -------------------  -----------------------
-xrootd   4.6.0-1              4.6.1-1
+Package      osg-3.3-el6-testing  osg-3.3-el6-development
+-----------  -------------------  -----------------------
+osg-gridftp  3.3-4                3.3-5
 
 RPMs slated for release in osg-3.3-el7-release
-vo-client-73-1.osg33.el7
+emi-trustmanager-tomcat-3.0.0-15.osg33.el7
+glideinwms-3.2.19-1.osg33.el7
+globus-xio-5.12-1.2.osg33.el7
+htcondor-ce-2.2.0-1.osg33.el7
+osg-build-1.10.0-1.osg33.el7
+osg-ca-scripts-1.1.6-1.osg33.el7
+osg-ce-3.3-13.osg33.el7
+osg-configure-1.8.1-2.osg33.el7
+osg-gridftp-3.3-4.osg33.el7
+osg-update-vos-1.4.0-1.osg33.el7
+osg-version-3.3.25-1.osg33.el7
+stashcache-0.7-2.osg33.el7
+xrootd-4.6.1-1.osg33.el7
+xrootd-lcmaps-1.3.3-3.osg33.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.3-el7-testing  osg-3.3-el7-development
--------  -------------------  -----------------------
-xrootd   4.6.0-1              4.6.1-1
+Package      osg-3.3-el7-testing  osg-3.3-el7-development
+-----------  -------------------  -----------------------
+osg-gridftp  3.3-4                3.3-5
+
+RPMs slated for release in osg-3.4-el6-release
+autopyfactory-2.4.6-4.osg34.el6
+blahp-1.18.29.bosco-3.osg34.el6
+bwctl-1.4-7.osg34.el6
+cctools-4.4.3-1.osg34.el6
+condor-8.6.3-1.1.osg34.el6
+condor-cron-1.1.1-2.osg34.el6
+cvmfs-2.3.5-1.osg34.el6
+cvmfs-config-osg-2.0-2.osg34.el6
+cvmfs-x509-helper-1.0-1.osg34.el6
+frontier-squid-3.5.24-3.1.osg34.el6
+glideinwms-3.2.19-2.osg34.el6
+glite-build-common-cpp-3.3.0.2-1.osg34.el6
+glite-ce-cream-client-api-c-1.15.4-2.3.osg34.el6
+glite-ce-wsdl-1.15.1-1.1.osg34.el6
+glite-lbjp-common-gsoap-plugin-3.2.12-1.1.osg34.el6
+globus-ftp-client-8.29-1.1.osg34.el6
+globus-gridftp-osg-extensions-0.3-2.osg34.el6
+globus-gridftp-server-11.8-1.1.osg34.el6
+globus-gridftp-server-control-4.1-1.3.osg34.el6
+gratia-probe-1.17.5-1.osg34.el6
+gsi-openssh-7.1p2f-1.2.osg34.el6
+htcondor-ce-2.2.0-1.osg34.el6
+igtf-ca-certs-1.82-1.osg34.el6
+javascriptrrd-1.1.1-1.osg34.el6
+koji-1.11.0-1.5.osg34.el6
+lcas-lcmaps-gt4-interface-0.3.1-1.2.osg34.el6
+lcmaps-1.6.6-1.6.osg34.el6
+lcmaps-plugins-basic-1.7.0-2.osg34.el6
+lcmaps-plugins-scas-client-0.5.6-1.osg34.el6
+lcmaps-plugins-verify-proxy-1.5.9-1.1.osg34.el6
+lcmaps-plugins-voms-1.7.1-1.2.osg34.el6
+llrun-0.1.3-1.3.osg34.el6
+mash-0.5.22-3.osg34.el6
+myproxy-6.1.18-1.4.osg34.el6
+nuttcp-6.1.2-1.osg34.el6
+osg-build-1.10.0-1.osg34.el6
+osg-ca-certs-1.62-1.osg34.el6
+osg-ca-certs-updater-1.4-1.osg34.el6
+osg-ca-generator-1.2.0-1.osg34.el6
+osg-ca-scripts-1.1.6-1.osg34.el6
+osg-ce-3.4-2.osg34.el6
+osg-configure-2.0.0-3.osg34.el6
+osg-control-1.1.0-1.osg34.el6
+osg-gridftp-3.4-2.osg34.el6
+osg-gridftp-xrootd-3.4-1.osg34.el6
+osg-oasis-7-9.osg34.el6
+osg-pki-tools-1.2.20-1.osg34.el6
+osg-system-profiler-1.4.0-1.osg34.el6
+osg-test-1.10.1-1.osg34.el6
+osg-tested-internal-3.4-2.osg34.el6
+osg-update-vos-1.4.0-1.osg34.el6
+osg-version-3.4.0-1.osg34.el6
+osg-vo-map-0.0.2-1.osg34.el6
+osg-wn-client-3.4-1.osg34.el6
+owamp-3.2rc4-2.osg34.el6
+pegasus-4.7.4-1.1.osg34.el6
+rsv-3.14.0-2.osg34.el6
+rsv-gwms-tester-1.1.2-1.osg34.el6
+uberftp-2.8-2.1.osg34.el6
+vo-client-73-1.osg34.el6
+voms-2.0.14-1.3.osg34.el6
+xacml-1.5.0-1.osg34.el6
+xrootd-4.6.1-1.osg34.el6
+xrootd-dsi-3.0.4-22.osg34.el6
+xrootd-lcmaps-1.2.1-2.osg34.el6
+xrootd-voms-plugin-0.4.0-1.osg34.el6
+
+Slated packages in testing behind current development versions
+Package        osg-3.4-el6-testing  osg-3.4-el6-development
+-------------  -------------------  -----------------------
+cvmfs          2.3.5-1              2.3.5-1.1
+igtf-ca-certs  1.82-1               1.83-1
+osg-ca-certs   1.62-1               1.63-1
+
+RPMs slated for release in osg-3.4-el7-release
+autopyfactory-2.4.6-4.osg34.el7
+blahp-1.18.29.bosco-3.osg34.el7
+bwctl-1.4-7.osg34.el7
+cctools-4.4.3-1.osg34.el7
+condor-8.6.3-1.1.osg34.el7
+condor-cron-1.1.1-2.osg34.el7
+cvmfs-2.3.5-1.osg34.el7
+cvmfs-config-osg-2.0-2.osg34.el7
+cvmfs-x509-helper-1.0-1.osg34.el7
+frontier-squid-3.5.24-3.1.osg34.el7
+glideinwms-3.2.19-2.osg34.el7
+glite-build-common-cpp-3.3.0.2-1.osg34.el7
+glite-ce-cream-client-api-c-1.15.4-2.3.osg34.el7
+glite-ce-wsdl-1.15.1-1.1.osg34.el7
+glite-lbjp-common-gsoap-plugin-3.2.12-1.1.osg34.el7
+globus-ftp-client-8.29-1.1.osg34.el7
+globus-gridftp-osg-extensions-0.3-2.osg34.el7
+globus-gridftp-server-11.8-1.1.osg34.el7
+globus-gridftp-server-control-4.1-1.3.osg34.el7
+gratia-probe-1.17.5-1.osg34.el7
+gsi-openssh-7.1p2f-1.2.osg34.el7
+htcondor-ce-2.2.0-1.osg34.el7
+igtf-ca-certs-1.82-1.osg34.el7
+javascriptrrd-1.1.1-1.osg34.el7
+koji-1.11.0-1.5.osg34.el7
+lcas-lcmaps-gt4-interface-0.3.1-1.2.osg34.el7
+lcmaps-1.6.6-1.6.osg34.el7
+lcmaps-plugins-basic-1.7.0-2.osg34.el7
+lcmaps-plugins-scas-client-0.5.6-1.osg34.el7
+lcmaps-plugins-verify-proxy-1.5.9-1.1.osg34.el7
+lcmaps-plugins-voms-1.7.1-1.2.osg34.el7
+llrun-0.1.3-1.3.osg34.el7
+mash-0.5.22-3.osg34.el7
+myproxy-6.1.18-1.4.osg34.el7
+nuttcp-6.1.2-1.osg34.el7
+osg-build-1.10.0-1.osg34.el7
+osg-ca-certs-1.62-1.osg34.el7
+osg-ca-certs-updater-1.4-1.osg34.el7
+osg-ca-generator-1.2.0-1.osg34.el7
+osg-ca-scripts-1.1.6-1.osg34.el7
+osg-ce-3.4-2.osg34.el7
+osg-configure-2.0.0-3.osg34.el7
+osg-control-1.1.0-1.osg34.el7
+osg-gridftp-3.4-2.osg34.el7
+osg-gridftp-xrootd-3.4-1.osg34.el7
+osg-oasis-7-9.osg34.el7
+osg-pki-tools-1.2.20-1.osg34.el7
+osg-system-profiler-1.4.0-1.osg34.el7
+osg-test-1.10.1-1.osg34.el7
+osg-tested-internal-3.4-2.osg34.el7
+osg-update-vos-1.4.0-1.osg34.el7
+osg-version-3.4.0-1.osg34.el7
+osg-vo-map-0.0.2-1.osg34.el7
+osg-wn-client-3.4-1.osg34.el7
+owamp-3.2rc4-2.osg34.el7
+pegasus-4.7.4-1.1.osg34.el7
+rsv-3.14.0-2.osg34.el7
+rsv-gwms-tester-1.1.2-1.osg34.el7
+stashcache-0.7-2.osg34.el7
+uberftp-2.8-2.1.osg34.el7
+vo-client-73-1.osg34.el7
+voms-2.0.14-1.3.osg34.el7
+xacml-1.5.0-1.osg34.el7
+xrootd-4.6.1-1.osg34.el7
+xrootd-dsi-3.0.4-22.osg34.el7
+xrootd-lcmaps-1.3.3-3.osg34.el7
+xrootd-voms-plugin-0.4.0-1.osg34.el7
+
+Slated packages in testing behind current development versions
+Package        osg-3.4-el7-testing  osg-3.4-el7-development
+-------------  -------------------  -----------------------
+cvmfs          2.3.5-1              2.3.5-1.1
+igtf-ca-certs  1.82-1               1.83-1
+osg-ca-certs   1.62-1               1.63-1
+
