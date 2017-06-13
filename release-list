@@ -8,6 +8,7 @@ emi-trustmanager-tomcat-3.0.0-15.osg33.el6
 glideinwms-3.2.19-1.osg33.el6
 globus-xio-5.12-1.2.osg33.el6
 htcondor-ce-2.2.0-1.osg33.el6
+lcmaps-plugins-voms-1.7.1-1.4.osg33.el6
 osg-build-1.10.0-1.osg33.el6
 osg-ca-scripts-1.1.6-1.osg33.el6
 osg-ce-3.3-13.osg33.el6
@@ -28,6 +29,7 @@ emi-trustmanager-tomcat-3.0.0-15.osg33.el7
 glideinwms-3.2.19-1.osg33.el7
 globus-xio-5.12-1.2.osg33.el7
 htcondor-ce-2.2.0-1.osg33.el7
+lcmaps-plugins-voms-1.7.1-1.4.osg33.el7
 osg-build-1.10.0-1.osg33.el7
 osg-ca-scripts-1.1.6-1.osg33.el7
 osg-ce-3.3-13.osg33.el7
@@ -75,7 +77,7 @@ lcmaps-1.6.6-1.6.osg34.el6
 lcmaps-plugins-basic-1.7.0-2.osg34.el6
 lcmaps-plugins-scas-client-0.5.6-1.osg34.el6
 lcmaps-plugins-verify-proxy-1.5.9-1.1.osg34.el6
-lcmaps-plugins-voms-1.7.1-1.2.osg34.el6
+lcmaps-plugins-voms-1.7.1-1.4.osg34.el6
 llrun-0.1.3-1.3.osg34.el6
 mash-0.5.22-3.osg34.el6
 myproxy-6.1.18-1.4.osg34.el6
@@ -150,7 +152,7 @@ lcmaps-1.6.6-1.6.osg34.el7
 lcmaps-plugins-basic-1.7.0-2.osg34.el7
 lcmaps-plugins-scas-client-0.5.6-1.osg34.el7
 lcmaps-plugins-verify-proxy-1.5.9-1.1.osg34.el7
-lcmaps-plugins-voms-1.7.1-1.2.osg34.el7
+lcmaps-plugins-voms-1.7.1-1.4.osg34.el7
 llrun-0.1.3-1.3.osg34.el7
 mash-0.5.22-3.osg34.el7
 myproxy-6.1.18-1.4.osg34.el7
