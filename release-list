@@ -3,7 +3,7 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.3-el6-release
+RPMs slated for release in osg-3.3-el6-testing
 emi-trustmanager-tomcat-3.0.0-15.osg33.el6
 glideinwms-3.2.19-1.osg33.el6
 globus-xio-5.12-1.2.osg33.el6
@@ -24,7 +24,7 @@ Package      osg-3.3-el6-testing  osg-3.3-el6-development
 -----------  -------------------  -----------------------
 osg-gridftp  3.3-4                3.3-5
 
-RPMs slated for release in osg-3.3-el7-release
+RPMs slated for release in osg-3.3-el7-testing
 emi-trustmanager-tomcat-3.0.0-15.osg33.el7
 glideinwms-3.2.19-1.osg33.el7
 globus-xio-5.12-1.2.osg33.el7
@@ -46,7 +46,7 @@ Package      osg-3.3-el7-testing  osg-3.3-el7-development
 -----------  -------------------  -----------------------
 osg-gridftp  3.3-4                3.3-5
 
-RPMs slated for release in osg-3.4-el6-release
+RPMs slated for release in osg-3.4-el6-testing
 autopyfactory-2.4.6-4.osg34.el6
 blahp-1.18.29.bosco-3.osg34.el6
 bwctl-1.4-7.osg34.el6
@@ -121,7 +121,7 @@ cvmfs          2.3.5-1              2.3.5-1.1
 igtf-ca-certs  1.82-1               1.83-1
 osg-ca-certs   1.62-1               1.63-1
 
-RPMs slated for release in osg-3.4-el7-release
+RPMs slated for release in osg-3.4-el7-testing
 autopyfactory-2.4.6-4.osg34.el7
 blahp-1.18.29.bosco-3.osg34.el7
 bwctl-1.4-7.osg34.el7
