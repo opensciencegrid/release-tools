@@ -29,7 +29,11 @@ for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     print_header "Generating $branch tarballs"
     run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --all --prerelease"
-    for arch in i386 x86_64; do
+    archs="x86_64"
+    if [[ $branch < "3.4" ]]; then
+        archs="i386 $archs"
+    fi
+    for arch in $archs; do
         tarball_dir="tarballs/$branch/$arch"
         run_cmd "mkdir -p $tarball_dir"
         run_cmd "mv osg*client-$branch*$arch*.tar.gz $tarball_dir"
