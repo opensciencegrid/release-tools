@@ -54,8 +54,12 @@ for ver in ${versions[@]}; do
         done
 
         # Write release notes
-        awk '{ print "   * [[https://koji.chtc.wisc.edu/koji/search?match=glob&type=build&terms=" $1 "][" $1 "]]"}' \
-            move-to-$branch-release-$dver > $branch-release-note-packages-$dver
+        cp /dev/null $branch-release-note-packages-$dver
+        for package in $(<move-to-$branch-release-$dver); do
+            uri_package=${package//+/%2B}
+            echo "   * [[https://koji.chtc.wisc.edu/koji/search?match=glob&type=build&terms=$uri_package][$package]]" \
+                >> $branch-release-note-packages-$dver
+        done
         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
             xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | \
             sort -u > $branch-release-note-rpms-$dver
