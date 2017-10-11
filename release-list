@@ -4,72 +4,33 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-testing
-globus-gridftp-server-control-5.2-1.1.osg33.el6
-gsi-openssh-7.3p1c-1.1.osg33.el6
-osg-build-1.10.2-1.osg33.el6
-osg-ca-scripts-1.1.7-2.osg33.el6
-osg-configure-1.10.1-1.osg33.el6
-osg-release-3.3-6.osg33.el6
-osg-release-itb-3.3-6.osg33.el6
-osg-version-3.3.29-1.osg33.el6
-voms-admin-server-2.7.0-1.23.osg33.el6
+igtf-ca-certs-1.86-1.osg33.el6
+osg-ca-certs-1.66-1.osg33.el6
+vo-client-75-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-testing
-globus-gridftp-server-control-5.2-1.1.osg33.el7
-gsi-openssh-7.3p1c-1.1.osg33.el7
-osg-build-1.10.2-1.osg33.el7
-osg-ca-scripts-1.1.7-2.osg33.el7
-osg-configure-1.10.1-1.osg33.el7
-osg-release-3.3-6.osg33.el7
-osg-release-itb-3.3-6.osg33.el7
-osg-version-3.3.29-1.osg33.el7
+igtf-ca-certs-1.86-1.osg33.el7
+osg-ca-certs-1.66-1.osg33.el7
+vo-client-75-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-3.4-el6-testing
-condor-8.6.6-1.osg34.el6
-globus-gridftp-server-control-5.2-1.1.osg34.el6
-gsi-openssh-7.3p1c-1.1.osg34.el6
-osg-build-1.10.2-1.osg34.el6
-osg-ca-scripts-1.1.7-2.osg34.el6
-osg-configure-2.2.1-1.osg34.el6
-osg-release-3.4-2.osg34.el6
-osg-release-itb-3.4-2.osg34.el6
-osg-tested-internal-3.4-5.osg34.el6
-osg-version-3.4.4-1.osg34.el6
-singularity-2.3.2-0.1.1.osg34.el6
+igtf-ca-certs-1.86-1.osg34.el6
+osg-ca-certs-1.66-1.osg34.el6
+vo-client-75-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-condor-8.6.6-1.osg34.el7
-globus-gridftp-server-control-5.2-1.1.osg34.el7
-gsi-openssh-7.3p1c-1.1.osg34.el7
-osg-build-1.10.2-1.osg34.el7
-osg-ca-scripts-1.1.7-2.osg34.el7
-osg-configure-2.2.1-1.osg34.el7
-osg-release-3.4-2.osg34.el7
-osg-release-itb-3.4-2.osg34.el7
-osg-tested-internal-3.4-5.osg34.el7
-osg-version-3.4.4-1.osg34.el7
-singularity-2.3.2-0.1.1.osg34.el7
+igtf-ca-certs-1.86-1.osg34.el7
+osg-ca-certs-1.66-1.osg34.el7
+vo-client-75-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
-
-RPMs slated for release in osg-upcoming-el6-testing
-condor-8.7.3-1.osgup.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-condor-8.7.3-1.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
