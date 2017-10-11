@@ -57,7 +57,7 @@ for ver in ${versions[@]}; do
         cp /dev/null $branch-release-note-packages-$dver
         for package in $(<move-to-$branch-release-$dver); do
             uri_package=${package//+/%2B}
-            echo "   * [[https://koji.chtc.wisc.edu/koji/search?match=glob&type=build&terms=$uri_package][$package]]" \
+            echo "-   [$package](https://koji.chtc.wisc.edu/koji/search?match=glob&type=build&terms=$uri_package)" \
                 >> $branch-release-note-packages-$dver
         done
         xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
