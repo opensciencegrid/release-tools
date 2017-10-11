@@ -30,13 +30,12 @@ tag_diff () {
   fgrep -vxf <(list_tag "$1") <(list_tag "$2") || :
 }
 
-pre_wrap () {
-  echo '<pre>'
+indent () {
+  echo -n '    '
   xargs
-  echo '</pre>'
 }
 
-FILTER=pre_wrap
+FILTER=indent
 SERIES=
 SINCE=
 while [[ $1 = -* ]]; do
