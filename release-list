@@ -4,33 +4,29 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-testing
-igtf-ca-certs-1.86-1.osg33.el6
-osg-ca-certs-1.66-1.osg33.el6
-vo-client-75-1.osg33.el6
+igtf-ca-certs-1.87-1.osg33.el6
+osg-ca-certs-1.67-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-testing
-igtf-ca-certs-1.86-1.osg33.el7
-osg-ca-certs-1.66-1.osg33.el7
-vo-client-75-1.osg33.el7
+igtf-ca-certs-1.87-1.osg33.el7
+osg-ca-certs-1.67-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-3.4-el6-testing
-igtf-ca-certs-1.86-1.osg34.el6
-osg-ca-certs-1.66-1.osg34.el6
-vo-client-75-1.osg34.el6
+igtf-ca-certs-1.87-1.osg34.el6
+osg-ca-certs-1.67-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-igtf-ca-certs-1.86-1.osg34.el7
-osg-ca-certs-1.66-1.osg34.el7
-vo-client-75-1.osg34.el7
+igtf-ca-certs-1.87-1.osg34.el7
+osg-ca-certs-1.67-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
