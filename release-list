@@ -4,117 +4,25 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-testing
-blahp-1.18.34.bosco-1.osg33.el6
-condor-8.4.12-2.2.osg33.el6
-cvmfs-2.4.2-1.osg33.el6
-globus-ftp-client-8.36-1.2.osg33.el6
-globus-gridftp-server-12.2-1.2.osg33.el6
-globus-gridftp-server-control-6.0-2.1.osg33.el6
-gratia-probe-1.18.2-2.osg33.el6
-gridftp-hdfs-1.1-1.1.osg33.el6
-gums-1.5.2-13.osg33.el6
-lcmaps-1.6.6-1.8.osg33.el6
-lcmaps-plugins-voms-1.7.1-1.5.osg33.el6
-osg-configure-1.10.2-1.osg33.el6
-osg-oasis-8-2.osg33.el6
-osg-pki-tools-2.0.0-1.osg33.el6
-osg-system-profiler-1.4.1-1.osg33.el6
-osg-test-2.0.0-1.osg33.el6
-osg-tested-internal-3.3-19.osg33.el6
-osg-version-3.3.30-1.osg33.el6
-rsv-3.16.0-1.osg33.el6
-xrootd-4.7.1-1.osg33.el6
+vo-client-76-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-testing
-blahp-1.18.34.bosco-1.osg33.el7
-condor-8.4.12-2.2.osg33.el7
-cvmfs-2.4.2-1.osg33.el7
-globus-ftp-client-8.36-1.2.osg33.el7
-globus-gridftp-server-12.2-1.2.osg33.el7
-globus-gridftp-server-control-6.0-2.1.osg33.el7
-gratia-probe-1.18.2-2.osg33.el7
-gridftp-hdfs-1.1-1.1.osg33.el7
-gums-1.5.2-13.osg33.el7
-lcmaps-1.6.6-1.8.osg33.el7
-lcmaps-plugins-voms-1.7.1-1.5.osg33.el7
-osg-configure-1.10.2-1.osg33.el7
-osg-oasis-8-2.osg33.el7
-osg-pki-tools-2.0.0-1.osg33.el7
-osg-system-profiler-1.4.1-1.osg33.el7
-osg-test-2.0.0-1.osg33.el7
-osg-tested-internal-3.3-19.osg33.el7
-osg-version-3.3.30-1.osg33.el7
-rsv-3.16.0-1.osg33.el7
-xrootd-4.7.1-1.osg33.el7
+vo-client-76-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-3.4-el6-testing
-blahp-1.18.34.bosco-1.osg34.el6
-condor-8.6.8-1.osg34.el6
-cvmfs-2.4.2-1.osg34.el6
-glite-ce-cream-client-api-c-1.15.4-2.4.osg34.el6
-globus-ftp-client-8.36-1.2.osg34.el6
-globus-gridftp-server-12.2-1.2.osg34.el6
-globus-gridftp-server-control-6.0-2.1.osg34.el6
-gratia-probe-1.18.2-2.osg34.el6
-lcmaps-1.6.6-1.8.osg34.el6
-lcmaps-plugins-voms-1.7.1-1.5.osg34.el6
-osg-configure-2.2.2-1.osg34.el6
-osg-oasis-8-2.osg34.el6
-osg-pki-tools-2.0.0-1.osg34.el6
-osg-system-profiler-1.4.1-1.osg34.el6
-osg-test-2.0.0-1.osg34.el6
-osg-version-3.4.5-1.osg34.el6
-rsv-3.16.0-1.osg34.el6
-xrootd-4.7.1-1.osg34.el6
+vo-client-76-1.osg34.el6
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el6-testing  osg-3.4-el6-development
--------  -------------------  -----------------------
-cvmfs    2.4.2-1              2.4.2-1.1
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-blahp-1.18.34.bosco-1.osg34.el7
-condor-8.6.8-1.osg34.el7
-cvmfs-2.4.2-1.osg34.el7
-glite-ce-cream-client-api-c-1.15.4-2.4.osg34.el7
-globus-ftp-client-8.36-1.2.osg34.el7
-globus-gridftp-server-12.2-1.2.osg34.el7
-globus-gridftp-server-control-6.0-2.1.osg34.el7
-gratia-probe-1.18.2-2.osg34.el7
-lcmaps-1.6.6-1.8.osg34.el7
-lcmaps-plugins-voms-1.7.1-1.5.osg34.el7
-osg-configure-2.2.2-1.osg34.el7
-osg-oasis-8-2.osg34.el7
-osg-pki-tools-2.0.0-1.osg34.el7
-osg-system-profiler-1.4.1-1.osg34.el7
-osg-test-2.0.0-1.osg34.el7
-osg-version-3.4.5-1.osg34.el7
-rsv-3.16.0-1.osg34.el7
-xrootd-4.7.1-1.osg34.el7
+vo-client-76-1.osg34.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el7-testing  osg-3.4-el7-development
--------  -------------------  -----------------------
-cvmfs    2.4.2-1              2.4.2-1.1
-
-RPMs slated for release in osg-upcoming-el6-testing
-blahp-1.18.34.bosco-1.osgup.el6
-condor-8.7.5-1.osgup.el6
-glite-ce-cream-client-api-c-1.15.4-2.5.osgup.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-blahp-1.18.34.bosco-1.osgup.el7
-condor-8.7.5-1.osgup.el7
-glite-ce-cream-client-api-c-1.15.4-2.5.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
+No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
