@@ -4,25 +4,33 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-testing
-vo-client-76-1.osg33.el6
+igtf-ca-certs-1.88-1.osg33.el6
+osg-ca-certs-1.68-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-testing
-vo-client-76-1.osg33.el7
+igtf-ca-certs-1.88-1.osg33.el7
+osg-ca-certs-1.68-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-3.4-el6-testing
-vo-client-76-1.osg34.el6
+igtf-ca-certs-1.88-1.osg34.el6
+osg-ca-certs-1.68-1.osg34.el6
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
+Package      osg-3.4-el6-testing  osg-3.4-el6-development
+-----------  -------------------  -----------------------
+singularity  2.4-1.1              2.4.1-1
 
 RPMs slated for release in osg-3.4-el7-testing
-vo-client-76-1.osg34.el7
+igtf-ca-certs-1.88-1.osg34.el7
+osg-ca-certs-1.68-1.osg34.el7
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+Package      osg-3.4-el7-testing  osg-3.4-el7-development
+-----------  -------------------  -----------------------
+singularity  2.4-1.1              2.4.1-1
