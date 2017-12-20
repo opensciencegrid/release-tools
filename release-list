@@ -1,17 +1,62 @@
 RPMs slated for release in osg-3.3-el6-testing
-vo-client-77-1.osg33.el6
+blahp-1.18.35.bosco-1.osg33.el6
+cvmfs-2.4.4-1.osg33.el6
+glideinwms-3.2.20-1.osg33.el6
+gridftp-hdfs-1.1.1-1.1.osg33.el6
+htcondor-ce-2.2.4-1.osg33.el6
+lcmaps-1.6.6-1.9.osg33.el6
+osg-ca-certs-updater-1.7-1.osg33.el6
+osg-ca-scripts-1.2.2-1.osg33.el6
+osg-ce-3.3-14.osg33.el6
+osg-configure-1.10.3-1.osg33.el6
+osg-gridftp-3.3-6.osg33.el6
+osg-oasis-8-5.osg33.el6
+osg-pki-tools-2.1.2-1.osg33.el6
+osg-system-profiler-1.4.2-1.osg33.el6
+osg-version-3.3.31-1.osg33.el6
+osg-wn-client-3.3-8.osg33.el6
+xrootd-4.8.0-1.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-testing
-vo-client-77-1.osg33.el7
+blahp-1.18.35.bosco-1.osg33.el7
+cvmfs-2.4.4-1.osg33.el7
+glideinwms-3.2.20-1.osg33.el7
+gridftp-hdfs-1.1.1-1.1.osg33.el7
+htcondor-ce-2.2.4-1.osg33.el7
+lcmaps-1.6.6-1.9.osg33.el7
+osg-ca-certs-updater-1.7-1.osg33.el7
+osg-ca-scripts-1.2.2-1.osg33.el7
+osg-ce-3.3-14.osg33.el7
+osg-configure-1.10.3-1.osg33.el7
+osg-gridftp-3.3-6.osg33.el7
+osg-oasis-8-5.osg33.el7
+osg-pki-tools-2.1.2-1.osg33.el7
+osg-system-profiler-1.4.2-1.osg33.el7
+osg-version-3.3.31-1.osg33.el7
+osg-wn-client-3.3-8.osg33.el7
+xrootd-4.8.0-1.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-3.4-el6-testing
-vo-client-77-1.osg34.el6
+blahp-1.18.35.bosco-1.osg34.el6
+cvmfs-2.4.4-1.osg34.el6
+glideinwms-3.2.20-1.osg34.el6
+htcondor-ce-3.0.4-1.osg34.el6
+osg-ca-certs-updater-1.7-1.osg34.el6
+osg-ca-scripts-1.2.2-1.osg34.el6
+osg-configure-2.2.3-1.osg34.el6
+osg-gridftp-3.4-4.osg34.el6
+osg-oasis-8-5.osg34.el6
+osg-pki-tools-2.1.2-1.osg34.el6
+osg-system-profiler-1.4.2-1.osg34.el6
+osg-version-3.4.6-1.osg34.el6
+osg-wn-client-3.4-3.osg34.el6
+xrootd-4.8.0-1.osg34.el6
 
 Slated packages in testing behind current development versions
 Package      osg-3.4-el6-testing  osg-3.4-el6-development
@@ -19,9 +64,34 @@ Package      osg-3.4-el6-testing  osg-3.4-el6-development
 singularity  2.4-1.1              2.4.2-1
 
 RPMs slated for release in osg-3.4-el7-testing
-vo-client-77-1.osg34.el7
+blahp-1.18.35.bosco-1.osg34.el7
+cvmfs-2.4.4-1.osg34.el7
+glideinwms-3.2.20-1.osg34.el7
+htcondor-ce-3.0.4-1.osg34.el7
+osg-ca-certs-updater-1.7-1.osg34.el7
+osg-ca-scripts-1.2.2-1.osg34.el7
+osg-configure-2.2.3-1.osg34.el7
+osg-gridftp-3.4-4.osg34.el7
+osg-oasis-8-5.osg34.el7
+osg-pki-tools-2.1.2-1.osg34.el7
+osg-system-profiler-1.4.2-1.osg34.el7
+osg-version-3.4.6-1.osg34.el7
+osg-wn-client-3.4-3.osg34.el7
+xrootd-4.8.0-1.osg34.el7
 
 Slated packages in testing behind current development versions
 Package      osg-3.4-el7-testing  osg-3.4-el7-development
 -----------  -------------------  -----------------------
 singularity  2.4-1.1              2.4.2-1
+
+RPMs slated for release in osg-upcoming-el6-testing
+blahp-1.18.35.bosco-1.osgup.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
+
+RPMs slated for release in osg-upcoming-el7-testing
+blahp-1.18.35.bosco-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
