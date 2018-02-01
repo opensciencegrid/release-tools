@@ -21,7 +21,7 @@ for ver in ${versions[@]}; do
 
         # Get lists of packages from release list and compare them to what's currently in prerelease
         osg-koji list-tagged --quiet $prerel_tag | awk '{print $1}' | sort > prerelease
-        pkgs_to_release $branch $dver > slated
+        pkgs_to_release $branch $dver | sort > slated
         missing_pkgs=$(comm -23 slated prerelease)
         extra_pkgs=$(comm -13 slated prerelease)
 
