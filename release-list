@@ -4,33 +4,55 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.3-el6-testing
-glideinwms-3.2.20-2.osg33.el6
-osg-version-3.3.32-1.osg33.el6
+osg-version-3.3.33-1.osg33.el6
+xrootd-4.8.0-2.osg33.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
 
 RPMs slated for release in osg-3.3-el7-testing
-glideinwms-3.2.20-2.osg33.el7
-osg-version-3.3.32-1.osg33.el7
+osg-version-3.3.33-1.osg33.el7
+xrootd-4.8.0-2.osg33.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
 
 RPMs slated for release in osg-3.4-el6-testing
-glideinwms-3.2.20-2.osg34.el6
-osg-version-3.4.8-1.osg34.el6
+frontier-squid-3.5.27-3.1.osg34.el6
+glideinwms-3.2.21-2.osg34.el6
+osg-gridftp-3.4-7.osg34.el6
+osg-release-3.4-4.osg34.el6
+osg-release-itb-3.4-4.osg34.el6
+osg-test-2.1.0-1.osg34.el6
+osg-version-3.4.9-1.osg34.el6
+rsv-3.17.0-1.osg34.el6
+xrootd-4.8.1-1.osg34.el6
 
 Slated packages in testing behind current development versions
-Package     osg-3.4-el6-testing  osg-3.4-el6-development
-----------  -------------------  -----------------------
-glideinwms  3.2.20-2             3.2.21-0.3.rc3
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-glideinwms-3.2.20-2.osg34.el7
-osg-version-3.4.8-1.osg34.el7
+frontier-squid-3.5.27-3.1.osg34.el7
+glideinwms-3.2.21-2.osg34.el7
+osg-gridftp-3.4-7.osg34.el7
+osg-release-3.4-4.osg34.el7
+osg-release-itb-3.4-4.osg34.el7
+osg-test-2.1.0-1.osg34.el7
+osg-version-3.4.9-1.osg34.el7
+rsv-3.17.0-1.osg34.el7
+xrootd-4.8.1-1.osg34.el7
 
 Slated packages in testing behind current development versions
-Package     osg-3.4-el7-testing  osg-3.4-el7-development
-----------  -------------------  -----------------------
-glideinwms  3.2.20-2             3.2.21-0.3.rc3
+No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+
+RPMs slated for release in osg-upcoming-el6-testing
+
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
+
+RPMs slated for release in osg-upcoming-el7-testing
+osg-gridftp-hdfs-3.4-2.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
