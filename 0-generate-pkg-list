@@ -2,27 +2,23 @@
 
 # This script promotes osg-version to testing and generates a preliminary list of packages for the release manager
 
-# make sure osg-koji is available before starting
-command -v osg-koji 2>&1 >/dev/null
-if [[ $? -ne 0 ]];
-then
-    echo "osg-koji not in PATH"
-    exit 1
-fi
+. release-common.sh
 
-command -v osg-pkgs-behind-tag 2>&1 >/dev/null
-if [[ $? -ne 0 ]];
-then
-    PATH=$PATH:.
-    command -v osg-pkgs-behind-tag 2>&1 >/dev/null
+# make sure osg-koji is available before starting
+check_for_osg_koji
+
+release_tools="osg-pkgs-behind-tag"
+
+for i in $release_tools;
+do
+    check_for_and_add_command $i
     if [[ $? -ne 0 ]];
     then
-       echo "Release tools not present in PATH"
-       exit 1
+        echo "Release tool ($i) not present in PATH"
+        exit 1
     fi
-fi
+done
 
-. release-common.sh
 detect_rescue_file
 
 ##################################

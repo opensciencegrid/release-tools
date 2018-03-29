@@ -8,27 +8,22 @@
 
 
 . release-common.sh
-detect_rescue_file
 
-command -v list-package-updates 2>&1 >/dev/null
-if [[ $? -ne 0 ]];
-then 
-    PATH=$PATH:.
-    command -v list-package-updates 2>&1 >/dev/null
+check_for_osg_koji
+
+release_tools="list-package-updates"
+
+for i in $release_tools;
+do
+    check_for_and_add_command $i
     if [[ $? -ne 0 ]];
-    then 
-       echo "Release tools not present in PATH"
-       exit 1
+    then
+        echo "Release tool ($i) not present in PATH"
+        exit 1
     fi
-fi
+done
 
-command -v osg-koji 2>&1 >/dev/null
-if [[ $? -ne 0 ]];
-then
-    echo "osg-koji not in PATH"
-    exit 1
-fi
-   
+detect_rescue_file
 
 if [[ ! -d /p/vdt/public/html/release-info/ && $DRY_RUN -eq 0 ]]; then
     print_header "Not on UW's AFS..."
