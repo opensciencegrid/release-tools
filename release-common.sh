@@ -70,13 +70,19 @@ check_file_transfer_rc () {
 
 check_for_command () {
     # check to see if command in $1 is available
-    # returns 0 if command is in path, 1 otherwise
-    command -v $1 2>&1 >/dev/null
-    if [[ $? -ne 0 ]];
+    # returns 0 if command is in path and is executable, 1 otherwise
+    cmd_path=`command -v $1`
+    if [[ $? -ne 0 ]]
     then
         return 1
     fi
-    return 0
+    # check to see if command is executable
+    if [[ -x "$cmd_path" ]]
+    then
+        return 0
+    fi
+    echo "$1 is in PATH but is not executable"
+    return 1
 }
 
 check_for_and_add_command () {

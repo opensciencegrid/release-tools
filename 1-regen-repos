@@ -9,15 +9,6 @@ check_for_osg_koji
 
 detect_rescue_file
 
-# make sure osg-koji is available before starting
-command -v osg-koji 2>&1 >/dev/null
-if [[ $? -ne 0 ]];
-then
-    echo "osg-koji not in PATH"
-    exit 1
-fi
-detect_rescue_file
-
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers

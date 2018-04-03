@@ -9,7 +9,7 @@ check_for_osg_koji
 
 release_tools="osg-pkgs-behind-tag"
 
-for i in $release_tools;
+for i in $release_tools
 do
     check_for_and_add_command $i
     if [[ $? -ne 0 ]];
