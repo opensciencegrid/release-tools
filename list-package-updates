@@ -19,7 +19,7 @@ usage () {
   exit
 }
 
-dvers=(el5 el6)
+dvers=(el6 el7)
 
 list_tag () {
   osg-koji list-tagged --latest --quiet --rpms "$1" | grep -v '\.src$' \
