@@ -67,6 +67,51 @@ check_file_transfer_rc () {
     fi
 }
 
+check_for_command () {
+    # check to see if command in $1 is available
+    # returns 0 if command is in path and is executable, 1 otherwise
+    cmd_path=`command -v $1`
+    if [[ $? -ne 0 ]]
+    then
+        return 1
+    fi
+    # check to see if command is executable
+    if [[ -x "$cmd_path" ]]
+    then
+        return 0
+    fi
+    echo "$1 is in PATH but is not executable"
+    return 1
+}
+
+check_for_and_add_command () {
+    # check for command in path, try to add it in by 
+    # adding . to PATH  
+    # returns 1 on failure, 0 on success
+    check_for_command $1
+    if [[ $? -ne 0 ]];
+    then
+        PATH=$PATH:.
+        check_for_command $1
+        if [[ $? -ne 0 ]];
+        then
+           return 1
+        fi
+    fi
+    return 0
+}
+
+check_for_osg_koji () {
+    # check to see if osg-koji is available
+    # exit with exit code 1 if not
+    check_for_command osg-koji
+    if [[ $? -ne 0 ]];
+    then
+        echo "osg-koji not in PATH, please fix"
+        exit 1
+    fi
+}
+
 detect_rescue_file () {
     rescue_file=`pwd`/$script_name.rescue
     [ -e $rescue_file ] && print_header "Found rescue file, picking up after the last successful command...\n" \

@@ -3,6 +3,10 @@
 # Solves 404 error messages when retrieving packages for building the tarballs
 
 . release-common.sh
+
+# make sure osg-koji is available before starting
+check_for_osg_koji
+
 detect_rescue_file
 
 # drop upcoming from versions since they don't get their own tarballs

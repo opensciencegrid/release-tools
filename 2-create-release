@@ -5,7 +5,24 @@
 # Lock the release repos
 # Write release notes and update information on UW's AFS
 
+
+
 . release-common.sh
+
+check_for_osg_koji
+
+release_tools="list-package-updates"
+
+for i in $release_tools;
+do
+    check_for_and_add_command $i
+    if [[ $? -ne 0 ]];
+    then
+        echo "Release tool ($i) not present in PATH"
+        exit 1
+    fi
+done
+
 detect_rescue_file
 
 if [[ ! -d /p/vdt/public/html/release-info/ && $DRY_RUN -eq 0 ]]; then
