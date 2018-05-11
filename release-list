@@ -3,44 +3,30 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
+RPMs slated for release in osg-3.3-el6-testing
+osg-ca-certs-1.72-1.osg33.el6
+vo-client-79-1.osg33.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
+
+RPMs slated for release in osg-3.3-el7-testing
+osg-ca-certs-1.72-1.osg33.el7
+vo-client-79-1.osg33.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
+
 RPMs slated for release in osg-3.4-el6-testing
-glideinwms-3.2.22.2-4.osg34.el6
-gratia-probe-1.20.1-1.osg34.el6
-htcondor-ce-3.1.2-1.osg34.el6
-osg-ca-certs-updater-1.8-1.osg34.el6
-osg-ca-scripts-1.2.3-1.osg34.el6
-osg-configure-2.3.0-1.osg34.el6
-osg-test-2.2.0-1.osg34.el6
-osg-version-3.4.12-1.osg34.el6
-rsv-3.18.0-1.osg34.el6
-xrootd-4.8.3-1.osg34.el6
+osg-ca-certs-1.72-1.osg34.el6
+vo-client-79-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-glideinwms-3.2.22.2-4.osg34.el7
-gratia-probe-1.20.1-1.osg34.el7
-htcondor-ce-3.1.2-1.osg34.el7
-osg-ca-certs-updater-1.8-1.osg34.el7
-osg-ca-scripts-1.2.3-1.osg34.el7
-osg-configure-2.3.0-1.osg34.el7
-osg-test-2.2.0-1.osg34.el7
-osg-version-3.4.12-1.osg34.el7
-rsv-3.18.0-1.osg34.el7
-xrootd-4.8.3-1.osg34.el7
+osg-ca-certs-1.72-1.osg34.el7
+vo-client-79-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
-
-RPMs slated for release in osg-upcoming-el6-testing
-glideinwms-3.3.3-3.osgup.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-glideinwms-3.3.3-3.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
