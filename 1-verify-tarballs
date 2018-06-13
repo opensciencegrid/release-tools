@@ -1,0 +1,58 @@
+#!/bin/bash
+
+usage () {
+    echo "usage:"
+    echo "  $(basename "$0") NON_UPCOMING_VERSIONS"
+    exit
+}
+
+[[ $1 =~ ^[3-9]\.[0-9]+\.[0-9]+$ ]] || usage
+
+dotest () {
+    file=$dir/$client-$ver-1.$rhel.$arch.tar.gz
+    if [ -e $file ]; then
+        echo "Testing $client-$ver-1.$rhel.$arch..."
+        size=$(du -m "$file" | cut -f 1)
+        if [ $size -gt $max_size ]; then
+            echo -e "\e[1;33mWARNING: $client-$ver-1.$rhel.$arch is too big. Check with release manager.\e[0m"
+        fi
+        mkdir -p $rhel-$arch
+        pushd $rhel-$arch
+        tar xzf ../$file
+        $client/osg/osg-post-install
+        $client/osgrun osg-ca-manage setupCA --url osg
+        $client/osgrun osg-update-vos
+        popd
+        rm -rf $rhel-$arch
+    else
+        echo -e "\e[1;31mERROR: $client-$ver-1.$rhel.$arch tarball is missing.\e[0m"
+    fi
+}
+
+cd /tmp
+
+for ver in "$@"; do
+    major_version="${ver%.*}"
+    clients="osg-wn-client"
+    if [ "$major_version" = "3.4" ]; then
+        clients="$clients osg-afs-client"
+    fi
+    for client in $clients; do
+        rhels="el6 el7"
+        for rhel in $rhels; do
+            max_size=28
+            if [ $rhel = "el7" ]; then
+                max_size=33
+            fi
+            archs="x86_64"
+            if [ "$major_version" = "3.3" -a $rhel = "el6" ]; then
+                archs="i386 $archs"
+            fi
+            for arch in $archs; do
+                dir=tarballs/$major_version/$arch
+                dotest
+            done
+        done
+    done
+done
+
