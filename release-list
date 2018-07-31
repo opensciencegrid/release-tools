@@ -4,15 +4,18 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-osg-version-3.4.15-1.osg34.el6
-singularity-2.5.2-1.osg34.el6
+frontier-squid-3.5.27-5.2.osg34.el6
+osg-version-3.4.16-1.osg34.el6
+xrootd-4.8.4-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-osg-version-3.4.15-1.osg34.el7
-singularity-2.5.2-1.osg34.el7
+frontier-squid-3.5.27-5.2.osg34.el7
+osg-version-3.4.16-1.osg34.el7
+python-scitokens-1.2.0-2.osg34.el7
+xrootd-4.8.4-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
