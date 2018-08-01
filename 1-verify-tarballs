@@ -13,8 +13,12 @@ dotest () {
     if [ -e $file ]; then
         echo "Testing $client-$ver-1.$rhel.$arch..."
         size=$(du -m "$file" | cut -f 1)
-        if [ $size -gt $max_size ]; then
+        if [ $size -lt $min_size ]; then
+            echo -e "\e[1;33mWARNING: $client-$ver-1.$rhel.$arch is too small. Check with release manager.\e[0m"
+        elif [ $size -gt $max_size ]; then
             echo -e "\e[1;33mWARNING: $client-$ver-1.$rhel.$arch is too big. Check with release manager.\e[0m"
+        else
+            echo -e "\e[1;32mOK: $client-$ver-1.$rhel.$arch is the right size.\e[0m"
         fi
         mkdir -p $rhel-$arch
         pushd $rhel-$arch
@@ -40,9 +44,11 @@ for ver in "$@"; do
     for client in $clients; do
         rhels="el6 el7"
         for rhel in $rhels; do
+            min_size=24
             max_size=28
             if [ $rhel = "el7" ]; then
-                max_size=33
+                min_size=30
+                max_size=34
             fi
             archs="x86_64"
             if [ "$major_version" = "3.3" -a $rhel = "el6" ]; then
