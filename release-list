@@ -4,34 +4,53 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-igtf-ca-certs-1.93-1.osg34.el6
-osg-ca-certs-1.75-1.osg34.el6
+blahp-1.18.38.bosco-1.osg34.el6
+cvmfs-2.5.1-1.osg34.el6
+glideinwms-3.4-1.1.osg34.el6
+globus-gridftp-server-12.9-1.1.osg34.el6
+globus-gridftp-server-control-7.0-1.osg34.el6
+gratia-probe-1.20.7-1.osg34.el6
+htcondor-ce-3.1.4-1.osg34.el6
+osg-oasis-10-1.osg34.el6
+osg-version-3.4.18-1.osg34.el6
+pegasus-4.8.4-1.osg34.el6
+rsv-3.19.8-1.osg34.el6
+xrootd-4.8.4-3.osg34.el6
 
 Slated packages in testing behind current development versions
 Package     osg-3.4-el6-testing  osg-3.4-el6-development
 ----------  -------------------  -----------------------
-glideinwms  3.4-1.1              3.4.1-0.1.rc1
+glideinwms  3.4-1.1              3.4.1-0.2.rc2
 
 RPMs slated for release in osg-3.4-el7-testing
-igtf-ca-certs-1.93-1.osg34.el7
-osg-ca-certs-1.75-1.osg34.el7
+blahp-1.18.38.bosco-1.osg34.el7
+cvmfs-2.5.1-1.osg34.el7
+glideinwms-3.4-1.1.osg34.el7
+globus-gridftp-server-12.9-1.1.osg34.el7
+globus-gridftp-server-control-7.0-1.osg34.el7
+gratia-probe-1.20.7-1.osg34.el7
+htcondor-ce-3.1.4-1.osg34.el7
+osg-oasis-10-1.osg34.el7
+osg-version-3.4.18-1.osg34.el7
+pegasus-4.8.4-1.osg34.el7
+rsv-3.19.8-1.osg34.el7
+xrootd-4.8.4-3.osg34.el7
+xrootd-hdfs-2.1.3-1.osg34.el7
+xrootd-lcmaps-1.4.1-1.osg34.el7
 
 Slated packages in testing behind current development versions
 Package     osg-3.4-el7-testing  osg-3.4-el7-development
 ----------  -------------------  -----------------------
-glideinwms  3.4-1.1              3.4.1-0.1.rc1
+glideinwms  3.4-1.1              3.4.1-0.2.rc2
 
-RPMs slated for release in osg-3.3-el6-testing
-igtf-ca-certs-1.93-1.osg33.el6
-osg-ca-certs-1.75-1.osg33.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
-
-RPMs slated for release in osg-3.3-el7-testing
-igtf-ca-certs-1.93-1.osg33.el7
-osg-ca-certs-1.75-1.osg33.el7
+RPMs slated for release in osg-upcoming-el6-testing
+blahp-1.18.38.bosco-1.osgup.el6
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
 
+RPMs slated for release in osg-upcoming-el7-testing
+blahp-1.18.38.bosco-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
