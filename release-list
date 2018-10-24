@@ -3,26 +3,21 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.3-el6-testing
-vo-client-84-1.osg33.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el6-testing' behind version in 'osg-3.3-el6-development'
-
-RPMs slated for release in osg-3.3-el7-testing
-vo-client-84-1.osg33.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.3-el7-testing' behind version in 'osg-3.3-el7-development'
-
 RPMs slated for release in osg-3.4-el6-testing
-vo-client-84-1.osg34.el6
+autopyfactory-2.4.9-2.osg34.el6
+osg-flock-1.0-1.osg34.el6
+osg-version-3.4.19-1.osg34.el6
+xrootd-4.8.5-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-vo-client-84-1.osg34.el7
+autopyfactory-2.4.9-2.osg34.el7
+osg-flock-1.0-1.osg34.el7
+osg-version-3.4.19-1.osg34.el7
+stashcache-0.9-1.osg34.el7
+xrootd-4.8.5-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
