@@ -4,49 +4,16 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-cctools-7.0.11-1.osg34.el6
-cvmfs-2.6.0-1.osg34.el6
-globus-ftp-client-9.1-2.1.osg34.el6
-globus-gridftp-server-13.9-1.1.osg34.el6
-globus-gridftp-server-control-8.0-1.osg34.el6
-htcondor-ce-3.2.2-1.osg34.el6
-koji-1.11.1-1.1.osg34.el6
-osg-build-1.14.2-1.osg34.el6
-osg-oasis-12-1.osg34.el6
-osg-pki-tools-3.2.2-1.osg34.el6
-osg-version-3.4.27-1.osg34.el6
+vo-client-88-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-cctools-7.0.11-1.osg34.el7
-cvmfs-2.6.0-1.osg34.el7
-globus-ftp-client-9.1-2.1.osg34.el7
-globus-gridftp-server-13.9-1.1.osg34.el7
-globus-gridftp-server-control-8.0-1.osg34.el7
-htcondor-ce-3.2.2-1.osg34.el7
-koji-1.11.1-1.1.osg34.el7
-osg-build-1.14.2-1.osg34.el7
-osg-oasis-12-1.osg34.el7
-osg-pki-tools-3.2.2-1.osg34.el7
-osg-version-3.4.27-1.osg34.el7
+vo-client-88-1.osg34.el7
 
 Slated packages in testing behind current development versions
 Package           osg-3.4-el7-testing  osg-3.4-el7-development
 ----------------  -------------------  -----------------------
-xrootd-hdfs       2.1.3-2              2.1.3-3
 xrootd-multiuser  0.4.2-2              0.4.2-3
-xrootd-scitokens  0.6.0-2              0.6.0-3
 
-RPMs slated for release in osg-upcoming-el6-testing
-singularity-3.1.1-1.osgup.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-singularity-3.1.1-1.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
