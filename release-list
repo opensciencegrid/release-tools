@@ -7,6 +7,7 @@ RPMs slated for release in osg-3.4-el6-testing
 glideinwms-3.4.5-1.osg34.el6
 osg-flock-1.1-1.osg34.el6
 osg-version-3.4.28-1.osg34.el6
+vo-client-89-1.osg34.el6
 xrootd-4.9.1-1.osg34.el6
 xrootd-lcmaps-1.7.0-1.1.osg34.el6
 
@@ -17,6 +18,7 @@ RPMs slated for release in osg-3.4-el7-testing
 glideinwms-3.4.5-1.osg34.el7
 osg-flock-1.1-1.osg34.el7
 osg-version-3.4.28-1.osg34.el7
+vo-client-89-1.osg34.el7
 xrootd-4.9.1-1.osg34.el7
 xrootd-hdfs-2.1.4-1.osg34.el7
 xrootd-lcmaps-1.7.0-1.1.osg34.el7
