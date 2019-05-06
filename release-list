@@ -4,16 +4,14 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-myproxy-6.2.3-1.1.osg34.el6
-osg-version-3.4.29-1.osg34.el6
+vo-client-90-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-myproxy-6.2.3-1.1.osg34.el7
-osg-version-3.4.29-1.osg34.el7
-xcache-1.0.5-1.osg34.el7
+vo-client-90-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+
