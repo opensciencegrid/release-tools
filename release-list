@@ -4,29 +4,21 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-Warning: Could not install krbV module. Kerberos support will be disabled.
-Warning: Could not install krbV module. Kerberos support will be disabled.
 igtf-ca-certs-1.99-1.osg34.el6
 osg-ca-certs-1.82-1.osg34.el6
 vo-client-92-1.osg34.el6
 
 Slated packages in testing behind current development versions
-Warning: Could not install krbV module. Kerberos support will be disabled.
-Warning: Could not install krbV module. Kerberos support will be disabled.
 Package  osg-3.4-el6-testing  osg-3.4-el6-development
 -------  -------------------  -----------------------
 xrootd   4.10.0-0.rc1         4.10.0-0.rc2
 
 RPMs slated for release in osg-3.4-el7-testing
-Warning: Could not install krbV module. Kerberos support will be disabled.
-Warning: Could not install krbV module. Kerberos support will be disabled.
 igtf-ca-certs-1.99-1.osg34.el7
 osg-ca-certs-1.82-1.osg34.el7
 vo-client-92-1.osg34.el7
 
 Slated packages in testing behind current development versions
-Warning: Could not install krbV module. Kerberos support will be disabled.
-Warning: Could not install krbV module. Kerberos support will be disabled.
 Package  osg-3.4-el7-testing  osg-3.4-el7-development
 -------  -------------------  -----------------------
 xrootd   4.10.0-0.rc1         4.10.0-0.rc2
