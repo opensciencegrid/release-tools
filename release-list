@@ -4,37 +4,15 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-condor-8.6.13-1.4.osg34.el6
-glideinwms-3.4.5-2.osg34.el6
-osg-version-3.4.31-1.osg34.el6
-singularity-3.2.1-1.osg34.el6
-vo-client-93-1.osg34.el6
+igtf-ca-certs-1.101-1.osg34.el6
+osg-ca-certs-1.83-1.osg34.el6
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el6-testing  osg-3.4-el6-development
--------  -------------------  -----------------------
-cctools  7.0.13-1             7.0.14-1
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-condor-8.6.13-1.4.osg34.el7
-glideinwms-3.4.5-2.osg34.el7
-osg-version-3.4.31-1.osg34.el7
-singularity-3.2.1-1.osg34.el7
-vo-client-93-1.osg34.el7
+igtf-ca-certs-1.101-1.osg34.el7
+osg-ca-certs-1.83-1.osg34.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el7-testing  osg-3.4-el7-development
--------  -------------------  -----------------------
-cctools  7.0.13-1             7.0.14-1
-
-RPMs slated for release in osg-upcoming-el6-testing
-condor-8.8.3-1.osgup.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-condor-8.8.3-1.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
+No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
