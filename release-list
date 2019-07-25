@@ -4,15 +4,37 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-igtf-ca-certs-1.101-1.osg34.el6
-osg-ca-certs-1.83-1.osg34.el6
+cvmfs-x509-helper-2.0-1.osg34.el6
+frontier-squid-4.4-2.1.osg34.el6
+glite-lbjp-common-gsoap-plugin-3.2.12-7.osg34.el6
+osg-oasis-13-1.osg34.el6
+osg-version-3.4.32-1.osg34.el6
+singularity-3.2.1-1.1.osg34.el6
+vo-client-94-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-igtf-ca-certs-1.101-1.osg34.el7
-osg-ca-certs-1.83-1.osg34.el7
+cvmfs-x509-helper-2.0-1.osg34.el7
+frontier-squid-4.4-2.1.osg34.el7
+glite-lbjp-common-gsoap-plugin-3.2.12-7.osg34.el7
+osg-oasis-13-1.osg34.el7
+osg-version-3.4.32-1.osg34.el7
+singularity-3.2.1-1.1.osg34.el7
+vo-client-94-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+
+RPMs slated for release in osg-upcoming-el6-testing
+condor-8.8.4-1.osgup.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el6-testing' behind version in 'osg-upcoming-el6-development'
+
+RPMs slated for release in osg-upcoming-el7-testing
+condor-8.8.4-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
