@@ -25,7 +25,11 @@ detect_rescue_file
 # Promote osg-version to testing #
 ##################################
 promote_osg_version() {
-    for ver in ${versions[@]/upcoming/}; do # We don't build osg-version for upcoming
+    for ver in ${versions[@]}; do
+        case $ver in
+            # We don't build osg-version for upcoming or 3.5+
+            3.5 | upcoming ) continue ;;
+        esac
         read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
         for dver in "${dvers[@]}"; do
             for repo in testing prerelease; do
