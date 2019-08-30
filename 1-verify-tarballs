@@ -38,11 +38,15 @@ cd /tmp
 for ver in "$@"; do
     major_version="${ver%.*}"
     clients="osg-wn-client"
-    if [ "$major_version" = "3.4" ]; then
+    if [ "$major_version" = "3.4" -o "$major_version" = "3.5" ]; then
         clients="$clients osg-afs-client"
     fi
     for client in $clients; do
-        rhels="el6 el7"
+        if [ "$major_version" = "3.4" ]; then
+            rhels="el6 el7"
+        else
+            rhels="el7"
+        fi
         for rhel in $rhels; do
             min_size=24
             max_size=28
