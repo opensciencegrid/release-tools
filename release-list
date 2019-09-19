@@ -3,78 +3,29 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
+RPMs slated for release in osg-3.4-el6-testing
+glideinwms-3.4.6-1.osg34.el6
+globus-gridftp-server-13.11-1.1.osg34.el6
+gsi-openssh-7.3p1c-1.2.osg34.el6
+myproxy-6.2.6-1.1.osg34.el6
+osg-version-3.4.35-1.osg34.el6
+singularity-3.4.0-1.2.osg34.el6
+
+Slated packages in testing behind current development versions
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
+
+RPMs slated for release in osg-3.4-el7-testing
+glideinwms-3.4.6-1.osg34.el7
+globus-gridftp-server-13.11-1.1.osg34.el7
+gsi-openssh-7.4p1-4.3.osg34.el7
+myproxy-6.2.6-1.1.osg34.el7
+osg-version-3.4.35-1.osg34.el7
+singularity-3.4.0-1.2.osg34.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+
 RPMs slated for release in osg-3.5-el7-testing
-avro-libs-1.7.6+cdh5.13.0+135-1.cdh5.13.0.p0.34.2.osg35.el7
-bigtop-jsvc-0.3.0-1.2.osg35.el7
-bigtop-utils-0.7.0+cdh5.13.0+0-1.cdh5.13.0.p0.34.1.osg35.el7
-blahp-1.18.41.bosco-1.osg35.el7
-cctools-7.0.14-1.osg35.el7
-cigetcert-1.16-2.osg35.el7
-cilogon-openid-ca-cert-1.1-4.osg35.el7
-condor-8.8.4-1.8.osg35.el7
-cvmfs-2.6.2-1.osg35.el7
-cvmfs-config-osg-2.4-1.osg35.el7
-cvmfs-gateway-0.3.1-1.1.osg35.el7
-cvmfs-x509-helper-2.0-3.osg35.el7
-frontier-squid-4.8-1.1.osg35.el7
-glite-ce-cream-client-api-c-1.15.4-2.5.osg35.el7
-globus-gridftp-osg-extensions-0.4-1.osg35.el7
-globus-gridftp-server-13.9-1.1.osg35.el7
-gratia-probe-1.20.8-1.osg35.el7
-gridftp-dsi-posix-1.4-2.osg35.el7
-gridftp-hdfs-1.1.1-1.2.osg35.el7
-gsi-openssh-7.4p1-2.3.osg35.el7
-hadoop-2.6.0+cdh5.12.1+2540-1.cdh5.12.1.p0.3.8.osg35.el7
-igtf-ca-certs-1.101-1.osg35.el7
-javascriptrrd-1.1.1-1.osg35.el7
-lcas-lcmaps-gt4-interface-0.3.1-1.3.osg35.el7
-lcmaps-1.6.6-1.10.osg35.el7
-lcmaps-plugins-basic-1.7.0-2.osg35.el7
-lcmaps-plugins-verify-proxy-1.5.11-1.1.osg35.el7
-lcmaps-plugins-voms-1.7.1-1.6.osg35.el7
-llrun-0.1.3-1.3.osg35.el7
-myproxy-6.2.4-1.1.osg35.el7
-osg-ca-certs-1.83-1.osg35.el7
-osg-ca-certs-updater-1.8-1.osg35.el7
-osg-ca-scripts-1.2.4-1.osg35.el7
-osg-configure-3.0.0-1.osg35.el7
-osg-flock-1.1-1.osg35.el7
-osg-gridftp-3.5-3.osg35.el7
-osg-oasis-15-2.osg35.el7
-osg-pki-tools-3.3.0-1.osg35.el7
-osg-release-itb-3.5-2.osg35.el7
-osg-se-hadoop-3.5-1.osg35.el7
-osg-system-profiler-1.4.3-1.osg35.el7
-osg-update-vos-1.4.0-1.osg35.el7
-osg-wn-client-3.5-1.osg35.el7
-osg-xrootd-3.5-3.osg35.el7
-pegasus-4.9.1-1.osg35.el7
-python-jwt-1.6.1-1.osg35.el7
-python-scitokens-1.2.1-2.osg35.el7
-rsv-3.19.8-2.osg35.el7
-scitokens-cpp-0.3.3-1.osg35.el7
-stashcache-client-5.2.0-1.osg35.el7
-uberftp-2.8-2.1.osg35.el7
-vo-client-94-1.osg35.el7
-voms-2.0.14-1.4.osg35.el7
-vomsxrd-0.6.0-3.osg35.el7
-xcache-1.1.1-1.osg35.el7
-xrootd-4.10.0-1.osg35.el7
-xrootd-hdfs-2.1.6-1.osg35.el7
-xrootd-lcmaps-1.7.4-2.osg35.el7
-xrootd-multiuser-0.4.2-4.osg35.el7
-xrootd-scitokens-1.0.0-1.1.osg35.el7
-zookeeper-3.4.5+cdh5.14.2+142-1.cdh5.14.2.p0.11.1.osg35.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-blahp-1.18.41.bosco-2.osgup.el7
-condor-8.9.2-1.4.osgup.el7
-
-Slated packages in testing behind current development versions
-Package     osg-upcoming-el7-testing  osg-upcoming-el7-development
-----------  ------------------------  ----------------------------
-glideinwms  3.5-1                     3.5.1-0.1.rc1
-
+globus-gridftp-server-13.11-1.1.osg35.el7
+gsi-openssh-7.4p1-4.3.osg35.el7
+myproxy-6.2.6-1.1.osg35.el7
