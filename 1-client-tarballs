@@ -28,7 +28,7 @@ versions=(${versions[@]/upcoming/})
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     print_header "Generating $branch tarballs"
-    run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --all --prerelease"
+    run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --version=$ver --all --prerelease"
     archs="x86_64"
     if [[ $branch < "3.4" ]]; then
         archs="i386 $archs"
