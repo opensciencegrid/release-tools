@@ -1,11 +1,35 @@
 #!/bin/bash
+set -e
+
+usage () {
+  echo "usage: $(basename "$0") REPO OLD_TAG [NEW_TAG]"
+  echo
+  echo "arguments:"
+  echo "  REPO:     '<owner>/<name>' eg 'opensciencegrid/frontier-squid'"
+  echo "            (<owner> defaults to 'opensciencegrid' if omitted)"
+  echo "  OLD_TAG:  Either 'fresh' or <YYYYMMDD-HHMM>"
+  echo "  NEW_TAG:  Defaults to 'stable'"
+  echo
+  echo "Environment:"
+  echo "  user:     dockerhub username"
+  echo "  pass:     dockerhub password"
+  echo
+  echo "If these are omitted, the script will prompt for them."
+  exit
+}
+
+[[ $2 ]] || usage
+REPOSITORY=$1
+TAG_OLD=$2
+TAG_NEW=${3:-stable}
+
+[[ $REPOSITORY = */* ]] || REPOSITORY=opensciencegrid/$REPOSITORY
+case $TAG_OLD in
+  fresh | 20[1-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9] ) ;; # OK
+  * ) usage ;;
+esac
 
 REGISTRY=https://registry-1.docker.io
-REPO_OWNER=opensciencegrid
-REPO_PROJECT=osg-wn
-REPOSITORY=$REPO_OWNER/$REPO_PROJECT
-TAG_OLD=fresh
-TAG_NEW=stable
 CONTENT_TYPE="application/vnd.docker.distribution.manifest.v2+json"
 
 getvar () {
