@@ -3,6 +3,7 @@
 import collections
 import getpass
 import urllib2
+import getopt
 import json
 import sys
 import os
@@ -13,6 +14,11 @@ from datetime import datetime, timedelta
 def usage():
     script = os.path.basename(__file__)
     print("Usage: {script} [opensciencegrid/]<REPO>".format(**locals()))
+    print("")
+    print("Options:")
+    print("  -u user   dockerhub username")
+    print("  -y        don't prompt for confirmation")
+    print("  -q        only output errors; implies -y")
     print("")
     print("HUB_USER and HUB_PASS may be set in the environment")
     sys.exit()
@@ -141,8 +147,15 @@ class RepoMan:
     def delete_tag(self, tag):
         return delete_tag(self.repo, tag, self.jwt_auth_token)
 
-def main(repo):
-    user = os.getenv("HUB_USER")
+def main(args):
+    try:
+        ops, args = getopt.getopt(args, "u:qy")
+    except getopt.GetoptError:
+        usage()
+    repo, = args
+    ops = dict(ops)
+
+    user = ops.get('-u') or os.getenv("HUB_USER")
     pw   = os.getenv("HUB_PASS")
     if not user:
         user = raw_input("dockerhub username: ")
@@ -153,27 +166,28 @@ def main(repo):
 
     tags, prune_tags = fb.get_tags_to_prune()
 
-    print("The following tags were found; those with a * will be deleted:")
-    print("")
-    for tag in sorted(tags):
-        star = "*" if tag in prune_tags else " "
-        print("{star} {tag}".format(**locals()))
+    if '-q' not in ops:
+        print("The following tags were found; those with a * will be deleted:")
+        print("")
+        for tag in sorted(tags):
+            star = "*" if tag in prune_tags else " "
+            print("{star} {tag}".format(**locals()))
 
-    print("")
-    yes = raw_input("Is this OK? (y/[N]) ")
-    if yes not in ('y', 'yes'):
-        sys.exit()
+        print("")
 
-    print("")
+        if '-y' not in ops:
+            yes = raw_input("Is this OK? (y/[N]) ")
+            if yes not in ('y', 'yes'):
+                sys.exit()
+        print("")
+
     rman = RepoMan(repo, user, pw)
     for tag in prune_tags:
-        print("deleting tag {tag} from repo {repo}...".format(**locals()))
+        if '-q' not in ops:
+            print("deleting tag {tag} from repo {repo}...".format(**locals()))
         rman.delete_tag(tag)
 
 if __name__ == '__main__':
     args = sys.argv[1:]
-    if not args or args[0].startswith('-'):
-        usage()
-    else:
-        main(*args)
+    main(args)
 
