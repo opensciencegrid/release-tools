@@ -10,7 +10,12 @@ import re
 
 from datetime import datetime, timedelta
 
-_repo = 'opensciencegrid/frontier-squid'
+def usage():
+    script = os.path.basename(__file__)
+    print("Usage: {script} [opensciencegrid/]<REPO>".format(**locals()))
+    print("")
+    print("HUB_USER and HUB_PASS may be set in the environment")
+    sys.exit()
 
 def set_map(fn, seq):
     return set(map(fn, seq))
@@ -135,13 +140,6 @@ class RepoMan:
 
     def delete_tag(self, tag):
         return delete_tag(self.repo, tag, self.jwt_auth_token)
-
-def usage():
-    script = os.path.basename(__file__)
-    print("Usage: {script} [opensciencegrid/]<REPO>".format(**locals()))
-    print("")
-    print("HUB_USER and HUB_PASS may be set in the environment")
-    sys.exit()
 
 def main(repo):
     user = os.getenv("HUB_USER")
