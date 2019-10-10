@@ -4,28 +4,52 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-glideinwms-3.4.6-1.osg34.el6
-globus-gridftp-server-13.11-1.1.osg34.el6
-gsi-openssh-7.3p1c-1.2.osg34.el6
-myproxy-6.2.6-1.1.osg34.el6
-osg-version-3.4.35-1.osg34.el6
-singularity-3.4.0-1.2.osg34.el6
+cctools-7.0.18-1.osg34.el6
+cvmfs-2.6.3-1.osg34.el6
+cvmfs-config-osg-2.4-1.osg34.el6
+cvmfs-x509-helper-2.1-2.osg34.el6
+frontier-squid-4.8-2.1.osg34.el6
+lcmaps-1.6.6-1.9.osg34.el6
+osg-oasis-15-4.osg34.el6
+osg-version-3.4.36-1.osg34.el6
+singularity-3.4.1-1.2.osg34.el6
+vo-client-96-1.osg34.el6
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
+Package  osg-3.4-el6-testing  osg-3.4-el6-development
+-------  -------------------  -----------------------
+blahp    1.18.41.bosco-2      1.18.44-1
 
 RPMs slated for release in osg-3.4-el7-testing
-glideinwms-3.4.6-1.osg34.el7
-globus-gridftp-server-13.11-1.1.osg34.el7
-gsi-openssh-7.4p1-4.3.osg34.el7
-myproxy-6.2.6-1.1.osg34.el7
-osg-version-3.4.35-1.osg34.el7
-singularity-3.4.0-1.2.osg34.el7
+cctools-7.0.18-1.osg34.el7
+cvmfs-2.6.3-1.osg34.el7
+cvmfs-config-osg-2.4-1.osg34.el7
+cvmfs-x509-helper-2.1-2.osg34.el7
+frontier-squid-4.8-2.1.osg34.el7
+hosted-ce-tools-0.4-1.osg34.el7
+lcmaps-1.6.6-1.9.osg34.el7
+osg-oasis-15-4.osg34.el7
+osg-version-3.4.36-1.osg34.el7
+singularity-3.4.1-1.2.osg34.el7
+vo-client-96-1.osg34.el7
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+Package  osg-3.4-el7-testing  osg-3.4-el7-development
+-------  -------------------  -----------------------
+blahp    1.18.41.bosco-2      1.18.44-1
 
 RPMs slated for release in osg-3.5-el7-testing
-globus-gridftp-server-13.11-1.1.osg35.el7
-gsi-openssh-7.4p1-4.3.osg35.el7
-myproxy-6.2.6-1.1.osg35.el7
+cctools-7.0.18-1.osg35.el7
+cvmfs-2.6.3-1.osg35.el7
+cvmfs-x509-helper-2.1-2.osg35.el7
+frontier-squid-4.8-2.1.osg35.el7
+hosted-ce-tools-0.4-1.osg35.el7
+htcondor-ce-4.0.1-1.osg35.el7
+osg-ce-3.5-2.osg35.el7
+osg-oasis-15-4.osg35.el7
+vo-client-96-1.osg35.el7
+
+Slated packages in testing behind current development versions
+Package  osg-3.5-el7-testing  osg-3.5-el7-development
+-------  -------------------  -----------------------
+condor   8.8.5-1.4            8.8.5-1.5
