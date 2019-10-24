@@ -4,52 +4,31 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-blahp-1.18.41.bosco-2.osg34.el6
-condor-8.8.5-1.4.osg34.el6
-glideinwms-3.6-2.osg34.el6
-glite-ce-cream-client-api-c-1.15.4-2.5.osg34.el6
-gratia-probe-1.20.11-1.osg34.el6
-koji-1.11.1-1.2.osg34.el6
-osg-build-1.15.1-1.osg34.el6
-osg-configure-2.5.0-1.osg34.el6
-osg-version-3.4.37-1.osg34.el6
-scitokens-cpp-0.3.4-1.osg34.el6
-xrootd-4.10.1-1.osg34.el6
+igtf-ca-certs-1.102-1.osg34.el6
+osg-ca-certs-1.84-1.osg34.el6
+osg-version-3.4.38-1.osg34.el6
+stashcache-client-5.5.0-2.osg34.el6
+vo-client-97-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-blahp-1.18.41.bosco-2.osg34.el7
-condor-8.8.5-1.4.osg34.el7
-glideinwms-3.6-2.osg34.el7
-glite-ce-cream-client-api-c-1.15.4-2.5.osg34.el7
-gratia-probe-1.20.11-1.osg34.el7
-koji-1.11.1-1.2.osg34.el7
-oidc-agent-3.2.6-1.osg34.el7
-osg-build-1.15.1-1.osg34.el7
-osg-configure-2.5.0-1.osg34.el7
-osg-version-3.4.37-1.osg34.el7
-scitokens-cpp-0.3.4-1.osg34.el7
-xrootd-4.10.1-1.osg34.el7
+igtf-ca-certs-1.102-1.osg34.el7
+osg-ca-certs-1.84-1.osg34.el7
+osg-version-3.4.38-1.osg34.el7
+stashcache-client-5.5.0-2.osg34.el7
+vo-client-97-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
-condor-8.8.5-1.6.osg35.el7
-glideinwms-3.6-1.osg35.el7
-gratia-probe-1.20.11-1.osg35.el7
-oidc-agent-3.2.6-1.osg35.el7
-osg-configure-3.1.0-1.osg35.el7
-scitokens-cpp-0.3.4-1.osg35.el7
-xrootd-4.10.1-1.osg35.el7
+condor-8.8.5-1.7.osg35.el7
+igtf-ca-certs-1.102-1.osg35.el7
+osg-ca-certs-1.84-1.osg35.el7
+stashcache-client-5.5.0-2.osg35.el7
+vo-client-97-1.osg35.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
-
-RPMs slated for release in osg-upcoming-el7-testing
-condor-8.9.3-1.1.osgup.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
