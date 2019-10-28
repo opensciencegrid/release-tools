@@ -33,7 +33,11 @@ Options:
   -y        don't prompt for confirmation
   -q        only output errors; implies -y
 
-HUB_USER and HUB_PASS may be set in the environment
+Environment:
+  HUB_USER:    dockerhub username
+  HUB_PASS:    dockerhub password
+
+If these are omitted, the script will prompt for them.
 ```
 
 ### `dockerhub-tag-fresh-to-stable.sh`

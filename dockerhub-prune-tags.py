@@ -20,7 +20,11 @@ def usage():
     print("  -y        don't prompt for confirmation")
     print("  -q        only output errors; implies -y")
     print("")
-    print("HUB_USER and HUB_PASS may be set in the environment")
+    print("Environment:")
+    print("  HUB_USER:    dockerhub username")
+    print("  HUB_PASS:    dockerhub password")
+    print("")
+    print("If these are omitted, the script will prompt for them.")
     sys.exit()
 
 def set_map(fn, seq):
