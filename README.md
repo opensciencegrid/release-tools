@@ -3,11 +3,9 @@
 See our Release documentation under the
 [OSG Technology docs](https://opensciencegrid.org/technology/release/cut-sw-release/).
 
-## Notes on specific tools:
-
 ---
 
-## Notes on individual tools
+## Notes on specific tools:
  - [`dockerhub-prune-tags`](#dockerhub-prune-tags)
  - [`dockerhub-tag-fresh-to-stable`](#dockerhub-tag-fresh-to-stable)
 
