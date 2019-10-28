@@ -152,6 +152,8 @@ def main(args):
         ops, args = getopt.getopt(args, "u:qy")
     except getopt.GetoptError:
         usage()
+    if len(args) != 1:
+        usage()
     repo, = args
     ops = dict(ops)
 
