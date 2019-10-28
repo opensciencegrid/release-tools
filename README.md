@@ -10,8 +10,8 @@ See our Release documentation under the
 For [SOFTWARE-3844](https://opensciencegrid.atlassian.net/browse/SOFTWARE-3844),
 we have a tool to cleanup OSG Software docker images based on our policy:
 
-    - Weekly timestamped image tags will be kept for at least three months
-    - After three months, monthly timestamped image tags will be kept for at least one year
+-   Weekly timestamped image tags will be kept for at least three months
+-   After three months, monthly timestamped image tags will be kept for at least one year
 
 The tool `dockerhub-prune-tags.py` untags images with only a timestamp tag
 (that is, without also being tagged as `fresh` or `stable`) according to the
