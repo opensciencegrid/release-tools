@@ -5,6 +5,14 @@ See our Release documentation under the
 
 ## Notes on specific tools:
 
+---
+
+## Notes on individual tools
+ - [`dockerhub-prune-tags.py`](#dockerhub-prune-tags.py)
+ - [`dockerhub-tag-fresh-to-stable.sh`](#dockerhub-tag-fresh-to-stable.sh)
+
+---
+
 ### `dockerhub-prune-tags.py`
 
 For [SOFTWARE-3844](https://opensciencegrid.atlassian.net/browse/SOFTWARE-3844),
