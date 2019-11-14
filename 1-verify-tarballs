@@ -48,10 +48,10 @@ for ver in "$@"; do
             rhels="el7"
         fi
         for rhel in $rhels; do
-            min_size=24
-            max_size=28
+            min_size=25
+            max_size=29
             if [ $rhel = "el7" ]; then
-                min_size=30
+                min_size=33
                 max_size=34
             fi
             archs="x86_64"

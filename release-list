@@ -44,3 +44,9 @@ xrootd-scitokens-1.0.0-1.2.osg35.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
+
+RPMs slated for release in osg-upcoming-el7-testing
+blahp-1.18.45-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
