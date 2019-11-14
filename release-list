@@ -4,31 +4,43 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-igtf-ca-certs-1.102-1.osg34.el6
-osg-ca-certs-1.84-1.osg34.el6
-osg-version-3.4.38-1.osg34.el6
-stashcache-client-5.5.0-2.osg34.el6
-vo-client-97-1.osg34.el6
+blahp-1.18.45-1.osg34.el6
+frontier-squid-4.9-2.1.osg34.el6
+osg-version-3.4.39-1.osg34.el6
+scitokens-cpp-0.3.5-1.osg34.el6
+singularity-3.4.2-1.1.osg34.el6
+xrootd-4.11.0-1.osg34.el6
+xrootd-lcmaps-1.7.4-4.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-igtf-ca-certs-1.102-1.osg34.el7
-osg-ca-certs-1.84-1.osg34.el7
-osg-version-3.4.38-1.osg34.el7
-stashcache-client-5.5.0-2.osg34.el7
-vo-client-97-1.osg34.el7
+blahp-1.18.45-1.osg34.el7
+frontier-squid-4.9-2.1.osg34.el7
+osg-version-3.4.39-1.osg34.el7
+scitokens-cpp-0.3.5-1.osg34.el7
+scitokens-credmon-0.4-2.osg34.el7
+singularity-3.4.2-1.1.osg34.el7
+xrootd-4.11.0-1.osg34.el7
+xrootd-hdfs-2.1.7-2.osg34.el7
+xrootd-lcmaps-1.7.4-4.osg34.el7
+xrootd-multiuser-0.4.2-5.osg34.el7
+xrootd-scitokens-1.0.0-1.2.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
-condor-8.8.5-1.7.osg35.el7
-igtf-ca-certs-1.102-1.osg35.el7
-osg-ca-certs-1.84-1.osg35.el7
-stashcache-client-5.5.0-2.osg35.el7
-vo-client-97-1.osg35.el7
+blahp-1.18.45-1.osg35.el7
+frontier-squid-4.9-2.1.osg35.el7
+scitokens-cpp-0.3.5-1.osg35.el7
+scitokens-credmon-0.4-2.osg35.el7
+xrootd-4.11.0-1.osg35.el7
+xrootd-hdfs-2.1.7-2.osg35.el7
+xrootd-lcmaps-1.7.4-4.osg35.el7
+xrootd-multiuser-0.4.2-5.osg35.el7
+xrootd-scitokens-1.0.0-1.2.osg35.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
