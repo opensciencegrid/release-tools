@@ -4,26 +4,52 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-cctools-7.0.21-1.osg34.el6
-osg-release-3.4-9.osg34.el6
-osg-version-3.4.40-1.osg34.el6
+condor-8.8.6-1.1.osg34.el6
+cvmfs-2.7.0-1.osg34.el6
+glideinwms-3.6.1-1.osg34.el6
+htcondor-ce-3.4.0-1.osg34.el6
+koji-1.15.3-1.2.osg34.el6
+osg-oasis-16-1.osg34.el6
+osg-version-3.4.41-1.osg34.el6
+osg-xrootd-3.4-5.osg34.el6
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
+Package     osg-3.4-el6-testing  osg-3.4-el6-development
+----------  -------------------  -----------------------
+osg-xrootd  3.4-5                3.4-9
 
 RPMs slated for release in osg-3.4-el7-testing
-cctools-7.0.21-1.osg34.el7
-osg-release-3.4-9.osg34.el7
-osg-version-3.4.40-1.osg34.el7
-xcache-1.2.0-1.osg34.el7
+condor-8.8.6-1.1.osg34.el7
+cvmfs-2.7.0-1.osg34.el7
+glideinwms-3.6.1-1.osg34.el7
+htcondor-ce-3.4.0-1.osg34.el7
+koji-1.15.3-1.2.osg34.el7
+osg-oasis-16-1.osg34.el7
+osg-version-3.4.41-1.osg34.el7
+osg-xrootd-3.4-5.osg34.el7
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
+Package     osg-3.4-el7-testing  osg-3.4-el7-development
+----------  -------------------  -----------------------
+osg-xrootd  3.4-5                3.4-9
 
 RPMs slated for release in osg-3.5-el7-testing
-cctools-7.0.21-1.osg35.el7
-osg-release-3.5-3.osg35.el7
-xcache-1.2.0-1.osg35.el7
+condor-8.8.6-1.1.osg35.el7
+cvmfs-2.7.0-1.osg35.el7
+glideinwms-3.6.1-1.osg35.el7
+htcondor-ce-4.1.0-1.osg35.el7
+osg-oasis-16-1.osg35.el7
+osg-xrootd-3.5-4.osg35.el7
 
 Slated packages in testing behind current development versions
-No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
+Package     osg-3.5-el7-testing  osg-3.5-el7-development
+----------  -------------------  -----------------------
+osg-xrootd  3.5-4                3.5-8
+
+RPMs slated for release in osg-upcoming-el7-testing
+condor-8.9.4-1.osgup.el7
+
+Slated packages in testing behind current development versions
+Package  osg-upcoming-el7-testing  osg-upcoming-el7-development
+-------  ------------------------  ----------------------------
+condor   8.9.4-1                   8.9.5-0.491068
