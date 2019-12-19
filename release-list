@@ -12,11 +12,12 @@ koji-1.15.3-1.2.osg34.el6
 osg-oasis-16-1.osg34.el6
 osg-version-3.4.41-1.osg34.el6
 osg-xrootd-3.4-5.osg34.el6
+singularity-3.5.2-1.1.osg34.el6
 
 Slated packages in testing behind current development versions
-Package     osg-3.4-el6-testing  osg-3.4-el6-development
-----------  -------------------  -----------------------
-osg-xrootd  3.4-5                3.4-9
+Package  osg-3.4-el6-testing  osg-3.4-el6-development
+-------  -------------------  -----------------------
+xrootd   4.11.1-0.rc1         4.11.1-1
 
 RPMs slated for release in osg-3.4-el7-testing
 condor-8.8.6-1.1.osg34.el7
@@ -27,11 +28,12 @@ koji-1.15.3-1.2.osg34.el7
 osg-oasis-16-1.osg34.el7
 osg-version-3.4.41-1.osg34.el7
 osg-xrootd-3.4-5.osg34.el7
+singularity-3.5.2-1.1.osg34.el7
 
 Slated packages in testing behind current development versions
-Package     osg-3.4-el7-testing  osg-3.4-el7-development
-----------  -------------------  -----------------------
-osg-xrootd  3.4-5                3.4-9
+Package  osg-3.4-el7-testing  osg-3.4-el7-development
+-------  -------------------  -----------------------
+xrootd   4.11.1-0.rc1         4.11.1-1
 
 RPMs slated for release in osg-3.5-el7-testing
 condor-8.8.6-1.1.osg35.el7
@@ -42,9 +44,9 @@ osg-oasis-16-1.osg35.el7
 osg-xrootd-3.5-4.osg35.el7
 
 Slated packages in testing behind current development versions
-Package     osg-3.5-el7-testing  osg-3.5-el7-development
-----------  -------------------  -----------------------
-osg-xrootd  3.5-4                3.5-8
+Package  osg-3.5-el7-testing  osg-3.5-el7-development
+-------  -------------------  -----------------------
+xrootd   4.11.1-0.rc1         4.11.1-1
 
 RPMs slated for release in osg-upcoming-el7-testing
 condor-8.9.4-1.osgup.el7
