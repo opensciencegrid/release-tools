@@ -4,54 +4,61 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-condor-8.8.6-1.1.osg34.el6
-cvmfs-2.7.0-1.osg34.el6
-glideinwms-3.6.1-1.osg34.el6
-htcondor-ce-3.4.0-1.osg34.el6
-koji-1.15.3-1.2.osg34.el6
-osg-oasis-16-1.osg34.el6
-osg-version-3.4.41-1.osg34.el6
-osg-xrootd-3.4-5.osg34.el6
-singularity-3.5.2-1.1.osg34.el6
+condor-8.8.7-1.osg34.el6
+gratia-probe-1.20.12-1.osg34.el6
+osg-ce-3.4-6.osg34.el6
+osg-tested-internal-3.4-8.osg34.el6
+osg-version-3.4.42-1.osg34.el6
+osg-xrootd-3.4-12.osg34.el6
+scitokens-cpp-0.4.0-1.osg34.el6
+voms-2.0.14-1.5.osg34.el6
+xrootd-4.11.1-1.osg34.el6
+xrootd-lcmaps-1.7.5-1.osg34.el6
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el6-testing  osg-3.4-el6-development
--------  -------------------  -----------------------
-xrootd   4.11.1-0.rc1         4.11.1-1
+Package              osg-3.4-el6-testing  osg-3.4-el6-development
+-------------------  -------------------  -----------------------
+osg-tested-internal  3.4-8                3.4-9
 
 RPMs slated for release in osg-3.4-el7-testing
-condor-8.8.6-1.1.osg34.el7
-cvmfs-2.7.0-1.osg34.el7
-glideinwms-3.6.1-1.osg34.el7
-htcondor-ce-3.4.0-1.osg34.el7
-koji-1.15.3-1.2.osg34.el7
-osg-oasis-16-1.osg34.el7
-osg-version-3.4.41-1.osg34.el7
-osg-xrootd-3.4-5.osg34.el7
-singularity-3.5.2-1.1.osg34.el7
+condor-8.8.7-1.osg34.el7
+gratia-probe-1.20.12-1.osg34.el7
+hosted-ce-tools-0.5-2.osg34.el7
+osg-ce-3.4-6.osg34.el7
+osg-tested-internal-3.4-8.osg34.el7
+osg-version-3.4.42-1.osg34.el7
+osg-xrootd-3.4-12.osg34.el7
+scitokens-cpp-0.4.0-1.osg34.el7
+voms-2.0.14-1.5.osg34.el7
+xrootd-4.11.1-1.osg34.el7
+xrootd-lcmaps-1.7.5-1.osg34.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el7-testing  osg-3.4-el7-development
--------  -------------------  -----------------------
-xrootd   4.11.1-0.rc1         4.11.1-1
+Package              osg-3.4-el7-testing  osg-3.4-el7-development
+-------------------  -------------------  -----------------------
+osg-tested-internal  3.4-8                3.4-9
 
 RPMs slated for release in osg-3.5-el7-testing
-condor-8.8.6-1.1.osg35.el7
-cvmfs-2.7.0-1.osg35.el7
-glideinwms-3.6.1-1.osg35.el7
-htcondor-ce-4.1.0-1.osg35.el7
-osg-oasis-16-1.osg35.el7
-osg-xrootd-3.5-4.osg35.el7
+condor-8.8.7-1.osg35.el7
+globus-gridftp-server-13.20-1.osg35.el7
+gratia-probe-1.20.12-1.osg35.el7
+gsi-openssh-7.4p1-4.5.osg35.el7
+hosted-ce-tools-0.5-2.osg35.el7
+osg-ce-3.5-4.osg35.el7
+osg-gridftp-3.5-4.osg35.el7
+osg-gsi-openssh-addons-1.0.0-3.osg35.el7
+osg-xrootd-3.5-10.osg35.el7
+scitokens-cpp-0.4.0-1.osg35.el7
+voms-2.0.14-1.5.osg35.el7
+xrootd-4.11.1-1.osg35.el7
+xrootd-lcmaps-1.7.5-1.osg35.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.5-el7-testing  osg-3.5-el7-development
--------  -------------------  -----------------------
-xrootd   4.11.1-0.rc1         4.11.1-1
+No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
 
 RPMs slated for release in osg-upcoming-el7-testing
-condor-8.9.4-1.osgup.el7
+blahp-1.18.45-1.1.osgup.el7
+condor-8.9.5-1.osgup.el7
 
 Slated packages in testing behind current development versions
-Package  osg-upcoming-el7-testing  osg-upcoming-el7-development
--------  ------------------------  ----------------------------
-condor   8.9.4-1                   8.9.5-0.491068
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
