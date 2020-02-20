@@ -33,11 +33,11 @@ REGISTRY=https://registry-1.docker.io
 CONTENT_TYPE="application/vnd.docker.distribution.manifest.v2+json"
 
 getvar () {
-  read -p "dockerhub $1? " "$1"
+  read $2 -p "dockerhub $1? " "$1"
 }
 
 [[ $user ]] || getvar user
-[[ $pass ]] || getvar pass
+[[ $pass ]] || getvar pass -s
 
 TOKEN=$(
   authurl=https://auth.docker.io/token
