@@ -27,6 +27,40 @@ def usage():
     print("If these are omitted, the script will prompt for them.")
     sys.exit()
 
+def parseargs(args):
+    try:
+        ops, args = getopt.getopt(args, "u:qy")
+    except getopt.GetoptError:
+        usage()
+    if len(args) != 1:
+        usage()
+    repo, = args
+    ops = dict(ops)
+
+    user = ops.get('-u') or os.getenv("HUB_USER")
+    pw   = os.getenv("HUB_PASS")
+    if not user:
+        user = raw_input("dockerhub username: ")
+    if not pw:
+        pw = getpass.getpass("dockerhub password: ")
+
+    return repo, user, pw, ops
+
+def prompt_user(tags, prune_tags, ops):
+    print("The following tags were found; those with a * will be deleted:")
+    print("")
+    for tag in sorted(tags):
+        star = "*" if tag in prune_tags else " "
+        print("{star} {tag}".format(**locals()))
+
+    print("")
+
+    if '-y' not in ops:
+        yes = raw_input("Is this OK? (y/[N]) ")
+        if yes not in ('y', 'yes'):
+            sys.exit()
+    print("")
+
 def set_map(fn, seq):
     return set(map(fn, seq))
 
@@ -152,40 +186,14 @@ class RepoMan:
         return delete_tag(self.repo, tag, self.jwt_auth_token)
 
 def main(args):
-    try:
-        ops, args = getopt.getopt(args, "u:qy")
-    except getopt.GetoptError:
-        usage()
-    if len(args) != 1:
-        usage()
-    repo, = args
-    ops = dict(ops)
-
-    user = ops.get('-u') or os.getenv("HUB_USER")
-    pw   = os.getenv("HUB_PASS")
-    if not user:
-        user = raw_input("dockerhub username: ")
-    if not pw:
-        pw = getpass.getpass("dockerhub password: ")
+    repo, user, pw, ops = parseargs(args)
 
     fb = FrenchBread(repo, user, pw)
 
     tags, prune_tags = fb.get_tags_to_prune()
 
     if '-q' not in ops:
-        print("The following tags were found; those with a * will be deleted:")
-        print("")
-        for tag in sorted(tags):
-            star = "*" if tag in prune_tags else " "
-            print("{star} {tag}".format(**locals()))
-
-        print("")
-
-        if '-y' not in ops:
-            yes = raw_input("Is this OK? (y/[N]) ")
-            if yes not in ('y', 'yes'):
-                sys.exit()
-        print("")
+        prompt_user(tags, prune_tags, ops)
 
     rman = RepoMan(repo, user, pw)
     for tag in prune_tags:
