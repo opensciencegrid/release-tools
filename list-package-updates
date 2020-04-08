@@ -23,7 +23,7 @@ dvers=(el6 el7)
 
 list_tag () {
   osg-koji list-tagged --latest --quiet --rpms "$1" | grep -v '\.src$' \
-  | grep -v '^GenericError: No such entry in table tag:' || :
+  | grep -v '^GenericError: ' || :
 }
 
 tag_diff () {
