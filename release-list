@@ -4,32 +4,19 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-frontier-squid-4.10-3.1.osg34.el6
-osg-version-3.4.49-1.osg34.el6
-vo-client-103-1.osg34.el6
+vo-client-104-1.osg34.el6
 
 Slated packages in testing behind current development versions
-Package    osg-3.4-el6-testing  osg-3.4-el6-development
----------  -------------------  -----------------------
-vo-client  103-1                104-1
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-frontier-squid-4.10-3.1.osg34.el7
-osg-version-3.4.49-1.osg34.el7
-vo-client-103-1.osg34.el7
+vo-client-104-1.osg34.el7
 
 Slated packages in testing behind current development versions
-Package    osg-3.4-el7-testing  osg-3.4-el7-development
----------  -------------------  -----------------------
-vo-client  103-1                104-1
+No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
-frontier-squid-4.10-3.1.osg35.el7
-osg-xrootd-3.5-12.osg35.el7
-vo-client-103-1.osg35.el7
-xrootd-4.11.3-1.2.osg35.el7
+vo-client-104-1.osg35.el7
 
 Slated packages in testing behind current development versions
-Package    osg-3.5-el7-testing  osg-3.5-el7-development
----------  -------------------  -----------------------
-vo-client  103-1                104-1
+No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
