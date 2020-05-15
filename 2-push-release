@@ -37,7 +37,7 @@ for ver in ${versions[@]}; do
             # Create new release repo for non-$data releases
             versioned_release_repo=osg-$branch-$dver-release-$ver
             print_header "Cloning $release_repo to $versioned_release_repo"
-            run_cmd "osg-koji clone-tag $release_repo $versioned_release_repo"
+            run_cmd "osg-koji clone-tag --all $release_repo $versioned_release_repo"
             echo
         fi
 
