@@ -4,31 +4,37 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-osg-version-3.4.50-1.osg34.el6
-vo-client-105-1.osg34.el6
-xrootd-4.11.3-1.2.osg34.el6
+gratia-probe-1.20.13-1.osg34.el6
+osg-build-1.16.1-1.osg34.el6
+osg-version-3.4.51-1.osg34.el6
+vo-client-106-1.osg34.el6
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-osg-version-3.4.50-1.osg34.el7
-vo-client-105-1.osg34.el7
-xrootd-4.11.3-1.2.osg34.el7
+gratia-probe-1.20.13-1.osg34.el7
+osg-build-1.16.1-1.osg34.el7
+osg-version-3.4.51-1.osg34.el7
+vo-client-106-1.osg34.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
-cctools-7.1.5-1.osg35.el7
-cvmfs-2.7.2-1.osg35.el7
-frontier-squid-4.11-2.1.osg35.el7
-hosted-ce-tools-0.7-1.osg35.el7
-osg-ce-3.5-5.osg35.el7
-osg-oasis-16-3.osg35.el7
-vo-client-105-1.osg35.el7
+blahp-1.18.46-1.osg35.el7
+condor-8.8.9-1.1.osg35.el7
+gratia-probe-1.20.13-1.osg35.el7
+osg-wn-client-3.5-4.osg35.el7
+vo-client-106-1.osg35.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.5-el7-testing  osg-3.5-el7-development
--------  -------------------  -----------------------
-xrootd   4.12.0-1             4.12.1-1
+No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
+
+RPMs slated for release in osg-upcoming-el7-testing
+blahp-1.18.46-3.osgup.el7
+condor-8.9.7-1.1.osgup.el7
+glideinwms-3.7-1.osgup.el7
+
+Slated packages in testing behind current development versions
+No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
