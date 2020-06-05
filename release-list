@@ -3,37 +3,8 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.4-el6-testing
-gratia-probe-1.20.13-1.osg34.el6
-osg-build-1.16.1-1.osg34.el6
-osg-version-3.4.51-1.osg34.el6
-vo-client-106-1.osg34.el6
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
-
-RPMs slated for release in osg-3.4-el7-testing
-gratia-probe-1.20.13-1.osg34.el7
-osg-build-1.16.1-1.osg34.el7
-osg-version-3.4.51-1.osg34.el7
-vo-client-106-1.osg34.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
-
-RPMs slated for release in osg-3.5-el7-testing
-blahp-1.18.46-1.osg35.el7
-condor-8.8.9-1.1.osg35.el7
-gratia-probe-1.20.13-1.osg35.el7
-vo-client-106-1.osg35.el7
-
-Slated packages in testing behind current development versions
-No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
-
 RPMs slated for release in osg-upcoming-el7-testing
-blahp-1.18.46-3.osgup.el7
-condor-8.9.7-1.1.osgup.el7
-glideinwms-3.7-1.osgup.el7
+blahp-1.18.46-1.osgup.el7
 
 Slated packages in testing behind current development versions
 No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
