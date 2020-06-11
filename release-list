@@ -3,8 +3,34 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-upcoming-el7-testing
-blahp-1.18.46-1.osgup.el7
+RPMs slated for release in osg-3.4-el6-testing
+frontier-squid-4.11-3.1.osg34.el6
+osg-version-3.4.52-1.osg34.el6
+voms-2.0.14-1.6.osg34.el6
 
 Slated packages in testing behind current development versions
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
+Package  osg-3.4-el6-testing  osg-3.4-el6-development
+-------  -------------------  -----------------------
+xrootd   4.12.1-1             4.12.2-1
+
+RPMs slated for release in osg-3.4-el7-testing
+frontier-squid-4.11-3.1.osg34.el7
+osg-version-3.4.52-1.osg34.el7
+voms-2.0.14-1.6.osg34.el7
+
+Slated packages in testing behind current development versions
+Package  osg-3.4-el7-testing  osg-3.4-el7-development
+-------  -------------------  -----------------------
+xrootd   4.12.1-1             4.12.2-1
+
+RPMs slated for release in osg-3.5-el7-testing
+frontier-squid-4.11-3.1.osg35.el7
+stashcache-client-5.6.1-1.osg35.el7
+voms-2.0.14-1.6.osg35.el7
+xcache-1.4.0-1.osg35.el7
+
+Slated packages in testing behind current development versions
+Package         osg-3.5-el7-testing  osg-3.5-el7-development
+--------------  -------------------  -----------------------
+frontier-squid  4.11-3.1             4.11-4.1
+xrootd          4.12.1-1             4.12.2-1
