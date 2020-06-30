@@ -4,33 +4,45 @@
 # same as the output from 0-generate-pkg-list.
 
 RPMs slated for release in osg-3.4-el6-testing
-frontier-squid-4.11-3.1.osg34.el6
-osg-version-3.4.52-1.osg34.el6
-voms-2.0.14-1.6.osg34.el6
+osg-version-3.4.53-1.osg34.el6
+xrootd-4.12.3-1.osg34.el6
+xrootd-lcmaps-1.7.7-2.osg34.el6
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el6-testing  osg-3.4-el6-development
--------  -------------------  -----------------------
-xrootd   4.12.1-1             4.12.2-1
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
-frontier-squid-4.11-3.1.osg34.el7
-osg-version-3.4.52-1.osg34.el7
-voms-2.0.14-1.6.osg34.el7
+osg-version-3.4.53-1.osg34.el7
+xrootd-4.12.3-1.osg34.el7
+xrootd-hdfs-2.1.7-6.osg34.el7
+xrootd-lcmaps-1.7.7-2.osg34.el7
+xrootd-multiuser-0.4.2-9.osg34.el7
+xrootd-scitokens-1.2.0-5.osg34.el7
 
 Slated packages in testing behind current development versions
-Package  osg-3.4-el7-testing  osg-3.4-el7-development
--------  -------------------  -----------------------
-xrootd   4.12.1-1             4.12.2-1
+No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
-frontier-squid-4.11-3.1.osg35.el7
-stashcache-client-5.6.1-1.osg35.el7
-voms-2.0.14-1.6.osg35.el7
-xcache-1.4.0-1.osg35.el7
+cctools-7.1.6-1.osg35.el7
+scitokens-credmon-0.7-1.osg35.el7
+xrootd-4.12.3-1.osg35.el7
+xrootd-hdfs-2.1.7-6.osg35.el7
+xrootd-lcmaps-1.7.7-2.osg35.el7
+xrootd-multiuser-0.4.2-8.osg35.el7
+xrootd-scitokens-1.2.0-5.osg35.el7
 
 Slated packages in testing behind current development versions
-Package         osg-3.5-el7-testing  osg-3.5-el7-development
---------------  -------------------  -----------------------
-frontier-squid  4.11-3.1             4.11-4.1
-xrootd          4.12.1-1             4.12.2-1
+Package              osg-3.5-el7-testing  osg-3.5-el7-development
+-------------------  -------------------  -----------------------
+osg-system-profiler  1.5.0-2              1.6.0-1
+
+RPMs slated for release in osg-upcoming-el7-testing
+blahp-1.18.46-3.osgup.el7
+condor-8.9.7-1.1.osgup.el7
+
+Slated packages in testing behind current development versions
+Package        osg-upcoming-el7-testing  osg-upcoming-el7-development
+-------------  ------------------------  ----------------------------
+xrootd         5.0.0-0.rc2.2             5.0.0-0.rc4
+xrootd-lcmaps  1.7.7-3                   1.7.7-4
+
