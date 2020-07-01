@@ -17,6 +17,11 @@ print_header () {
     echo -e "\033[1;33m$1\033[0m"
 }
 
+print_header_with_line () {
+    print_header "$1"
+    print_header "$(tr '[:print:]' = <<< "$1")"
+}
+
 osg_release () {
     osgversion=$1
     sed -r 's/\.[0-9]+$//' <<< $osgversion

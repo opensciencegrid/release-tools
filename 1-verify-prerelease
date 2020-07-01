@@ -32,13 +32,13 @@ for ver in ${versions[@]}; do
 
         # Print any slated packages missing from pre-release
         if [[ -n $missing_pkgs ]]; then
-            final_msg=$(printf "%s\n\n$(print_header "Slated packages missing from $prerel_tag")\n%s" \
+            final_msg=$(printf "%s\n\n$(print_header_with_line "Slated packages missing from $prerel_tag")\n%s" \
                         "$final_msg" "$missing_pkgs")
         fi
 
         # Print any packages in pre-release that are not slated for release
         if [[ -n $extra_pkgs ]]; then
-            final_msg=$(printf "%s\n\n$(print_header "Packages in $prerel_tag not slated for release")\n%s" \
+            final_msg=$(printf "%s\n\n$(print_header_with_line "Packages in $prerel_tag not slated for release")\n%s" \
                         "$final_msg" "$extra_pkgs")
         fi
     done
