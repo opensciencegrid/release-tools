@@ -18,12 +18,8 @@ print_header () {
 }
 
 print_header_with_line () {
-    echo -e "\033[1;33m$1\033[0m"
-    echo -en "\033[1;33m"
-    for ((i=0; i<${#1}; i++)); do
-        echo -n "="
-    done
-    echo -e "\033[0m"
+    print_header "$1"
+    print_header "$(tr '[:print:]' = <<< "$1")"
 }
 
 osg_release () {
