@@ -14,7 +14,11 @@ usage () {
 }
 
 print_header () {
-    echo -e "\033[1;33m$1\033[0m"
+    if [[ -t 1 ]]; then
+        echo -e "\033[1;33m$1\033[0m"
+    else
+        echo -e "$1"
+    fi
 }
 
 print_header_with_line () {
