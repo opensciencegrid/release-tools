@@ -4,8 +4,8 @@
 # same as the output from 0-generate-pkg-list.
 
 
-[1;33mRPMs slated for release in osg-3.5-el7-testing[0m
-[1;33m==============================================[0m
+RPMs slated for release in osg-3.5-el7-testing
+==============================================
 cvmfs-2.7.3-1.osg35.el7
 cvmfs-config-osg-2.4-4.osg35.el7
 htcondor-ce-4.4.0-1.osg35.el7
@@ -14,8 +14,8 @@ osg-system-profiler-1.5.0-2.osg35.el7
 osg-wn-client-3.5-4.osg35.el7
 osg-xrootd-3.5-13.osg35.el7
 
-[1;33mSlated packages in testing behind current development versions[0m
-[1;33m==============================================================[0m
+Slated packages in testing behind current development versions
+==============================================================
 Package              osg-3.5-el7-testing  osg-3.5-el7-development
 -------------------  -------------------  -----------------------
 osg-system-profiler  1.5.0-2              1.6.0-1
