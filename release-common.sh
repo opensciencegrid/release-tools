@@ -149,7 +149,7 @@ pkg_dist () {
 pkgs_to_release () {
     branch=$1
     dver=$2
-    awk "/^RPMs.*osg-$branch-$dver-testing/ {flag=1;next} /^[[:space:]]*$/ { flag=0 } flag { print }" release-list
+    awk "/^RPMs.*osg-$branch-$dver-testing/ {flag=1;next} /^[[:space:]]*$/ { flag=0 } flag { print }" release-list | grep -v =======
 }
 
 ########
