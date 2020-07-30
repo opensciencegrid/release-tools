@@ -5,15 +5,34 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-cvmfs-2.7.3-1.osg35.el7
-cvmfs-config-osg-2.4-4.osg35.el7
-frontier-squid-4.12-2.1.osg35.el7
-htcondor-ce-4.4.0-1.osg35.el7
-osg-oasis-16-5.osg35.el7
-scitokens-cpp-0.5.1-1.osg35.el7
+htcondor-ce-4.4.1-1.osg35.el7
+osg-flock-1.1-2.osg35.el7
+osg-pki-tools-3.4.0-1.osg35.el7
+osg-system-profiler-1.6.0-1.osg35.el7
+osg-wn-client-3.5-4.osg35.el7
+osg-xrootd-3.5-13.osg35.el7
+stashcache-client-6.0.0-1.osg35.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
-Package              osg-3.5-el7-testing  osg-3.5-el7-development
--------------------  -------------------  -----------------------
-osg-system-profiler  1.5.0-2              1.6.0-1
+No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
+
+RPMs slated for release in osg-3.5-el8-testing
+==============================================
+cvmfs-2.7.3-1.osg35.el8
+cvmfs-config-osg-2.4-4.osg35.el8
+cvmfs-x509-helper-2.1-2.1.osg35.el8
+igtf-ca-certs-1.106-1.osg35.el8
+osg-ca-certs-1.88-1.osg35.el8
+osg-ca-scripts-1.2.4-1.osg35.el8
+osg-oasis-16-5.osg35.el8
+osg-system-profiler-1.6.0-1.osg35.el8
+osg-update-vos-1.4.0-2.osg35.el8
+osg-wn-client-3.5-4.osg35.el8
+stashcache-client-6.0.0-1.osg35.el8
+vo-client-106-1.osg35.el8
+voms-2.1.0-0.14.rc0.1.osg35.el8
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.5-el8-testing' behind version in 'osg-3.5-el8-development'
