@@ -38,7 +38,7 @@ osg_dvers () {
         echo el6 el7
     fi
     if [[ $branch == '3.5' || $branch == 'upcoming' ]]; then
-        echo el7
+        echo el7 el8
     fi
 }
 
