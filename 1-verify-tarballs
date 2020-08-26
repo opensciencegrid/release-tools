@@ -1,24 +1,18 @@
 #!/bin/bash
 
-usage () {
-    echo "usage:"
-    echo "  $(basename "$0") NON_UPCOMING_VERSIONS"
-    exit
-}
-
-[[ $1 =~ ^[3-9]\.[0-9]+\.[0-9]+$ ]] || usage
+. release-common.sh
 
 dotest () {
-    file=$dir/$client-$ver-1.$rhel.$arch.tar.gz
+    file=$dir/$client-$ver-$data_rel.$rhel.$arch.tar.gz
     if [ -e $file ]; then
-        echo "Testing $client-$ver-1.$rhel.$arch..."
+        echo "Testing $client-$ver-$data_rel.$rhel.$arch..."
         size=$(du -m "$file" | cut -f 1)
         if [ $size -lt $min_size ]; then
-            echo -e "\e[1;33mWARNING: $client-$ver-1.$rhel.$arch is too small. Check with release manager.\e[0m"
+            echo -e "\e[1;33mWARNING: $client-$ver-$data_rel.$rhel.$arch is too small. Check with release manager.\e[0m"
         elif [ $size -gt $max_size ]; then
-            echo -e "\e[1;33mWARNING: $client-$ver-1.$rhel.$arch is too big. Check with release manager.\e[0m"
+            echo -e "\e[1;33mWARNING: $client-$ver-$data_rel.$rhel.$arch is too big. Check with release manager.\e[0m"
         else
-            echo -e "\e[1;32mOK: $client-$ver-1.$rhel.$arch is the right size.\e[0m"
+            echo -e "\e[1;32mOK: $client-$ver-$data_rel.$rhel.$arch is the right size.\e[0m"
         fi
         mkdir -p $rhel-$arch
         pushd $rhel-$arch
@@ -29,29 +23,33 @@ dotest () {
         popd
         rm -rf $rhel-$arch
     else
-        echo -e "\e[1;31mERROR: $client-$ver-1.$rhel.$arch tarball is missing.\e[0m"
+        echo -e "\e[1;31mERROR: $(pwd)/$dir/$client-$ver-$data_rel.$rhel.$arch tarball is missing.\e[0m"
     fi
 }
 
-cd /tmp
+pushd /tmp
 
-for ver in "$@"; do
+for ver in ${versions[@]}; do
     major_version="${ver%.*}"
-    clients="osg-wn-client"
-    if [ "$major_version" = "3.4" -o "$major_version" = "3.5" ]; then
-        clients="$clients osg-afs-client"
+    if [ "$major_version" = "3.4" ]; then
+        rhels="el6 el7"
+    else
+        rhels="el7 el8"
+    fi
+    clients="osg-wn-client osg-afs-client"
+    data_rel="1"
+    if [ $DATA -ne 0 ]; then
+        data_rel="$DATA"
     fi
     for client in $clients; do
-        if [ "$major_version" = "3.4" ]; then
-            rhels="el6 el7"
-        else
+        # No EL8 AFS tarball yet
+        if [ "$client" = "osg-afs-client" -a "$major_version" = "3.5" ]; then
             rhels="el7"
         fi
         for rhel in $rhels; do
             min_size=24
             max_size=32
             if [ $rhel = "el7" ]; then
-                min_size=32
                 max_size=36
             fi
             archs="x86_64"
@@ -59,10 +57,11 @@ for ver in "$@"; do
                 archs="i386 $archs"
             fi
             for arch in $archs; do
-                dir=tarballs/$major_version/$arch
+                dir=tarballs
                 dotest
             done
         done
     done
 done
 
+popd
