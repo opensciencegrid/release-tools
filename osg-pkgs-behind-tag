@@ -26,7 +26,7 @@ import sys
 import os
 import re
 import rpm
-import urllib2
+
 try:
     from rpmUtils.miscutils import stringToVersion
 except ImportError:
