@@ -5,20 +5,15 @@
 
 RPMs slated for release in osg-3.4-el6-testing
 ==============================================
-osg-version-3.4.55-1.osg34.el6
-singularity-3.6.3-1.osg34.el6
+vo-client-109-1.osg34.el6
 
 Slated packages in testing behind current development versions
 ==============================================================
-Package     osg-3.4-el6-testing  osg-3.4-el6-development
-----------  -------------------  -----------------------
-glideinwms  3.6.4-1              3.6.5-1
+No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
 ==============================================
-glideinwms-3.6.5-1.osg34.el7
-osg-version-3.4.55-1.osg34.el7
-singularity-3.6.3-1.osg34.el7
+vo-client-109-1.osg34.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -26,17 +21,23 @@ No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-blahp-1.18.48-2.osg35.el7
-glideinwms-3.6.5-1.osg35.el7
+vo-client-109-1.osg35.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
 No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
 
-RPMs slated for release in osg-upcoming-el7-testing
-===================================================
-blahp-1.18.48-2.osgup.el7
+RPMs slated for release in osg-3.5-el8-testing
+==============================================
+vo-client-109-1.osg35.el8
 
 Slated packages in testing behind current development versions
 ==============================================================
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
+Package           osg-3.5-el8-testing  osg-3.5-el8-development
+----------------  -------------------  -----------------------
+blahp             1.18.47-1            1.18.48-2
+condor            8.8.10-1.3           8.8.11-1
+python-scitokens  1.2.2-2              1.2.4-2
+xrootd            4.12.1-1             4.12.3-1
+xrootd-multiuser  0.4.4-1              0.4.4-2
+
