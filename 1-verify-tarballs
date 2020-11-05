@@ -57,7 +57,7 @@ for ver in ${versions[@]}; do
                 archs="i386 $archs"
             fi
             for arch in $archs; do
-                dir=tarballs
+                dir=tarballs/$major_version/$arch
                 dotest
             done
         done
