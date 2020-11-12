@@ -5,8 +5,8 @@
 
 RPMs slated for release in osg-3.4-el6-testing
 ==============================================
-gfal2-2.18.1-1.osg34.el6
-osg-version-3.4.56-1.osg34.el6
+gfal2-2.18.1-1.1.osg34.el6
+osg-version-3.4.57-1.osg34.el6
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -14,8 +14,8 @@ No packages in 'osg-3.4-el6-testing' behind version in 'osg-3.4-el6-development'
 
 RPMs slated for release in osg-3.4-el7-testing
 ==============================================
-gfal2-2.18.1-1.osg34.el7
-osg-version-3.4.56-1.osg34.el7
+gfal2-2.18.1-1.1.osg34.el7
+osg-version-3.4.57-1.osg34.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -23,14 +23,7 @@ No packages in 'osg-3.4-el7-testing' behind version in 'osg-3.4-el7-development'
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-condor-8.8.11-1.osg35.el7
-cvmfs-2.7.5-1.osg35.el7
-cvmfs-config-osg-2.5-1.osg35.el7
-gfal2-2.18.1-1.osg35.el7
-osg-flock-1.2-2.osg35.el7
-osg-oasis-16-7.osg35.el7
-python-scitokens-1.2.4-3.osg35.el7
-scitokens-credmon-0.8.1-1.2.osg35.el7
+gfal2-2.18.1-1.1.osg35.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -40,9 +33,6 @@ xrootd   4.12.5-1             4.12.5-1.1
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-cvmfs-2.7.5-1.osg35.el8
-cvmfs-config-osg-2.5-1.osg35.el8
-osg-oasis-16-7.osg35.el8
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -50,11 +40,15 @@ Package           osg-3.5-el8-testing  osg-3.5-el8-development
 ----------------  -------------------  -----------------------
 blahp             1.18.47-1            1.18.48-2
 condor            8.8.10-1.3           8.8.11-1
+gfal2             2.18.1-1             2.18.1-1.1
 python-scitokens  1.2.2-2              1.2.4-2
+xrootd-multiuser  0.4.4-2              0.4.5-1
 
 RPMs slated for release in osg-upcoming-el7-testing
 ===================================================
-xrootd-5.0.2-1.osgup.el7
+condor-8.9.9-1.osgup.el7
+glideinwms-3.7.1-1.osgup.el7
+xrootd-cmstfc-1.5.2-6.osgup.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -65,6 +59,7 @@ RPMs slated for release in osg-upcoming-el8-testing
 
 Slated packages in testing behind current development versions
 ==============================================================
-Package  osg-upcoming-el8-testing  osg-upcoming-el8-development
--------  ------------------------  ----------------------------
-blahp    1.18.47-2                 1.18.48-2
+Package           osg-upcoming-el8-testing  osg-upcoming-el8-development
+----------------  ------------------------  ----------------------------
+blahp             1.18.47-2                 1.18.48-2
+xrootd-multiuser  0.4.4-4                   0.4.5-1
