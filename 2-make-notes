@@ -53,6 +53,11 @@ for ver in ${versions[@]}; do
             xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
                 xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | \
                 sort -u > $branch-release-note-rpms-$dver
+            echo -n '    ' > $branch-release-note-rpm-updates-$dver
+            for rpm in $(<$branch-release-note-rpms-$dver); do
+                rpm=${rpm%%-[0-9]*}
+                echo -n "$rpm " >> $branch-release-note-rpm-updates-$dver
+            done
 
             # Update info
             run_cmd "cp move-to-$branch-release-$dver $ver$data_rel-updated-$branch-$dver.txt"
@@ -61,13 +66,6 @@ for ver in ${versions[@]}; do
             echo
         fi
     done
-
-    # RPM update release-notes don't need to specify the dver
-    if [[ $branch =~ .*upcoming.* ]]; then
-        list-package-updates -u $ver > $branch-release-note-rpm-updates
-    else
-        list-package-updates $data_option$ver > $branch-release-note-rpm-updates
-    fi
 done
 
 # Copy release info files over to AFS
