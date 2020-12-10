@@ -27,7 +27,15 @@ dotest () {
     fi
 }
 
-pushd /tmp
+echo "Enter the directory containing the tarballs:"
+read tarball_directory
+if [ ! -d $tarball_directory ]; then
+    echo "Directory not found: $tarball_directory"
+    exit 1
+fi
+
+# drop upcoming from versions since they don't get their own tarballs
+versions=(${versions[@]/upcoming/})
 
 for ver in ${versions[@]}; do
     major_version="${ver%.*}"
@@ -57,11 +65,9 @@ for ver in ${versions[@]}; do
                 archs="i386 $archs"
             fi
             for arch in $archs; do
-                dir=tarballs/$major_version/$arch
+                dir=$tarball_directory
                 dotest
             done
         done
     done
 done
-
-popd
