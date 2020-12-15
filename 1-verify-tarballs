@@ -3,7 +3,7 @@
 . release-common.sh
 
 dotest () {
-    file=$dir/$client-$ver-$data_rel.$rhel.$arch.tar.gz
+    file=$client-$ver-$data_rel.$rhel.$arch.tar.gz
     if [ -e $file ]; then
         echo "Testing $client-$ver-$data_rel.$rhel.$arch..."
         size=$(du -m "$file" | cut -f 1)
@@ -23,7 +23,7 @@ dotest () {
         popd
         rm -rf $rhel-$arch
     else
-        echo -e "\e[1;31mERROR: $(pwd)/$dir/$client-$ver-$data_rel.$rhel.$arch tarball is missing.\e[0m"
+        echo -e "\e[1;31mERROR: $(pwd)/$client-$ver-$data_rel.$rhel.$arch tarball is missing.\e[0m"
     fi
 }
 
@@ -33,6 +33,7 @@ if [ ! -d $tarball_directory ]; then
     echo "Directory not found: $tarball_directory"
     exit 1
 fi
+pushd $tarball_directory
 
 # drop upcoming from versions since they don't get their own tarballs
 versions=(${versions[@]/upcoming/})
@@ -65,9 +66,9 @@ for ver in ${versions[@]}; do
                 archs="i386 $archs"
             fi
             for arch in $archs; do
-                dir=$tarball_directory
                 dotest
             done
         done
     done
 done
+popd
