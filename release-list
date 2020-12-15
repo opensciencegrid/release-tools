@@ -5,24 +5,19 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-blahp-1.18.48-2.1.osg35.el7
-condor-8.8.12-1.1.osg35.el7
-hosted-ce-tools-0.9-1.osg35.el7
-htgettoken-1.0-1.osg35.el7
-osg-ca-certs-1.90-1.osg35.el7
-xrootd-4.12.5-1.osg35.el7
+igtf-ca-certs-1.108-1.osg35.el7
+osg-ca-certs-1.91-1.osg35.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
 Package        osg-3.5-el7-testing  osg-3.5-el7-development
 -------------  -------------------  -----------------------
 osg-configure  3.10.0-1             3.10.99-0.1
-xrootd         4.12.5-1             4.12.5-1.1
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-htgettoken-1.0-1.osg35.el8
-osg-ca-certs-1.90-1.osg35.el8
+igtf-ca-certs-1.108-1.osg35.el8
+osg-ca-certs-1.91-1.osg35.el8
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -34,24 +29,3 @@ gfal2             2.18.1-1             2.18.1-1.1
 osg-configure     3.10.0-1             3.10.99-0.1
 python-scitokens  1.2.2-2              1.2.4-2
 xrootd-multiuser  0.4.4-2              0.4.5-1
-
-RPMs slated for release in osg-upcoming-el7-testing
-===================================================
-blahp-1.18.48-2.2.osgup.el7
-condor-8.9.10-1.osgup.el7
-
-Slated packages in testing behind current development versions
-==============================================================
-No packages in 'osg-upcoming-el7-testing' behind version in 'osg-upcoming-el7-development'
-
-RPMs slated for release in osg-upcoming-el8-testing
-===================================================
-
-Slated packages in testing behind current development versions
-==============================================================
-Package           osg-upcoming-el8-testing  osg-upcoming-el8-development
-----------------  ------------------------  ----------------------------
-blahp             1.18.47-2                 1.18.48-2.2
-condor            8.9.9-1                   8.9.10-1
-xrootd            5.0.2-1                   5.1.0-0.rc1.1
-xrootd-multiuser  0.4.4-4                   0.4.5-1
