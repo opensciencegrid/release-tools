@@ -3,40 +3,9 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.5-el7-testing
-==============================================
-htgettoken-1.1-1.osg35.el7
-igtf-ca-certs-1.109-1.osg35.el7
-osg-ca-certs-1.92-1.osg35.el7
-osg-configure-3.11.0-1.osg35.el7
-
-Slated packages in testing behind current development versions
-==============================================================
-Package       osg-3.5-el7-testing  osg-3.5-el7-development
-------------  -------------------  -----------------------
-gratia-probe  1.22.1-1             1.22.2-1
-
-RPMs slated for release in osg-3.5-el8-testing
-==============================================
-htgettoken-1.1-1.osg35.el8
-igtf-ca-certs-1.109-1.osg35.el8
-osg-ca-certs-1.92-1.osg35.el8
-osg-configure-3.11.0-1.osg35.el8
-
-Slated packages in testing behind current development versions
-==============================================================
-Package           osg-3.5-el8-testing  osg-3.5-el8-development
-----------------  -------------------  -----------------------
-blahp             1.18.47-1            1.18.48-2.1
-condor            8.8.10-1.3           8.8.12-1.1
-gfal2             2.18.1-1             2.18.1-1.1
-gratia-probe      1.22.1-1             1.22.2-1
-python-scitokens  1.2.2-2              1.2.4-2
-xrootd-multiuser  0.4.4-2              0.4.5-1
-
 RPMs slated for release in osg-upcoming-el7-testing
 ===================================================
-glideinwms-3.7.2-1.osgup.el7
+condor-8.9.11-1.osgup.el7
 
 Slated packages in testing behind current development versions
 ==============================================================
@@ -52,3 +21,4 @@ Package           osg-upcoming-el8-testing  osg-upcoming-el8-development
 blahp             1.18.47-2                 1.18.48-2.2
 xrootd            5.0.2-1                   5.1.0-0.rc5.1
 xrootd-multiuser  0.4.4-4                   0.4.5-1
+
