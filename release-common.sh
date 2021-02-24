@@ -131,18 +131,6 @@ cleanup_on_success () {
     rm $rescue_file
 }
 
-pkg_dist () {
-    osgversion=$1
-    dver=$2
-
-    if [[ $osgversion == 'upcoming' ]]; then
-        echo "osgup.$dver"
-    else
-        branch=$(osg_release $osgversion)
-        echo "osg$(sed 's/\.//' <<< $branch).$dver"
-    fi
-}
-
 pkgs_to_release () {
     branch=$1
     dver=$2
