@@ -21,42 +21,6 @@ done
 
 detect_rescue_file
 
-##################################
-# Promote osg-version to testing #
-##################################
-promote_osg_version() {
-    for ver in ${versions[@]}; do
-        case $ver in
-            # We don't build osg-version for upcoming or 3.5+
-            3.5.* | upcoming ) continue ;;
-        esac
-        read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
-        for dver in "${dvers[@]}"; do
-            for repo in testing prerelease; do
-                tag=osg-$(osg_release $ver)-$dver-$repo
-                versioned_tag=osg-$(osg_release $ver)-$dver-release-$ver
-                # If there is already a versioned release tag, we don't
-                # have to worry about tagging osg-version
-                osg-koji list-tagged $versioned_tag > /dev/null 2>&1 && break
-
-                pkg=osg-version-$ver-1.$(pkg_dist $ver $dver)
-                osg-koji latest-pkg $tag osg-version | grep $pkg > /dev/null
-                if [ $? -eq 1 ]; then
-                    print_header "Promoting $pkg into $tag..."
-                    run_cmd "osg-koji tag-pkg $tag $pkg"
-                else
-                    print_header "$pkg already tagged in $tag"
-                fi
-            done
-        done
-    done
-    echo
-}
-
-if [[ $DATA -eq 0 ]]; then
-    promote_osg_version
-fi
-
 # #############################
 # # Generate list of packages #
 # #############################
