@@ -20,9 +20,6 @@ versions=(${versions[@]/upcoming/})
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
     archs="x86_64"
-    if [[ $branch < "3.4" ]]; then
-        archs="i386 $archs"
-    fi
     for arch in $archs; do
         tarball_dest="tarballs/$branch/$arch"
         mkdir -p $tarball_dest
