@@ -34,9 +34,9 @@ osg_release () {
 osg_dvers () {
     osgversion=$1
     branch=$(osg_release $osgversion)
-    if [[ $branch == '3.5' || $branch == 'upcoming' ]]; then
-        echo el7 el8
-    fi
+    case $branch in
+      3.5 | 3.6 | upcoming ) echo el7 el8 ;;
+    esac
 }
 
 is_rel_ver () {
