@@ -40,11 +40,7 @@ versions=(${versions[@]/upcoming/})
 
 for ver in ${versions[@]}; do
     major_version="${ver%.*}"
-    if [ "$major_version" = "3.4" ]; then
-        rhels="el6 el7"
-    else
-        rhels="el7 el8"
-    fi
+    rhels="el7 el8"
     clients="osg-wn-client osg-afs-client"
     data_rel="1"
     if [ $DATA -ne 0 ]; then
