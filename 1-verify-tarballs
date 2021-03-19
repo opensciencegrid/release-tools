@@ -47,11 +47,11 @@ for ver in ${versions[@]}; do
         data_rel="$DATA"
     fi
     for client in $clients; do
-        # No EL8 AFS tarball yet
-        if [ "$client" = "osg-afs-client" -a "$major_version" = "3.5" ]; then
-            rhels="el7"
-        fi
         for rhel in $rhels; do
+            # No EL8 AFS tarball yet
+            if [ $client.$rhel = "osg-afs-client.el8" ]; then
+                continue
+            fi
             min_size=24
             max_size=32
             if [ $rhel = "el7" ]; then
