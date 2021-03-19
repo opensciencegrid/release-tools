@@ -30,8 +30,8 @@ print_header_with_line () {
 osg_release () {
     osgversion=$1
     case $osgversion in
-      upcoming  ) echo ${upcoming_version%.*}-upcoming ;;
-      3.[5-9].* ) echo ${osgversion%.*} ;;
+      3.[5-9].*-upcoming  ) echo ${osgversion%.*}-upcoming ;;
+      3.[5-9].*           ) echo ${osgversion%.*} ;;
     esac
 }
 
@@ -178,7 +178,7 @@ do
             die "unknown option: $1"
             ;;
         *)
-            if is_rel_ver "$1" || [[ $1 == upcoming ]]; then
+            if is_rel_ver "$1" || is_rel_ver "${1%-upcoming}"; then
                 versions+=($1)
                 shift
             else

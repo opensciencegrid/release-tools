@@ -35,10 +35,11 @@ if [ ! -d $tarball_directory ]; then
 fi
 pushd $tarball_directory
 
-# drop upcoming from versions since they don't get their own tarballs
-versions=(${versions[@]/upcoming/})
-
 for ver in ${versions[@]}; do
+    # drop upcoming from versions since they don't get their own tarballs
+    if [[ $ver = *-upcoming ]]; then
+        continue
+    fi
     major_version="${ver%.*}"
     rhels="el7 el8"
     clients="osg-wn-client osg-afs-client"

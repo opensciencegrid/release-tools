@@ -14,10 +14,11 @@ if [ ! -d $tarball_src ]; then
     exit 1
 fi
 
-# drop upcoming from versions since they don't get their own tarballs
-versions=(${versions[@]/upcoming/})
-
 for ver in ${versions[@]}; do
+    # drop upcoming from versions since they don't get their own tarballs
+    if [[ $ver = *-upcoming ]]; then
+        continue
+    fi
     branch=$(osg_release $ver)
     archs="x86_64"
     for arch in $archs; do
