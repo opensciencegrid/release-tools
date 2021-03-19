@@ -188,14 +188,3 @@ do
     esac
 done
 
-# Get the OSG version to associate with the upcoming release
-
-if [[ ${versions[*]} = *upcoming* ]]; then
-    # get the latest version provided
-    upcoming_version=$(echo ${versions[@]} | tr ' ' '\n' | grep -v upcoming | sort -V | tail -n1)
-    # user has only specified upcoming
-    while ! is_rel_ver "$upcoming_version"; do
-        echo "What release version should upcoming be associated with?"
-        read upcoming_version
-    done
-fi
