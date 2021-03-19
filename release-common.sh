@@ -26,16 +26,20 @@ print_header_with_line () {
     print_header "$(tr '[:print:]' = <<< "$1")"
 }
 
+# 3.X.Y or upcoming -> 3.X or 3.X-upcoming
 osg_release () {
     osgversion=$1
-    sed -r 's/\.[0-9]+$//' <<< $osgversion
+    case $osgversion in
+      upcoming  ) echo ${upcoming_version%.*}-upcoming ;;
+      3.[5-9].* ) echo ${osgversion%.*} ;;
+    esac
 }
 
 osg_dvers () {
     osgversion=$1
     branch=$(osg_release $osgversion)
     case $branch in
-      3.5 | 3.6 | upcoming ) echo el7 el8 ;;
+      3.[56] | 3.[56]-upcoming ) echo el7 el8 ;;
     esac
 }
 
