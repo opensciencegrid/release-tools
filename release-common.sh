@@ -185,8 +185,8 @@ do
 done
 
 # Get the OSG version to associate with the upcoming release
-grep 'upcoming' <<< ${versions[@]} > /dev/null 2>&1
-if [[ $? -eq 0 ]]; then
+
+if [[ ${versions[*]} = *upcoming* ]]; then
     # get the latest version provided
     upcoming_version=$(echo ${versions[@]} | tr ' ' '\n' | grep -v upcoming | sort -V | tail -n1)
     # user has only specified upcoming
