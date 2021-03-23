@@ -19,7 +19,7 @@ usage () {
   exit
 }
 
-dvers=(el6 el7)
+dvers=(el7 el8)
 
 list_tag () {
   osg-koji list-tagged --latest --quiet --rpms "$1" | grep -v '\.src$' \
@@ -36,13 +36,13 @@ indent () {
 }
 
 FILTER=indent
-SERIES=
+UPCOMING=
 SINCE=
 while [[ $1 = -* ]]; do
 case $1 in
   --since       ) SINCE=Y;         shift;;
   --bare        ) FILTER=cat;      shift;;
-  -u|--upcoming ) SERIES=upcoming; shift;;
+  -u|--upcoming ) UPCOMING=-upcoming; shift;;
              -* ) echo "Unsupported option: $1" >&2; usage ;;
 esac
 done
@@ -70,8 +70,8 @@ case $# in
 esac
 
 for dver in ${dvers[@]}; do
-  tag1=osg-${SERIES:-$ser1}-$dver-release-$v1
-  tag2=osg-${SERIES:-$ser2}-$dver-release${v2:+-$v2}
+  tag1=osg-$ser1${UPCOMING}-$dver-release-$v1
+  tag2=osg-$ser2${UPCOMING}-$dver-release${v2:+-$v2}
   tag_diff $tag1 $tag2
 done | perl -lpe 's/(-[^-]+){2}$//' | sort -u | $FILTER
 

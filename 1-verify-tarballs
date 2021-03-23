@@ -35,36 +35,30 @@ if [ ! -d $tarball_directory ]; then
 fi
 pushd $tarball_directory
 
-# drop upcoming from versions since they don't get their own tarballs
-versions=(${versions[@]/upcoming/})
-
 for ver in ${versions[@]}; do
-    major_version="${ver%.*}"
-    if [ "$major_version" = "3.4" ]; then
-        rhels="el6 el7"
-    else
-        rhels="el7 el8"
+    # drop upcoming from versions since they don't get their own tarballs
+    if [[ $ver = *-upcoming ]]; then
+        continue
     fi
+    major_version="${ver%.*}"
+    rhels="el7 el8"
     clients="osg-wn-client osg-afs-client"
     data_rel="1"
     if [ $DATA -ne 0 ]; then
         data_rel="$DATA"
     fi
     for client in $clients; do
-        # No EL8 AFS tarball yet
-        if [ "$client" = "osg-afs-client" -a "$major_version" = "3.5" ]; then
-            rhels="el7"
-        fi
         for rhel in $rhels; do
+            # No EL8 AFS tarball yet
+            if [ $client.$rhel = "osg-afs-client.el8" ]; then
+                continue
+            fi
             min_size=24
             max_size=32
             if [ $rhel = "el7" ]; then
                 max_size=36
             fi
             archs="x86_64"
-            if [ "$major_version" = "3.3" -a $rhel = "el6" ]; then
-                archs="i386 $archs"
-            fi
             for arch in $archs; do
                 dotest
             done

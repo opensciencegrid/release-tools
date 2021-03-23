@@ -38,7 +38,8 @@ show_all  = False
 pkgset    = None
 tags      = []
 
-tagpat = (r'^osg-([3-9]\.[0-9]|upcoming)-el[5-9]-(development|testing|release)'
+tagpat = (r'^osg-([3-9]\.[0-9](-upcoming)?)'
+          r'-el[5-9]-(development|testing|release)'
           r'(-[3-9]\.\d\.\d+)?$')
 
 def usage():

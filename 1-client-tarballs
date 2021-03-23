@@ -21,18 +21,16 @@ run_cmd "yum -y install git yum-priorities"
 pushd /tmp
 run_cmd "git clone --depth 1 https://github.com/opensciencegrid/tarball-client"
 
-# drop upcoming from versions since they don't get their own tarballs
-versions=(${versions[@]/upcoming/})
-
 # Build tarballs
 for ver in ${versions[@]}; do
+    # drop upcoming from versions since they don't get their own tarballs
+    if [[ $ver = *-upcoming ]]; then
+        continue
+    fi
     branch=$(osg_release $ver)
     print_header "Generating $branch tarballs"
     run_cmd "/tmp/tarball-client/make-client-tarball --osgver=$branch --version=$ver --all --prerelease"
     archs="x86_64"
-    if [[ $branch < "3.4" ]]; then
-        archs="i386 $archs"
-    fi
     for arch in $archs; do
         tarball_dir="tarballs/$branch/$arch"
         run_cmd "mkdir -p $tarball_dir"

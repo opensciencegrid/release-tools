@@ -26,25 +26,25 @@ print_header_with_line () {
     print_header "$(tr '[:print:]' = <<< "$1")"
 }
 
+# 3.X.Y or upcoming -> 3.X or 3.X-upcoming
 osg_release () {
     osgversion=$1
-    sed -r 's/\.[0-9]+$//' <<< $osgversion
+    case $osgversion in
+      3.[5-9].*-upcoming  ) echo ${osgversion%.*}-upcoming ;;
+      3.[5-9].*           ) echo ${osgversion%.*} ;;
+    esac
 }
 
 osg_dvers () {
     osgversion=$1
     branch=$(osg_release $osgversion)
-    if [[ $branch == '3.4' ]]; then
-        echo el6 el7
-    fi
-    if [[ $branch == '3.5' || $branch == 'upcoming' ]]; then
-        echo el7 el8
-    fi
+    case $branch in
+      3.[56] | 3.[56]-upcoming ) echo el7 el8 ;;
+    esac
 }
 
 is_rel_ver () {
-    grep -E '^3\.[4-5]+\.[0-9]+$' <<< $1 > /dev/null 2>&1
-    echo $?
+    [[ $1 =~ ^3\.[56]\.[0-9]+$ ]]
 }
 
 run_cmd () {
@@ -134,18 +134,6 @@ cleanup_on_success () {
     rm $rescue_file
 }
 
-pkg_dist () {
-    osgversion=$1
-    dver=$2
-
-    if [[ $osgversion == 'upcoming' ]]; then
-        echo "osgup.$dver"
-    else
-        branch=$(osg_release $osgversion)
-        echo "osg$(sed 's/\.//' <<< $branch).$dver"
-    fi
-}
-
 pkgs_to_release () {
     branch=$1
     dver=$2
@@ -190,7 +178,7 @@ do
             die "unknown option: $1"
             ;;
         *)
-            if [[ $(is_rel_ver $1) -eq '0' || $1 == 'upcoming' ]]; then
+            if is_rel_ver "$1" || is_rel_ver "${1%-upcoming}"; then
                 versions+=($1)
                 shift
             else
@@ -200,16 +188,3 @@ do
     esac
 done
 
-# Get the OSG version to associate with the upcoming release
-grep 'upcoming' <<< ${versions[@]} > /dev/null 2>&1
-if [[ $? -eq 0 ]]; then
-    # get the latest version provided
-    upcoming_version=$(echo ${versions[@]} | tr ' ' '\n' | grep -v upcoming | sort -V | tail -n1)
-    has_upcoming_version=$(is_rel_ver $upcoming_version)
-    # user has only specified upcoming
-    while [ $has_upcoming_version != 0 ]; do
-        echo "What release version should upcoming be associated with?"
-        read upcoming_version
-        has_upcoming_version=$(is_rel_ver $upcoming_version)
-    done
-fi

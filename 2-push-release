@@ -13,8 +13,8 @@ detect_rescue_file
 
 for ver in ${versions[@]}; do
     branch=$(osg_release $ver)
-    if [[ $branch == 'upcoming' ]]; then
-        ver=$upcoming_version
+    if [[ $branch = 3.*-upcoming ]]; then
+        ver=${ver%-upcoming}
     fi
     read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
     for dver in ${dvers[@]}; do
