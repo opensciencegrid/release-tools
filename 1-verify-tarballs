@@ -53,11 +53,8 @@ for ver in ${versions[@]}; do
             if [ $client.$rhel = "osg-afs-client.el8" ]; then
                 continue
             fi
-            min_size=24
-            max_size=32
-            if [ $rhel = "el7" ]; then
-                max_size=36
-            fi
+            min_size=8
+            max_size=36
             archs="x86_64"
             for arch in $archs; do
                 dotest
