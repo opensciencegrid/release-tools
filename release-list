@@ -3,29 +3,19 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
+
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-condor-8.8.13-1.1.osg35.el7
+vo-client-113-1.osg35.el7
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-condor-8.8.13-1.1.osg35.el8
+vo-client-113-1.osg35.el8
 
-RPMs slated for release in osg-3.5-upcoming-el7-testing
-=======================================================
-osg-xrootd-3.5.upcoming-1.osg35up.el7
-xrootd-5.2.0-1.1.osg35up.el7
-xrootd-hdfs-2.2.0-1.1.osg35up.el7
-xrootd-multiuser-1.0.0-1.osg35up.el7
-xrootd-scitokens-1.2.2-1.osg35up.el7
+RPMs slated for release in osg-3.6-el7-testing
+==============================================
+vo-client-113-1.osg36.el7
 
-RPMs slated for release in osg-3.5-upcoming-el8-testing
-=======================================================
-osg-xrootd-3.5.upcoming-1.osg35up.el8
-xrootd-5.2.0-1.1.osg35up.el8
-xrootd-cmstfc-1.5.2-6.osg35up.el8
-xrootd-lcmaps-1.7.8-3.osgup.el8
-xrootd-multiuser-1.0.0-1.osg35up.el8
-xrootd-rucioN2N-for-Xcache-1.2-3.3.osg35up.el8
-xrootd-scitokens-1.2.2-1.osg35up.el8
-
+RPMs slated for release in osg-3.6-el8-testing
+==============================================
+vo-client-113-1.osg36.el8
