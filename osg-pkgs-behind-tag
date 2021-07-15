@@ -27,10 +27,7 @@ import os
 import re
 import rpm
 
-try:
-    from rpmUtils.miscutils import stringToVersion
-except ImportError:
-    from miscutils import stringToVersion
+from vendor.miscutils import stringToVersion
 
 
 use_color = sys.stdout.isatty()
