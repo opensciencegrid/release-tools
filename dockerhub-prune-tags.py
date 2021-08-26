@@ -2,7 +2,7 @@
 
 import collections
 import getpass
-import urllib
+import urllib.request
 import getopt
 import json
 import sys
