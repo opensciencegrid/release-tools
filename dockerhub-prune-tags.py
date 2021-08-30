@@ -68,10 +68,10 @@ def set_filter(fn, seq):
     return set(filter(fn, seq))
 
 def authstr(user, passwd):
-    from base64 import b64encode, encode
+    from base64 import b64encode
     auth = f'{user}:{passwd}'
-    auth_bytes = p.encode()
-    return str(b64encode(auth_bytes))
+    auth_bytes = auth.encode()
+    return b64encode(auth_bytes).decode()
 
 def get_registry_auth_token(repo, user=None, pw=None):
     authurl = "https://auth.docker.io/token"
