@@ -68,12 +68,11 @@ def set_filter(fn, seq):
     return set(filter(fn, seq))
 
 def authstr(user, passwd):
-    from base64 import encodestring
-    return encodestring('%s:%s' % (user,passwd)).replace('\n', '')
+    from base64 import b64encode, encode
+    auth = f'{user}:{passwd}'
+    auth_bytes = p.encode()
+    return str(b64encode(auth_bytes))
 
-
-## unsure about urllib request and response. It was originally
-# 'urllib2.request(url)' and 'urllib2.urlopen(req)'
 def get_registry_auth_token(repo, user=None, pw=None):
     authurl = "https://auth.docker.io/token"
     scope = f"repository:{repo}:pull,push"
@@ -85,7 +84,6 @@ def get_registry_auth_token(repo, user=None, pw=None):
     resp = urllib.request.urlopen(req)
     return json.load(resp)['token']
 
-## same as above
 def query_docker_registry(rel_url, auth_token):
     REGISTRY = "https://registry-1.docker.io"
     CONTENT_TYPE = "application/vnd.docker.distribution.manifest.v2+json"
