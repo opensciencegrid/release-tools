@@ -5,21 +5,17 @@
 
 RPMs slated for release in osg-3.5-upcoming-el7-testing
 =======================================================
-blahp-2.1.1-1.osg35up.el7
-condor-9.0.5-1.1.osg35up.el7
+htcondor-ce-5.1.2-1.osg35up.el7
 
 RPMs slated for release in osg-3.5-upcoming-el8-testing
 =======================================================
-blahp-2.1.1-1.osg35up.el8
-condor-9.0.5-1.1.osg35up.el8
+htcondor-ce-5.1.2-1.osg35up.el8
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-blahp-2.1.1-1.osg36.el7
-condor-9.0.5-1.osg36.el7
+htcondor-ce-5.1.2-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-blahp-2.1.1-1.osg36.el8
-condor-9.0.5-1.osg36.el8
+htcondor-ce-5.1.2-1.osg36.el8
 
