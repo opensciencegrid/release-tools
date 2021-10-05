@@ -5,66 +5,21 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-cvmfs-2.8.2-1.osg35.el7
-cvmfs-x509-helper-2.2-2.osg35.el7
-htgettoken-1.6-1.osg35.el7
-htvault-config-1.6-1.osg35.el7
-osg-ca-certs-1.99-1.osg35.el7
-osg-oasis-17-5.osg35.el7
-osg-wn-client-3.5-5.osg35.el7
-vault-1.8.2-1.osg35.el7
+igtf-ca-certs-1.113-1.osg35.el7
+osg-ca-certs-1.100-1.osg35.el7
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-cvmfs-2.8.2-1.osg35.el8
-cvmfs-x509-helper-2.2-2.osg35.el8
-htgettoken-1.6-1.osg35.el8
-htvault-config-1.6-1.osg35.el8
-osg-ca-certs-1.99-1.osg35.el8
-osg-oasis-17-5.osg35.el8
-osg-wn-client-3.5-5.osg35.el8
-vault-1.8.2-1.osg35.el8
-
-RPMs slated for release in osg-3.5-upcoming-el7-testing
-=======================================================
-condor-9.0.6-1.1.osg35up.el7
-glideinwms-3.7.5-1.osg35up.el7
-xrootd-multiuser-2.0.2-1.osg35up.el7
-
-RPMs slated for release in osg-3.5-upcoming-el8-testing
-=======================================================
-condor-9.0.6-1.1.osg35up.el8
-xrootd-multiuser-2.0.2-1.osg35up.el8
+igtf-ca-certs-1.113-1.osg35.el8
+osg-ca-certs-1.100-1.osg35.el8
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-condor-9.0.6-1.osg36.el7
-cvmfs-2.8.2-1.osg36.el7
-cvmfs-x509-helper-2.2-2.osg36.el7
-htgettoken-1.6-1.osg36.el7
-htvault-config-1.6-1.osg36.el7
-osg-ca-certs-1.99-1.osg36.el7
-osg-oasis-17-5.osg36.el7
-osg-wn-client-3.6-4.osg36.el7
-vault-1.8.2-1.osg36.el7
+igtf-ca-certs-1.113-1.osg36.el7
+osg-ca-certs-1.100-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-condor-9.0.6-1.osg36.el8
-cvmfs-2.8.2-1.osg36.el8
-cvmfs-x509-helper-2.2-2.osg36.el8
-htgettoken-1.6-1.osg36.el8
-htvault-config-1.6-1.osg36.el8
-osg-ca-certs-1.99-1.osg36.el8
-osg-oasis-17-5.osg36.el8
-osg-wn-client-3.6-4.osg36.el8
-vault-1.8.2-1.osg36.el8
-
-RPMs slated for release in osg-3.6-upcoming-el7-testing
-=======================================================
-condor-9.2.0-1.osg36up.el7
-
-RPMs slated for release in osg-3.6-upcoming-el8-testing
-=======================================================
-condor-9.2.0-1.osg36up.el8
+igtf-ca-certs-1.113-1.osg36.el8
+osg-ca-certs-1.100-1.osg36.el8
 
