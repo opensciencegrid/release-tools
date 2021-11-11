@@ -5,21 +5,27 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-igtf-ca-certs-1.113-1.osg35.el7
-osg-ca-certs-1.100-1.osg35.el7
+osg-ca-certs-updater-2.0-1.osg35.el7
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-igtf-ca-certs-1.113-1.osg35.el8
-osg-ca-certs-1.100-1.osg35.el8
+osg-ca-certs-updater-2.0-1.osg35.el8
+
+RPMs slated for release in osg-3.5-upcoming-el7-testing
+=======================================================
+xrootd-multiuser-2.0.3-1.osg35up.el7
+
+RPMs slated for release in osg-3.5-upcoming-el8-testing
+=======================================================
+xrootd-multiuser-2.0.3-1.osg35up.el8
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-igtf-ca-certs-1.113-1.osg36.el7
-osg-ca-certs-1.100-1.osg36.el7
+gratia-probe-2.3.3-1.osg36.el7
+osg-flock-1.6-3.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-igtf-ca-certs-1.113-1.osg36.el8
-osg-ca-certs-1.100-1.osg36.el8
+gratia-probe-2.3.3-1.osg36.el8
+osg-flock-1.6-3.osg36.el8
 
