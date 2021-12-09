@@ -1,8 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import collections
 import getpass
-import urllib2
+import urllib.request
 import getopt
 import json
 import sys
@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 
 def usage():
     script = os.path.basename(__file__)
-    print("Usage: {script} [opensciencegrid/]<REPO>".format(**locals()))
+    print(f"Usage: {script} [opensciencegrid/]<REPO>")
     print("")
     print("Options:")
     print("  -u user   dockerhub username")
@@ -40,7 +40,7 @@ def parseargs(args):
     user = ops.get('-u') or os.getenv("HUB_USER")
     pw   = os.getenv("HUB_PASS")
     if not user:
-        user = raw_input("dockerhub username: ")
+        user = input("dockerhub username: ")
     if not pw:
         pw = getpass.getpass("dockerhub password: ")
 
@@ -51,12 +51,12 @@ def prompt_user(tags, prune_tags, ops):
     print("")
     for tag in sorted(tags):
         star = "*" if tag in prune_tags else " "
-        print("{star} {tag}".format(**locals()))
+        print(f"{star} {tag}")
 
     print("")
 
     if '-y' not in ops:
-        yes = raw_input("Is this OK? (y/[N]) ")
+        yes = input("Is this OK? (y/[N]) ")
         if yes not in ('y', 'yes'):
             sys.exit()
     print("")
@@ -68,36 +68,38 @@ def set_filter(fn, seq):
     return set(filter(fn, seq))
 
 def authstr(user, passwd):
-    from base64 import encodestring
-    return encodestring('%s:%s' % (user,passwd)).replace('\n', '')
+    from base64 import b64encode
+    auth = f'{user}:{passwd}'
+    auth_bytes = auth.encode()
+    return b64encode(auth_bytes).decode()
 
 def get_registry_auth_token(repo, user=None, pw=None):
     authurl = "https://auth.docker.io/token"
-    scope = "repository:{repo}:pull,push".format(**locals())
+    scope = f"repository:{repo}:pull,push"
     service = "registry.docker.io"
-    url = "{authurl}?scope={scope}&service={service}".format(**locals())
-    req = urllib2.Request(url)
+    url = f"{authurl}?scope={scope}&service={service}"
+    req = urllib.request.Request(url)
     if user and pw:
         req.add_header("Authorization", "Basic %s" % authstr(user, pw))
-    resp = urllib2.urlopen(req)
+    resp = urllib.request.urlopen(req)
     return json.load(resp)['token']
 
 def query_docker_registry(rel_url, auth_token):
     REGISTRY = "https://registry-1.docker.io"
     CONTENT_TYPE = "application/vnd.docker.distribution.manifest.v2+json"
     url = REGISTRY + rel_url
-    req = urllib2.Request(url)
+    req = urllib.request.Request(url)
     req.add_header("Accept", CONTENT_TYPE)
-    req.add_header("Authorization", "Bearer {auth_token}".format(**locals()))
-    resp = urllib2.urlopen(req)
+    req.add_header("Authorization", f"Bearer {auth_token}")
+    resp = urllib.request.urlopen(req)
     return json.load(resp)
 
 def get_tag_manifest(repo, tag, auth_token):
-    rel_url = "/v2/{repo}/manifests/{tag}".format(**locals())
+    rel_url = f"/v2/{repo}/manifests/{tag}"
     return query_docker_registry(rel_url, auth_token)
 
 def get_tags(repo, auth_token):
-    rel_url = "/v2/{repo}/tags/list".format(**locals())
+    rel_url = f"/v2/{repo}/tags/list"
     return query_docker_registry(rel_url, auth_token)['tags']
 
 def is_timestamp_tag(tag):
@@ -158,22 +160,21 @@ class FrenchBread:
 
 def get_jwt_auth_token(user, pw):
     url = "https://hub.docker.com/v2/users/login/"
-    req = urllib2.Request(url)
+    req = urllib.request.Request(url)
     req.add_header("Content-Type", "application/json")
     req.add_header("Accept", "application/json")
     req.get_method = lambda : 'POST'
     data = {"username":user, "password":pw}
-    resp = urllib2.urlopen(req, json.dumps(data))
+    resp = urllib.request.urlopen(req, json.dumps(data))
     return json.load(resp)['token']
 
 def delete_tag(repo, tag, jwt_auth_token):
-    url = ("https://hub.docker.com/v2/repositories/{repo}/tags/{tag}/"
-                                                   .format(**locals()) )
-    req = urllib2.Request(url)
+    url = f"https://hub.docker.com/v2/repositories/{repo}/tags/{tag}/"
+    req = urllib.request.Request(url)
     req.add_header("Accept", "application/json")
     req.add_header("Authorization", "JWT " + jwt_auth_token)
     req.get_method = lambda : 'DELETE'
-    resp = urllib2.urlopen(req)
+    resp = urllib.request.urlopen(req)
     return resp
 
 # helper class that taketh away
@@ -198,7 +199,7 @@ def main(args):
     rman = RepoMan(repo, user, pw)
     for tag in prune_tags:
         if '-q' not in ops:
-            print("deleting tag {tag} from repo {repo}...".format(**locals()))
+            print(f"deleting tag {tag} from repo {repo}...")
         rman.delete_tag(tag)
 
 if __name__ == '__main__':
