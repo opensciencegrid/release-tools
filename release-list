@@ -3,31 +3,82 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
+RPMs slated for release in osg-3.5-el7-testing
+==============================================
+oidc-agent-4.2.4-1.1.osg35.el7
+osg-pki-tools-3.5.0-2.osg35.el7
+osg-scitokens-mapfile-4-1.osg35.el7
+vo-client-116-1.osg35.el7
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.5-el7-testing' behind version in 'osg-3.5-el7-development'
+
+RPMs slated for release in osg-3.5-el8-testing
+==============================================
+oidc-agent-4.2.4-1.1.osg35.el8
+osg-pki-tools-3.5.0-2.osg35.el8
+osg-scitokens-mapfile-4-1.osg35.el8
+scitokens-credmon-0.8.1-1.2.osg35.el8
+vo-client-116-1.osg35.el8
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.5-el8-testing' behind version in 'osg-3.5-el8-development'
+
 RPMs slated for release in osg-3.5-upcoming-el7-testing
 =======================================================
-condor-9.0.8-1.1.osg35up.el7
-xrootd-5.3.4-1.osg35up.el7
+xrootd-5.4.0-1.osg35up.el7
+xrootd-tcp-stats-1.0.0-1.osg35up.el7
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.5-upcoming-el7-testing' behind version in 'osg-3.5-upcoming-el7-development'
 
 RPMs slated for release in osg-3.5-upcoming-el8-testing
 =======================================================
-condor-9.0.8-1.1.osg35up.el8
-xrootd-5.3.4-1.osg35up.el8
+xrootd-5.4.0-1.osg35up.el8
+xrootd-tcp-stats-1.0.0-1.osg35up.el8
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.5-upcoming-el8-testing' behind version in 'osg-3.5-upcoming-el8-development'
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-condor-9.0.8-1.osg36.el7
-xrootd-5.3.4-1.osg36.el7
+htgettoken-1.9-1.osg36.el7
+htvault-config-1.11-1.osg36.el7
+oidc-agent-4.2.4-1.1.osg36.el7
+osg-pki-tools-3.5.0-2.osg36.el7
+osg-scitokens-mapfile-4-1.osg36.el7
+osg-xrootd-3.6-12.osg36.el7
+vault-1.9.0-1.osg36.el7
+vo-client-116-1.osg36.el7
+xrootd-5.4.0-1.osg36.el7
+xrootd-tcp-stats-1.0.0-1.osg36.el7
+
+Slated packages in testing behind current development versions
+==============================================================
+Package  osg-3.6-el7-testing  osg-3.6-el7-development
+-------  -------------------  -----------------------
+xrootd   5.4.0-1              5.4.0-1.1
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-condor-9.0.8-1.osg36.el8
-xrootd-5.3.4-1.osg36.el8
+htgettoken-1.9-1.osg36.el8
+htvault-config-1.11-1.osg36.el8
+oidc-agent-4.2.4-1.1.osg36.el8
+osg-pki-tools-3.5.0-2.osg36.el8
+osg-scitokens-mapfile-4-1.osg36.el8
+osg-xrootd-3.6-12.osg36.el8
+vault-1.9.0-1.osg36.el8
+vo-client-116-1.osg36.el8
+xrootd-5.4.0-1.osg36.el8
+xrootd-tcp-stats-1.0.0-1.osg36.el8
 
-RPMs slated for release in osg-3.6-upcoming-el7-testing
-=======================================================
-condor-9.4.0-1.osg36up.el7
-
-RPMs slated for release in osg-3.6-upcoming-el8-testing
-=======================================================
-condor-9.4.0-1.osg36up.el8
+Slated packages in testing behind current development versions
+==============================================================
+Package  osg-3.6-el8-testing  osg-3.6-el8-development
+-------  -------------------  -----------------------
+xrootd   5.4.0-1              5.4.0-1.1
 
