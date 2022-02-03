@@ -5,21 +5,21 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-osg-scitokens-mapfile-5-1.osg35.el7
-vo-client-117-1.osg35.el7
+vo-client-118-1.osg35.el7
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-osg-scitokens-mapfile-5-1.osg35.el8
-vo-client-117-1.osg35.el8
+vo-client-118-1.osg35.el8
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-osg-scitokens-mapfile-5-1.osg36.el7
-vo-client-117-1.osg36.el7
+gratia-probe-2.5.1-2.osg36.el7
+osg-flock-1.7-1.osg36.el7
+vo-client-118-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-osg-scitokens-mapfile-5-1.osg36.el8
-vo-client-117-1.osg36.el8
+gratia-probe-2.5.1-2.osg36.el8
+osg-flock-1.7-1.osg36.el8
+vo-client-118-1.osg36.el8
 
