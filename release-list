@@ -5,40 +5,17 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-condor-8.8.16-1.1.osg35.el7
-hosted-ce-tools-0.11-1.osg35.el7
+scitokens-cpp-0.7.0-1.osg35.el7
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-condor-8.8.16-1.1.osg35.el8
-hosted-ce-tools-0.11-1.osg35.el8
+scitokens-cpp-0.7.0-1.osg35.el8
 
 RPMs slated for release in osg-3.5-upcoming-el7-testing
 =======================================================
-condor-9.0.10-1.1.osg35up.el7
+gfal2-2.20.5-1.osg35up.el7
 
 RPMs slated for release in osg-3.5-upcoming-el8-testing
 =======================================================
-condor-9.0.10-1.1.osg35up.el8
-
-RPMs slated for release in osg-3.6-el7-testing
-==============================================
-condor-9.0.10-1.osg36.el7
-hosted-ce-tools-0.11-1.osg36.el7
-osg-configure-4.1.0-1.osg36.el7
-
-RPMs slated for release in osg-3.6-el8-testing
-==============================================
-condor-9.0.10-1.osg36.el8
-hosted-ce-tools-0.11-1.osg36.el8
-javascriptrrd-1.1.1-1.osg36.el8
-osg-configure-4.1.0-1.osg36.el8
-
-RPMs slated for release in osg-3.6-upcoming-el7-testing
-=======================================================
-condor-9.6.0-1.osg36up.el7
-
-RPMs slated for release in osg-3.6-upcoming-el8-testing
-=======================================================
-condor-9.6.0-1.osg36up.el8
+gfal2-2.20.5-1.osg35up.el8
 
