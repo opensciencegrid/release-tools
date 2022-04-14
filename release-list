@@ -5,21 +5,19 @@
 
 RPMs slated for release in osg-3.5-el7-testing
 ==============================================
-igtf-ca-certs-1.115-1.osg35.el7
-osg-ca-certs-1.105-1.osg35.el7
+osg-scitokens-mapfile-8-1.osg35.el7
 
 RPMs slated for release in osg-3.5-el8-testing
 ==============================================
-igtf-ca-certs-1.115-1.osg35.el8
-osg-ca-certs-1.105-1.osg35.el8
+osg-scitokens-mapfile-8-1.osg35.el8
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-igtf-ca-certs-1.115-1.osg36.el7
-osg-ca-certs-1.105-1.osg36.el7
+osg-configure-4.1.1-1.osg36.el7
+osg-scitokens-mapfile-8-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-igtf-ca-certs-1.115-1.osg36.el8
-osg-ca-certs-1.105-1.osg36.el8
+osg-configure-4.1.1-1.osg36.el8
+osg-scitokens-mapfile-8-1.osg36.el8
 
