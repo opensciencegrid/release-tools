@@ -42,19 +42,15 @@ for ver in ${versions[@]}; do
     fi
     major_version="${ver%.*}"
     rhels="el7 el8"
-    clients="osg-wn-client osg-afs-client"
+    clients="osg-wn-client"
     data_rel="1"
     if [ $DATA -ne 0 ]; then
         data_rel="$DATA"
     fi
     for client in $clients; do
         for rhel in $rhels; do
-            # No EL8 AFS tarball yet
-            if [ $client.$rhel = "osg-afs-client.el8" ]; then
-                continue
-            fi
-            min_size=16
-            max_size=39
+            min_size=30
+            max_size=38
             archs="x86_64"
             for arch in $archs; do
                 dotest
