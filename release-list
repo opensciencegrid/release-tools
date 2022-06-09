@@ -5,9 +5,30 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-osg-wn-client-3.6-5.osg36.el7
+glideinwms-3.9.4-3.osg36.el7
+htcondor-ce-5.1.5-1.1.osg36.el7
+htgettoken-1.12-1.osg36.el7
+htvault-config-1.13-1.osg36.el7
+osg-ce-3.6-6.osg36.el7
+osg-pki-tools-3.5.2-1.osg36.el7
+osg-release-3.6-5.osg36.el7
+osg-token-renewer-0.8.2-1.osg36.el7
+osg-xrootd-3.6-17.osg36.el7
+rrdtool-1.8.0-1.2.osg36.el7
+xcache-3.1.0-1.osg36.el7
+xrootd-multiuser-2.0.4-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-osg-wn-client-3.6-5.osg36.el8
+glideinwms-3.9.4-3.osg36.el8
+htcondor-ce-5.1.5-1.1.osg36.el8
+htgettoken-1.12-1.osg36.el8
+htvault-config-1.13-1.osg36.el8
+osg-ce-3.6-6.osg36.el8
+osg-pki-tools-3.5.2-1.osg36.el8
+osg-release-3.6-5.osg36.el8
+osg-token-renewer-0.8.2-1.osg36.el8
+osg-xrootd-3.6-17.osg36.el8
+xcache-3.1.0-1.osg36.el8
+xrootd-multiuser-2.0.4-1.osg36.el8
 
