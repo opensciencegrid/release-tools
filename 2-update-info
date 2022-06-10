@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Write release notes and update information on UW's AFS
+# Update information on UW's AFS
 
 
 . release-common.sh
@@ -43,22 +43,6 @@ for ver in ${versions[@]}; do
         fi
 
         if [ -s move-to-$branch-release-$dver ]; then
-            # Write release notes
-            cp /dev/null $branch-release-note-packages-$dver
-            for package in $(<move-to-$branch-release-$dver); do
-                uri_package=${package//+/%2B}
-                echo "-   [$package](https://koji.chtc.wisc.edu/koji/search?match=glob&type=build&terms=$uri_package)" \
-                    >> $branch-release-note-packages-$dver
-            done
-            xargs --arg-file move-to-$branch-release-$dver osg-koji buildinfo | fgrep "/mnt" | \
-                xargs -n 1 basename | perl -p -e "s/\.(noarch|src|i386|x86_64)\.rpm//" | \
-                sort -u > $branch-release-note-rpms-$dver
-            echo -n '    ' > $branch-release-note-rpm-updates-$dver
-            for rpm in $(<$branch-release-note-rpms-$dver); do
-                rpm=${rpm%%-[0-9]*}
-                echo -n "$rpm " >> $branch-release-note-rpm-updates-$dver
-            done
-
             # Update info
             run_cmd "cp move-to-$branch-release-$dver $ver$data_rel-updated-$branch-$dver.txt"
             run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $ver$data_rel-packages-$branch-$dver.txt"
