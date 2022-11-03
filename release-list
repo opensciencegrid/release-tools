@@ -7,12 +7,14 @@ RPMs slated for release in osg-3.6-el7-testing
 ==============================================
 htcondor-ce-5.1.6-1.osg36.el7
 osdf-client-6.9.2-2.osg36.el7
+xcache-3.2.3-1.osg36.el7
 xrootd-multiuser-2.1.2-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
 htcondor-ce-5.1.6-1.osg36.el8
 osdf-client-6.9.2-2.osg36.el8
+xcache-3.2.3-1.osg36.el8
 xrootd-multiuser-2.1.2-1.osg36.el8
 
 RPMs slated for release in osg-3.6-upcoming-el7-testing
