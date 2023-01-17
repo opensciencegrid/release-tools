@@ -5,8 +5,13 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-htgettoken-1.16-1.osg36.el7
+vo-client-128-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-htgettoken-1.16-1.osg36.el8
+vo-client-128-1.osg36.el8
+
+RPMs slated for release in osg-3.6-el9-testing
+==============================================
+vo-client-128-1.osg36.el9
+
