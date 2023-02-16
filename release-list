@@ -5,13 +5,11 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-vo-client-129-1.osg36.el7
+gratia-probe-2.8.1-1.osg36.el7
+python-scitokens-1.7.4-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-vo-client-129-1.osg36.el8
-
-RPMs slated for release in osg-3.6-el9-testing
-==============================================
-vo-client-129-1.osg36.el9
+gratia-probe-2.8.1-1.osg36.el8
+python-scitokens-1.7.4-1.osg36.el8
 
