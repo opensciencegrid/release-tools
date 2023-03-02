@@ -6,15 +6,15 @@
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
 gratia-probe-2.8.2-1.osg36.el7
-htcondor-ce-6.0.0-1.osg36.el7
+osg-flock-1.9-2.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
 gratia-probe-2.8.2-1.osg36.el8
-htcondor-ce-6.0.0-1.osg36.el8
+osg-flock-1.9-2.osg36.el8
 
 RPMs slated for release in osg-3.6-upcoming-el9-testing
 =======================================================
 gratia-probe-2.8.2-1.osg36up.el9
-htcondor-ce-6.0.0-1.osg36up.el9
+osg-flock-1.9-2.osg36up.el9
 
