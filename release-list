@@ -8,7 +8,6 @@ RPMs slated for release in osg-3.6-el7-testing
 cvmfs-2.10.1-1.2.osg36.el7
 frontier-squid-5.7-2.1.osg36.el7
 osg-oasis-19-3.osg36.el7
-xcache-3.4.0-3.osg36.el7
 xrootd-5.5.3-1.2.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
@@ -16,7 +15,6 @@ RPMs slated for release in osg-3.6-el8-testing
 cvmfs-2.10.1-1.2.osg36.el8
 frontier-squid-5.7-2.1.osg36.el8
 osg-oasis-19-3.osg36.el8
-xcache-3.4.0-3.osg36.el8
 xrootd-5.5.3-1.2.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
