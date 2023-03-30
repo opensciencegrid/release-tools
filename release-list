@@ -23,7 +23,6 @@ cvmfs-x509-helper-2.2-3.osg36.el9
 frontier-squid-5.8-2.1.osg36.el9
 glideinwms-3.10.1-1.osg36.el9
 gratia-probe-2.8.4-1.osg36.el9
-hosted-ce-tools-0.11-1.osg36.el9
 htcondor-ce-6.0.0-1.osg36.el9
 htvault-config-1.14-1.osg36.el9
 igtf-ca-certs-1.119-1.1.osg36.el9
@@ -41,7 +40,6 @@ osg-pki-tools-3.5.2-2.osg36.el9
 osg-scitokens-mapfile-12-1.osg36.el9
 osg-system-profiler-1.6.0-2.osg36.el9
 osg-token-renewer-0.8.3-1.osg36.el9
-osg-update-vos-1.4.0-3.osg36.el9
 osg-wn-client-3.6-6.osg36.el9
 osg-xrootd-3.6-19.osg36.el9
 pegasus-5.0.1-1.1.osg36.el9
