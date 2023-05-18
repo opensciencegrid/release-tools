@@ -5,16 +5,22 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-vo-client-131-1.osg36.el7
-xrootd-5.5.4-1.1.osg36.el7
+htvault-config-1.15-1.osg36.el7
+vault-1.13.2-1.osg36.el7
+voms-2.0.16-1.6.osg36.el7
+xrootd-5.5.5-1.1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-vo-client-131-1.osg36.el8
-xrootd-5.5.4-1.1.osg36.el8
+htvault-config-1.15-1.osg36.el8
+vault-1.13.2-1.osg36.el8
+voms-2.1.0-0.14.rc2.6.osg36.el8
+xrootd-5.5.5-1.1.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-vo-client-131-1.osg36.el9
-xrootd-5.5.4-1.1.osg36.el9
+hosted-ce-tools-0.11-1.osg36.el9
+htvault-config-1.15-1.osg36.el9
+vault-1.13.2-1.osg36.el9
+xrootd-5.5.5-1.1.osg36.el9
 
