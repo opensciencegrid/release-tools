@@ -5,44 +5,9 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-cigetcert-1.21-1.osg36.el7
-condor-10.0.4-1.osg36.el7
-frontier-squid-5.8-2.1.osg36.el7
-htgettoken-1.18-1.osg36.el7
-igtf-ca-certs-1.120-1.osg36.el7
-osg-ca-certs-1.111-1.osg36.el7
-osg-token-renewer-0.8.3-2.osg36.el7
-osg-update-vos-1.4.1-1.osg36.el7
-xcache-3.5.0-1.osg36.el7
+condor-10.0.5-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-cigetcert-1.21-1.osg36.el8
-condor-10.0.4-1.osg36.el8
-frontier-squid-5.8-2.1.osg36.el8
-htgettoken-1.18-1.osg36.el8
-igtf-ca-certs-1.120-1.osg36.el8
-osg-ca-certs-1.111-1.osg36.el8
-osg-token-renewer-0.8.3-2.osg36.el8
-osg-update-vos-1.4.1-1.osg36.el8
-xcache-3.5.0-1.osg36.el8
-
-RPMs slated for release in osg-3.6-el9-testing
-==============================================
-cigetcert-1.21-1.osg36.el9
-condor-10.5.1-1.osg36.el9
-htgettoken-1.18-1.osg36.el9
-igtf-ca-certs-1.120-1.osg36.el9
-osg-ca-certs-1.111-1.osg36.el9
-osg-token-renewer-0.8.3-2.osg36.el9
-osg-update-vos-1.4.1-1.osg36.el9
-xcache-3.5.0-1.osg36.el9
-
-RPMs slated for release in osg-3.6-upcoming-el7-testing
-=======================================================
-condor-10.5.1-1.osg36up.el7
-
-RPMs slated for release in osg-3.6-upcoming-el8-testing
-=======================================================
-condor-10.5.1-1.osg36up.el8
+condor-10.0.5-1.osg36.el8
 
