@@ -16,7 +16,7 @@ for branch in ${versions[@]}; do
     fi
     read -ra dvers <<< $(osg_dvers $branch) # create array of dvers
     for dver in ${dvers[@]}; do
-        run_cmd "osg-koji regen-repo osg-$branch-$dver-release-build" # avoid pkg 404 errors
+        run_cmd "osg-koji regen-repo osg-$branch-$dver-$(release_tag_name $branch)-build" # avoid pkg 404 errors
     done
 done
 

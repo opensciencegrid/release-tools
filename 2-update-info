@@ -33,7 +33,7 @@ for branch in ${versions[@]}; do
     fi
     read -ra dvers <<< $(osg_dvers $branch) # create array of dvers
     for dver in ${dvers[@]}; do
-        release_repo=osg-$branch-$dver-release
+        release_repo=osg-$branch-$dver-$(release_tag_name $branch)
 
         print_header "Generating release notes for $release_repo"
         if [ $DATA -ne 0 ]; then

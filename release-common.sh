@@ -140,6 +140,17 @@ ver_tag () {
     echo $1.$date_tag
 }
 
+release_tag_name () {
+    # return release for all upcoming and 3.X, main-release for >=23 
+    branch=$1
+    if [[ $1 =~ ^.*-upcoming$ || $1 =~ ^(3\.[56])$ ]]; then 
+        echo "release"
+    else 
+        echo "main-release"
+    fi
+
+}
+
 ########
 # MAIN #
 ########
