@@ -41,7 +41,7 @@ for branch in ${versions[@]}; do
     if [[ $branch = *-upcoming ]]; then
         continue
     fi
-    rhels="el7 el8"
+    rhels=$(osg_dvers $branch)
     clients="osg-wn-client"
     data_rel="1"
     if [ $DATA -ne 0 ]; then
