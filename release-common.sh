@@ -137,11 +137,12 @@ pkgs_to_release () {
 }
 
 ver_tag () {
-    echo $1.$date_tag
+    # Return major-version.yymmdd
+    echo ${1%-upcoming}.$date_tag
 }
 
 release_tag_name () {
-    # return release for all upcoming and 3.X, main-release for >=23 
+    # return 'release' for *-upcoming and 3.X, 'main-release' for >=23
     branch=$1
     if [[ $1 =~ ^.*-upcoming$ || $1 =~ ^(3\.[56])$ ]]; then 
         echo "release"
