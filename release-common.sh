@@ -26,18 +26,8 @@ print_header_with_line () {
     print_header "$(tr '[:print:]' = <<< "$1")"
 }
 
-# 3.X.Y or upcoming -> 3.X or 3.X-upcoming
-osg_release () {
-    osgversion=$1
-    case $osgversion in
-      3.[5-9].*-upcoming  ) echo ${osgversion%.*}-upcoming ;;
-      3.[5-9].*           ) echo ${osgversion%.*} ;;
-    esac
-}
-
 osg_dvers () {
-    osgversion=$1
-    branch=$(osg_release $osgversion)
+    branch=$1
     case $branch in
       3.5 | 3.5-upcoming ) echo el7 el8 ;;
       3.6 | 3.6-upcoming ) echo el7 el8 el9 ;;
@@ -45,7 +35,11 @@ osg_dvers () {
 }
 
 is_rel_ver () {
-    [[ $1 =~ ^3\.[56]\.[0-9]+$ ]]
+    [[ $1 =~ ^(3\.[56]|[2-9][0-9])$ ]]
+}
+
+is_date_tag () {
+    [[ $1 =~ ^[0-9]{6}$ ]]
 }
 
 run_cmd () {
@@ -141,12 +135,17 @@ pkgs_to_release () {
     awk "/^RPMs.*osg-$branch-$dver-testing/ {flag=1;next} /^[[:space:]]*$/ { flag=0 } flag { print }" release-list | grep -v =======
 }
 
+ver_tag () {
+    echo $1.$date_tag
+}
+
 ########
 # MAIN #
 ########
 
 DRY_RUN=0
 DATA=0
+date_tag=
 versions=()
 script_name=$(basename $0)
 
@@ -182,6 +181,11 @@ do
             if is_rel_ver "$1" || is_rel_ver "${1%-upcoming}"; then
                 versions+=($1)
                 shift
+            elif is_date_tag "$1" && [ -z $date_tag ]; then
+                date_tag=$1
+                shift
+            elif is_date_tag "$1" && [ -n $date_tag ]; then
+                die "Date tag already entered: $date_tag"
             else
                 usage
                 die "unknown parameter: $1"

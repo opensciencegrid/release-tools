@@ -27,12 +27,11 @@ if [[ ! -d /p/vdt/public/html/release-info/ && $DRY_RUN -eq 0 ]]; then
     read rusermachine
 fi
 
-for ver in ${versions[@]}; do
-    branch=$(osg_release $ver)
+for branch in ${versions[@]}; do
     if [[ $branch = 3.*-upcoming ]]; then
         ver=${ver%-upcoming}
     fi
-    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+    read -ra dvers <<< $(osg_dvers $branch) # create array of dvers
     for dver in ${dvers[@]}; do
         release_repo=osg-$branch-$dver-release
 
@@ -42,11 +41,13 @@ for ver in ${versions[@]}; do
             data_option="--since " # option for list-package-updates for data releases
         fi
 
+        pkg_prefix=$(ver_tag $branch)$data_rel
+
         if [ -s move-to-$branch-release-$dver ]; then
             # Update info
-            run_cmd "cp move-to-$branch-release-$dver $ver$data_rel-updated-$branch-$dver.txt"
-            run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $ver$data_rel-packages-$branch-$dver.txt"
-            run_cmd "xargs --arg-file $ver$data_rel-packages-$branch-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $ver$data_rel-rpms-$branch$data_rel-$dver.txt"
+            run_cmd "cp move-to-$branch-release-$dver $pkg_prefix-updated-$branch-$dver.txt"
+            run_cmd "osg-koji list-tagged --quiet --latest $release_repo | awk '{print \$1}' > $pkg_prefix-packages-$branch-$dver.txt"
+            run_cmd "xargs --arg-file $pkg_prefix-packages-$branch-$dver.txt osg-koji buildinfo | fgrep \"/mnt\" | xargs -n 1 basename | sort > $pkg_prefix-rpms-$branch$data_rel-$dver.txt"
             echo
         fi
     done
