@@ -5,27 +5,31 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-hosted-ce-tools-1.0-4.osg36.el7
-osdf-client-6.12.1-1.osg36.el7
-xrootd-5.5.5-1.2.osg36.el7
-
-Slated packages in testing behind current development versions
-==============================================================
-No packages in 'osg-3.6-el7-testing' behind version in 'osg-3.6-el7-development'
+condor-10.0.6-1.osg36.el7
+osg-ca-scripts-1.2.4-2.osg36.el7
+osg-xrootd-3.6-20.osg36.el7
+xcache-3.5.0-2.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-hosted-ce-tools-1.0-4.osg36.el8
-osdf-client-6.12.1-1.osg36.el8
-xrootd-5.5.5-1.2.osg36.el8
-
-Slated packages in testing behind current development versions
-==============================================================
-No packages in 'osg-3.6-el8-testing' behind version in 'osg-3.6-el8-development'
+condor-10.0.6-1.osg36.el8
+osg-ca-scripts-1.2.4-2.osg36.el8
+osg-xrootd-3.6-20.osg36.el8
+xcache-3.5.0-2.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-hosted-ce-tools-1.0-4.osg36.el9
-osdf-client-6.12.1-1.osg36.el9
-xrootd-5.5.5-1.2.osg36.el9
+condor-10.6.0-1.osg36.el9
+osg-ca-certs-experimental2-1.110-1.2.osg36.el9
+osg-ca-scripts-1.2.4-2.osg36.el9
+osg-xrootd-3.6-20.osg36.el9
+xcache-3.5.0-2.osg36.el9
+
+RPMs slated for release in osg-3.6-upcoming-el7-testing
+=======================================================
+condor-10.6.0-1.osg36up.el7
+
+RPMs slated for release in osg-3.6-upcoming-el8-testing
+=======================================================
+condor-10.6.0-1.osg36up.el8
 
