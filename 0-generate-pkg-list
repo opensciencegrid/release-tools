@@ -25,9 +25,8 @@ detect_rescue_file
 # # Generate list of packages #
 # #############################
 
-for ver in ${versions[@]}; do
-    branch=$(osg_release $ver)
-    read -ra dvers <<< $(osg_dvers $ver) # create array of dvers
+for branch in ${versions[@]}; do
+    read -ra dvers <<< $(osg_dvers $branch) # create array of dvers
     for dver in ${dvers[@]}; do
         print_header_with_line "RPMs slated for release in osg-$branch-$dver-testing"
         slated_cmd="koji-tag-diff osg-$branch-$dver-{testing,release}"

@@ -3,6 +3,7 @@
 . release-common.sh
 
 dotest () {
+    ver=$(ver_tag $branch)
     file=$client-$ver-$data_rel.$rhel.$arch.tar.gz
     if [ -e $file ]; then
         echo "Testing $client-$ver-$data_rel.$rhel.$arch..."
@@ -35,13 +36,12 @@ if [ ! -d $tarball_directory ]; then
 fi
 pushd $tarball_directory
 
-for ver in ${versions[@]}; do
+for branch in ${versions[@]}; do
     # drop upcoming from versions since they don't get their own tarballs
-    if [[ $ver = *-upcoming ]]; then
+    if [[ $branch = *-upcoming ]]; then
         continue
     fi
-    major_version="${ver%.*}"
-    rhels="el7 el8"
+    rhels=$(osg_dvers $branch)
     clients="osg-wn-client"
     data_rel="1"
     if [ $DATA -ne 0 ]; then
