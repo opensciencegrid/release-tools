@@ -18,7 +18,7 @@ for branch in ${versions[@]}; do
     read -ra dvers <<< $(osg_dvers $branch) # create array of dvers
     for dver in ${dvers[@]}; do
         prerelease_repo=osg-$branch-$dver-prerelease
-        release_repo=osg-$branch-$dver-$(release_tag_name $branch)
+        release_repo=osg-$branch-$dver-release
 
         # Push from pre-release to release
         print_header "Unlocking $release_repo"
@@ -34,7 +34,7 @@ for branch in ${versions[@]}; do
 
         if [ $DATA -eq 0 ]; then
             # Create new release repo for non-$data releases
-            versioned_release_repo=osg-$branch-$dver-$(release_tag_name $branch)-$(ver_tag $branch)
+            versioned_release_repo=osg-$branch-$dver-release-$(ver_tag $branch)
             print_header "Cloning $release_repo to $versioned_release_repo"
             run_cmd "osg-koji clone-tag --all $release_repo $versioned_release_repo"
             echo

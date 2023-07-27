@@ -31,12 +31,22 @@ osg_dvers () {
     case $branch in
       3.5 | 3.5-upcoming ) echo el7 el8 ;;
       3.6 | 3.6-upcoming ) echo el7 el8 el9 ;;
-       23 |  23-upcoming ) echo el8 el9 ;;
+      23-main | 23-upcoming ) echo el8 el9 ;;
     esac
 }
 
 is_rel_ver () {
-    [[ $1 =~ ^(3\.[56]|[2-9][0-9])$ ]]
+    [[ $1 =~ ^(3\.[56]|[2-9][0-9])(-upcoming)?$ ]]
+}
+
+add_branch_to_ver () {
+    # OSG 23+ should always have either -main or -upcoming appended
+    # OSG 3.6 may have either -upcoming or nothing
+    if [[ $1 =~ ^([2-9][0-9])$ ]]; then 
+        echo $1-main
+    else
+        echo $1
+    fi
 }
 
 is_date_tag () {
@@ -138,18 +148,7 @@ pkgs_to_release () {
 
 ver_tag () {
     # Return major-version.yymmdd
-    echo ${1%-upcoming}.$date_tag
-}
-
-release_tag_name () {
-    # return 'release' for *-upcoming and 3.X, 'main-release' for >=23
-    branch=$1
-    if [[ $1 =~ ^.*-upcoming$ || $1 =~ ^(3\.[56])$ ]]; then 
-        echo "release"
-    else 
-        echo "main-release"
-    fi
-
+    echo $1.$date_tag | sed 's/-[a-z]\+//'
 }
 
 ########
@@ -191,8 +190,8 @@ do
             die "unknown option: $1"
             ;;
         *)
-            if is_rel_ver "$1" || is_rel_ver "${1%-upcoming}"; then
-                versions+=($1)
+            if is_rel_ver "$1"; then
+                versions+=($(add_branch_to_ver $1))
                 shift
             elif is_date_tag "$1" && [ -z $date_tag ]; then
                 date_tag=$1
