@@ -5,24 +5,16 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-condor-10.0.7-1.osg36.el7
+igtf-ca-certs-1.122-1.osg36.el7
+osg-ca-certs-1.113-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-condor-10.0.7-1.osg36.el8
+igtf-ca-certs-1.122-1.osg36.el8
+osg-ca-certs-1.113-1.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-condor-10.7.0-1.osg36.el9
-
-RPMs slated for release in osg-3.6-upcoming-el7-testing
-=======================================================
-condor-10.7.0-1.osg36up.el7
-
-RPMs slated for release in osg-3.6-upcoming-el8-testing
-=======================================================
-condor-10.7.0-1.osg36up.el8
-
-RPMs slated for release in osg-3.6-upcoming-el9-testing
-=======================================================
+igtf-ca-certs-1.122-1.osg36.el9
+osg-ca-certs-1.113-1.osg36.el9
 
