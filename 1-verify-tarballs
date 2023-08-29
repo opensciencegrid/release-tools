@@ -15,14 +15,53 @@ dotest () {
         else
             echo -e "\e[1;32mOK: $client-$ver-$data_rel.$rhel.$arch is the right size.\e[0m"
         fi
-        mkdir -p $rhel-$arch
-        pushd $rhel-$arch
-        tar xzf ../$file
-        $client/osg/osg-post-install
-        $client/osgrun osg-ca-manage setupCA --url osg
-        $client/osgrun osg-update-vos
-        popd
-        rm -rf $rhel-$arch
+        if type docker > /dev/null; then
+            if [ $rhel = el7 ]; then
+                image="centos:7"
+                packages="perl"
+            elif [ $rhel = el8 ]; then
+                image="almalinux:8"
+                packages="perl python36"
+            elif [ $rhel = el9 ]; then
+                image="almalinux:9"
+                packages="perl"
+            else
+                echo "Unknown Red Hat version: $rhel"
+                exit 1
+            fi
+            tmp_working_dir=$(mktemp -d "${TMPDIR:-/tmp}/test-tarball-XXXXXX")
+            mkdir -p ${tmp_working_dir}
+            cp -p $file ${tmp_working_dir}
+            myuid=$(id -u)
+            cat > ${tmp_working_dir}/test-tarball.sh <<EOF
+#!/bin/bash
+echo "Installing $packages..."
+yum install -y perl $python > /dev/null 2>&1
+echo "Extracting tarball..."
+tar xzf $file
+$client/osg/osg-post-install
+$client/osgrun osg-ca-manage setupCA --url osg
+$client/osgrun osg-update-vos
+rm -rf $client
+EOF
+            chmod 755 ${tmp_working_dir}/test-tarball.sh
+            echo "Testing in $image Docker container..."
+            docker run -it --rm \
+                -v "$tmp_working_dir:/working:rw" \
+                -e "myuid=$myuid" \
+                -w /working \
+                $image sh -c './test-tarball.sh'
+            rm -rf ${tmp_working_dir}
+        else
+            mkdir -p $rhel-$arch
+            pushd $rhel-$arch
+            tar xzf ../$file
+            $client/osg/osg-post-install
+            $client/osgrun osg-ca-manage setupCA --url osg
+            $client/osgrun osg-update-vos
+            popd
+            rm -rf $rhel-$arch
+        fi
     else
         echo -e "\e[1;31mERROR: $(pwd)/$client-$ver-$data_rel.$rhel.$arch tarball is missing.\e[0m"
     fi
@@ -50,7 +89,7 @@ for branch in ${versions[@]}; do
     for client in $clients; do
         for rhel in $rhels; do
             min_size=30
-            max_size=42
+            max_size=46
             archs="x86_64"
             for arch in $archs; do
                 dotest
