@@ -5,16 +5,22 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-igtf-ca-certs-1.122-1.osg36.el7
-osg-ca-certs-1.113-1.osg36.el7
+htgettoken-1.20-1.osg36.el7
+igtf-ca-certs-1.123-1.1.osg36.el7
+osg-ca-certs-1.114-1.1.osg36.el7
+pegasus-5.0.6-1.1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-igtf-ca-certs-1.122-1.osg36.el8
-osg-ca-certs-1.113-1.osg36.el8
+htgettoken-1.20-1.osg36.el8
+igtf-ca-certs-1.123-1.1.osg36.el8
+osg-ca-certs-1.114-1.1.osg36.el8
+pegasus-5.0.6-1.1.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-igtf-ca-certs-1.122-1.osg36.el9
-osg-ca-certs-1.113-1.osg36.el9
+htgettoken-1.20-1.osg36.el9
+igtf-ca-certs-1.123-1.1.osg36.el9
+osg-ca-certs-1.114-1.1.osg36.el9
+pegasus-5.0.6-1.1.osg36.el9
 
