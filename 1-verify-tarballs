@@ -36,7 +36,7 @@ dotest () {
             cat > ${tmp_working_dir}/test-tarball.sh <<EOF
 #!/bin/bash
 echo "Installing $packages..."
-yum install -y perl $python > /dev/null 2>&1
+yum install -y $packages > /dev/null 2>&1
 echo "Extracting tarball..."
 tar xzf $file
 $client/osg/osg-post-install
