@@ -5,22 +5,24 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-htgettoken-1.20-1.osg36.el7
-igtf-ca-certs-1.123-1.1.osg36.el7
-osg-ca-certs-1.114-1.1.osg36.el7
-pegasus-5.0.6-1.1.osg36.el7
+igtf-ca-certs-1.123-2.osg36.el7
+osg-ca-certs-1.114-2.osg36.el7
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.6-el7-testing' behind version in 'osg-3.6-el7-development'
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-htgettoken-1.20-1.osg36.el8
-igtf-ca-certs-1.123-1.1.osg36.el8
-osg-ca-certs-1.114-1.1.osg36.el8
-pegasus-5.0.6-1.1.osg36.el8
+igtf-ca-certs-1.123-2.osg36.el8
+osg-ca-certs-1.114-2.osg36.el8
+
+Slated packages in testing behind current development versions
+==============================================================
+No packages in 'osg-3.6-el8-testing' behind version in 'osg-3.6-el8-development'
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-htgettoken-1.20-1.osg36.el9
-igtf-ca-certs-1.123-1.1.osg36.el9
-osg-ca-certs-1.114-1.1.osg36.el9
-pegasus-5.0.6-1.1.osg36.el9
+igtf-ca-certs-1.123-2.osg36.el9
+osg-ca-certs-1.114-2.osg36.el9
 
