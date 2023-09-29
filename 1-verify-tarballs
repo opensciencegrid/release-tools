@@ -15,16 +15,15 @@ dotest () {
         else
             echo -e "\e[1;32mOK: $client-$ver-$data_rel.$rhel.$arch is the right size.\e[0m"
         fi
+        packages="perl yum-utils"
         if type docker > /dev/null; then
             if [ $rhel = el7 ]; then
                 image="centos:7"
-                packages="perl"
             elif [ $rhel = el8 ]; then
                 image="almalinux:8"
-                packages="perl python36"
+                packages="$packages python36"
             elif [ $rhel = el9 ]; then
                 image="almalinux:9"
-                packages="perl"
             else
                 echo "Unknown Red Hat version: $rhel"
                 exit 1
