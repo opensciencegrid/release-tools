@@ -3,26 +3,93 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.6-el7-testing
-==============================================
-igtf-ca-certs-1.123-2.osg36.el7
-osg-ca-certs-1.114-2.osg36.el7
+RPMs slated for release in osg-23-main-el8-testing
+==================================================
+cigetcert-1.21-1.osg23.el8
+cilogon-openid-ca-cert-1.1-8.osg23.el8
+cvmfs-2.11.0-1.2.osg23.el8
+cvmfs-config-osg-2.5-3.osg23.el8
+cvmfs-gateway-1.2.0-1.1.osg23.el8
+cvmfs-x509-helper-2.3-1.osg23.el8
+frontier-squid-5.9-1.1.osg23.el8
+glideinwms-3.10.5-1.osg23.el8
+gratia-probe-2.8.4-2.osg23.el8
+hosted-ce-tools-1.0-4.osg23.el8
+htgettoken-1.20-1.osg23.el8
+htvault-config-1.15-1.osg23.el8
+igtf-ca-certs-1.123-2.osg23.el8
+javascriptrrd-1.1.1-1.2.osg23.el8
+osdf-client-6.12.1-1.osg23.el8
+osg-ca-certs-1.114-2.osg23.el8
+osg-ca-certs-updater-2.0-1.3.osg23.el8
+osg-ca-scripts-1.2.4-3.osg23.el8
+osg-ce-23-1.osg23.el8
+osg-configure-4.1.1-2.osg23.el8
+osg-flock-1.9-3.osg23.el8
+osg-oasis-20-2.osg23.el8
+osg-pki-tools-3.6.1-1.osg23.el8
+osg-release-23-4.osg23.el8
+osg-scitokens-mapfile-12-2.osg23.el8
+osg-system-profiler-1.6.0-3.osg23.el8
+osg-token-renewer-0.8.3-3.osg23.el8
+osg-update-vos-1.4.2-1.osg23.el8
+osg-wn-client-23-1.osg23.el8
+osg-xrootd-23-2.osg23.el8
+pegasus-5.0.6-1.2.osg23.el8
+vault-1.13.2-2.osg23.el8
+vo-client-131-2.osg23.el8
+voms-2.1.0-0.14.rc2.7.osg23.el8
+xcache-3.5.0-4.osg23.el8
+xrootd-5.6.2-2.2.osg23.el8
+xrootd-monitoring-shoveler-1.1.2-2.osg23.el8
+xrootd-multiuser-2.1.3-1.3.osg23.el8
+xrootd-tcp-stats-1.0.0-2.osg23.el8
 
 Slated packages in testing behind current development versions
 ==============================================================
-No packages in 'osg-3.6-el7-testing' behind version in 'osg-3.6-el7-development'
+No packages in 'osg-23-main-el8-testing' behind version in 'osg-23-main-el8-development'
 
-RPMs slated for release in osg-3.6-el8-testing
-==============================================
-igtf-ca-certs-1.123-2.osg36.el8
-osg-ca-certs-1.114-2.osg36.el8
+RPMs slated for release in osg-23-main-el9-testing
+==================================================
+cigetcert-1.21-1.osg23.el9
+cilogon-openid-ca-cert-1.1-8.osg23.el9
+cvmfs-2.11.0-1.2.osg23.el9
+cvmfs-config-osg-2.5-3.osg23.el9
+cvmfs-gateway-1.2.0-1.1.osg23.el9
+cvmfs-x509-helper-2.3-1.osg23.el9
+frontier-squid-5.9-1.1.osg23.el9
+glideinwms-3.10.5-1.osg23.el9
+gratia-probe-2.8.4-2.osg23.el9
+hosted-ce-tools-1.0-4.osg23.el9
+htgettoken-1.20-1.osg23.el9
+htvault-config-1.15-1.osg23.el9
+igtf-ca-certs-1.123-2.osg23.el9
+javascriptrrd-1.1.1-1.2.osg23.el9
+osdf-client-6.12.1-1.osg23.el9
+osg-ca-certs-1.114-2.osg23.el9
+osg-ca-certs-updater-2.0-1.3.osg23.el9
+osg-ca-scripts-1.2.4-3.osg23.el9
+osg-ce-23-1.osg23.el9
+osg-configure-4.1.1-2.osg23.el9
+osg-flock-1.9-3.osg23.el9
+osg-oasis-20-2.osg23.el9
+osg-pki-tools-3.6.1-1.osg23.el9
+osg-release-23-4.osg23.el9
+osg-scitokens-mapfile-12-2.osg23.el9
+osg-system-profiler-1.6.0-3.osg23.el9
+osg-token-renewer-0.8.3-3.osg23.el9
+osg-update-vos-1.4.2-1.osg23.el9
+osg-wn-client-23-1.osg23.el9
+osg-xrootd-23-2.osg23.el9
+pegasus-5.0.6-1.2.osg23.el9
+vault-1.13.2-2.osg23.el9
+vo-client-131-2.osg23.el9
+xcache-3.5.0-4.osg23.el9
+xrootd-5.6.2-2.2.osg23.el9
+xrootd-monitoring-shoveler-1.1.2-2.osg23.el9
+xrootd-multiuser-2.1.3-1.3.osg23.el9
+xrootd-tcp-stats-1.0.0-2.osg23.el9
 
 Slated packages in testing behind current development versions
 ==============================================================
-No packages in 'osg-3.6-el8-testing' behind version in 'osg-3.6-el8-development'
-
-RPMs slated for release in osg-3.6-el9-testing
-==============================================
-igtf-ca-certs-1.123-2.osg36.el9
-osg-ca-certs-1.114-2.osg36.el9
-
+No packages in 'osg-23-main-el9-testing' behind version in 'osg-23-main-el9-development'
