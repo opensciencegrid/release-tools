@@ -35,9 +35,9 @@ show_all  = False
 pkgset    = None
 tags      = []
 
-tagpat = (r'^osg-(([3-9]\.\d|[2-9]\d)(-upcoming)?)'
-          r'-el[5-9]-(development|testing|(main-)?release)'
-          r'(-([3-9]\.\d|[2-9]\d)\.\d+)?$')
+tagpat = (r'^osg-(([2-9]\.?\d|[2-9]\d)(-main)?(-upcoming)?)'
+          r'-el[5-9]-(development|testing|release)'
+          r'(-([2-9]\.?\d|[2-9]\d)\.\d+)?$')
 
 def usage():
     print(__doc__.format(os.path.basename(__file__)))
