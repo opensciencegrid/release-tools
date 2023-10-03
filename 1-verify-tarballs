@@ -15,7 +15,7 @@ dotest () {
         else
             echo -e "\e[1;32mOK: $client-$ver-$data_rel.$rhel.$arch is the right size.\e[0m"
         fi
-        packages="perl yum-utils"
+        packages="cpio perl yum-utils"
         if type docker > /dev/null; then
             if [ $rhel = el7 ]; then
                 image="centos:7"

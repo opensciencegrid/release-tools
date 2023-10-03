@@ -23,7 +23,7 @@ for branch in ${versions[@]}; do
     for arch in $archs; do
         tarball_dest="tarballs/$branch/$arch"
         mkdir -p $tarball_dest
-        mv $tarball_src/osg*client-$branch*$arch*.tar.gz $tarball_dest
+        mv $tarball_src/osg*client-$(ver_tag $branch)*$arch*.tar.gz $tarball_dest
     done
 done
 
