@@ -21,12 +21,13 @@ for branch in ${versions[@]}; do
     fi
     archs="x86_64"
     for arch in $archs; do
-        tarball_dest="tarballs/$branch/$arch"
+        tarball_dest="tarballs-$date_tag/$branch/$arch"
         mkdir -p $tarball_dest
         mv $tarball_src/osg*client-$(ver_tag $branch)*$arch*.tar.gz $tarball_dest
     done
 done
 
 print_header "Copying tarballs to $rusermachine"
-rsync -av tarballs/* $rusermachine:/p/vdt/public/html/tarball-client/
+rsync -v tarballs-$date_tag/* $rusermachine:/p/vdt/public/html/tarball-client/
 check_file_transfer_rc $?
+rm -rf tarballs-$date_tag
