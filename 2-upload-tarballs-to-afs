@@ -2,9 +2,16 @@
 
 . release-common.sh
 
-if [[ $DRY_RUN -eq 0 ]]; then
-    echo "Enter username and machine name to use for scp, e.g. matyas@ingwe.cs.wisc.edu"
+if [[ ! -d /p/vdt/public/html/tarball-client/ && $DRY_RUN -eq 0 ]]; then
+    print_header "Not on UW's AFS..."
+    print_header "Enter username and machine name to use for scp (e.g. matyas@ingwe.cs.wisc.edu):"
     read rusermachine
+else
+    # Make sure we have an AFS tokens
+    if ! tokens | grep -q Expires; then
+        echo No AFS token
+        exit 1
+    fi
 fi
 
 echo "Enter the directory containing the tarballs:"
@@ -27,7 +34,11 @@ for branch in ${versions[@]}; do
     done
 done
 
-print_header "Copying tarballs to $rusermachine"
-rsync -v tarballs-$date_tag/* $rusermachine:/p/vdt/public/html/tarball-client/
+print_header "Copying tarballs over to UW's AFS"
+if [ -d /p/vdt/public/html/tarball-client/ ]; then
+    cp -rv tarballs-$date_tag/* /p/vdt/public/html/tarball-client/
+else
+    rsync -v tarballs-$date_tag/* $rusermachine:/p/vdt/public/html/tarball-client/
+fi
 check_file_transfer_rc $?
 rm -rf tarballs-$date_tag

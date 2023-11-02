@@ -25,6 +25,12 @@ if [[ ! -d /p/vdt/public/html/release-info/ && $DRY_RUN -eq 0 ]]; then
     print_header "Not on UW's AFS..."
     print_header "Enter username and machine name to use for scp (e.g. matyas@ingwe.cs.wisc.edu):"
     read rusermachine
+else
+    # Make sure we have an AFS tokens
+    if ! tokens | grep -q Expires; then
+        echo No AFS token
+        exit 1
+    fi
 fi
 
 for branch in ${versions[@]}; do
