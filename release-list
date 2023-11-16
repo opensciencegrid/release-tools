@@ -5,41 +5,36 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-cvmfs-2.11.2-1.osg36.el7
-cvmfs-x509-helper-2.4-1.osg36.el7
-igtf-ca-certs-1.124-1.osg36.el7
-osg-ca-certs-1.115-1.osg36.el7
-osg-oasis-20-7.osg36.el7
+osg-ce-3.6-11.osg36.el7
+osg-system-profiler-1.7.0-1.osg36.el7
+vo-client-132-1.osg36.el7
+xrootd-5.6.3-1.2.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-cvmfs-2.11.2-1.osg36.el8
-cvmfs-x509-helper-2.4-1.osg36.el8
-igtf-ca-certs-1.124-1.osg36.el8
-osg-ca-certs-1.115-1.osg36.el8
-osg-oasis-20-7.osg36.el8
+osg-ce-3.6-11.osg36.el8
+osg-system-profiler-1.7.0-1.osg36.el8
+vo-client-132-1.osg36.el8
+xrootd-5.6.3-1.2.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-cvmfs-2.11.2-1.osg36.el9
-cvmfs-x509-helper-2.4-1.osg36.el9
-igtf-ca-certs-1.124-1.osg36.el9
-osg-ca-certs-1.115-1.osg36.el9
-osg-oasis-20-7.osg36.el9
+osg-ce-3.6-11.osg36.el9
+osg-system-profiler-1.7.0-1.osg36.el9
+vo-client-132-1.osg36.el9
+xrootd-5.6.3-1.2.osg36.el9
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-cvmfs-2.11.2-1.osg23.el8
-cvmfs-x509-helper-2.4-1.osg23.el8
-igtf-ca-certs-1.124-1.osg23.el8
-osg-ca-certs-1.115-1.osg23.el8
-osg-oasis-20-7.osg23.el8
+osg-ce-23-2.osg23.el8
+osg-system-profiler-1.7.0-1.osg23.el8
+vo-client-132-1.osg23.el8
+xrootd-5.6.3-1.2.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-cvmfs-2.11.2-1.osg23.el9
-cvmfs-x509-helper-2.4-1.osg23.el9
-igtf-ca-certs-1.124-1.osg23.el9
-osg-ca-certs-1.115-1.osg23.el9
-osg-oasis-20-7.osg23.el9
+osg-ce-23-2.osg23.el9
+osg-system-profiler-1.7.0-1.osg23.el9
+vo-client-132-1.osg23.el9
+xrootd-5.6.3-1.2.osg23.el9
 
