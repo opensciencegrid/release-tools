@@ -5,36 +5,31 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-osg-ce-3.6-11.osg36.el7
-osg-system-profiler-1.7.0-1.osg36.el7
-vo-client-132-1.osg36.el7
-xrootd-5.6.3-1.2.osg36.el7
+igtf-ca-certs-1.125-1.osg36.el7
+osg-ca-certs-1.116-3.osg36.el7
+vo-client-133-1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-osg-ce-3.6-11.osg36.el8
-osg-system-profiler-1.7.0-1.osg36.el8
-vo-client-132-1.osg36.el8
-xrootd-5.6.3-1.2.osg36.el8
+igtf-ca-certs-1.125-1.osg36.el8
+osg-ca-certs-1.116-3.osg36.el8
+vo-client-133-1.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-osg-ce-3.6-11.osg36.el9
-osg-system-profiler-1.7.0-1.osg36.el9
-vo-client-132-1.osg36.el9
-xrootd-5.6.3-1.2.osg36.el9
+igtf-ca-certs-1.125-1.osg36.el9
+osg-ca-certs-1.116-3.osg36.el9
+vo-client-133-1.osg36.el9
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-osg-ce-23-2.osg23.el8
-osg-system-profiler-1.7.0-1.osg23.el8
-vo-client-132-1.osg23.el8
-xrootd-5.6.3-1.2.osg23.el8
+igtf-ca-certs-1.125-1.osg23.el8
+osg-ca-certs-1.116-3.osg23.el8
+vo-client-133-1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-osg-ce-23-2.osg23.el9
-osg-system-profiler-1.7.0-1.osg23.el9
-vo-client-132-1.osg23.el9
-xrootd-5.6.3-1.2.osg23.el9
+igtf-ca-certs-1.125-1.osg23.el9
+osg-ca-certs-1.116-3.osg23.el9
+vo-client-133-1.osg23.el9
 
