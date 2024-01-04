@@ -5,31 +5,31 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-xcache-3.6.0-1.osg36.el7
-xrootd-5.6.4-1.1.osg36.el7
-xrootd-multiuser-2.2.0-1.osg36.el7
+igtf-ca-certs-1.126-1.osg36.el7
+osg-ca-certs-1.117-1.osg36.el7
+ospool-ep-1.0-4.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-xcache-3.6.0-1.osg36.el8
-xrootd-5.6.4-1.1.osg36.el8
-xrootd-multiuser-2.2.0-1.osg36.el8
+igtf-ca-certs-1.126-1.osg36.el8
+osg-ca-certs-1.117-1.osg36.el8
+ospool-ep-1.0-4.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-xcache-3.6.0-1.osg36.el9
-xrootd-5.6.4-1.1.osg36.el9
-xrootd-multiuser-2.2.0-1.osg36.el9
+igtf-ca-certs-1.126-1.osg36.el9
+osg-ca-certs-1.117-1.osg36.el9
+ospool-ep-1.0-4.osg36.el9
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-xcache-3.6.0-1.osg23.el8
-xrootd-5.6.4-1.1.osg23.el8
-xrootd-multiuser-2.2.0-1.osg23.el8
+igtf-ca-certs-1.126-1.osg23.el8
+osg-ca-certs-1.117-1.osg23.el8
+ospool-ep-1.0-4.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-xcache-3.6.0-1.osg23.el9
-xrootd-5.6.4-1.1.osg23.el9
-xrootd-multiuser-2.2.0-1.osg23.el9
+igtf-ca-certs-1.126-1.osg23.el9
+osg-ca-certs-1.117-1.osg23.el9
+ospool-ep-1.0-4.osg23.el9
 
