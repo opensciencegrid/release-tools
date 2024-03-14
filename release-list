@@ -5,21 +5,31 @@
 
 RPMs slated for release in osg-3.6-el7-testing
 ==============================================
-xrootd-5.6.8-1.1.osg36.el7
+igtf-ca-certs-1.128-1.osg36.el7
+osg-ca-certs-1.119-1.osg36.el7
+osg-xrootd-3.6-23.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
-xrootd-5.6.8-1.1.osg36.el8
+igtf-ca-certs-1.128-1.osg36.el8
+osg-ca-certs-1.119-1.osg36.el8
+osg-xrootd-3.6-23.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
-xrootd-5.6.8-1.1.osg36.el9
+igtf-ca-certs-1.128-1.osg36.el9
+osg-ca-certs-1.119-1.osg36.el9
+osg-xrootd-3.6-23.osg36.el9
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-xrootd-5.6.8-1.1.osg23.el8
+igtf-ca-certs-1.128-1.osg23.el8
+osg-ca-certs-1.119-1.osg23.el8
+osg-xrootd-23-5.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-xrootd-5.6.8-1.1.osg23.el9
+igtf-ca-certs-1.128-1.osg23.el9
+osg-ca-certs-1.119-1.osg23.el9
+osg-xrootd-23-5.osg23.el9
 
