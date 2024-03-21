@@ -7,28 +7,23 @@ RPMs slated for release in osg-3.6-el7-testing
 ==============================================
 osg-scitokens-mapfile-13-2.osg36.el7
 vo-client-135-1.osg36.el7
-xrootd-5.6.9-1.1.osg36.el7
 
 RPMs slated for release in osg-3.6-el8-testing
 ==============================================
 osg-scitokens-mapfile-13-2.osg36.el8
 vo-client-135-1.osg36.el8
-xrootd-5.6.9-1.1.osg36.el8
 
 RPMs slated for release in osg-3.6-el9-testing
 ==============================================
 osg-scitokens-mapfile-13-2.osg36.el9
 vo-client-135-1.osg36.el9
-xrootd-5.6.9-1.1.osg36.el9
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
 osg-scitokens-mapfile-13-2.osg23.el8
 vo-client-135-1.osg23.el8
-xrootd-5.6.9-1.1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
 osg-scitokens-mapfile-13-2.osg23.el9
 vo-client-135-1.osg23.el9
-xrootd-5.6.9-1.1.osg23.el9
