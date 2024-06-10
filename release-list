@@ -3,23 +3,11 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.6-el7-testing
-==============================================
-voms-2.1.0-0.31.rc3.2.osg36.el7
-
-RPMs slated for release in osg-3.6-el8-testing
-==============================================
-voms-2.1.0-0.31.rc3.2.osg36.el8
-
-RPMs slated for release in osg-3.6-el9-testing
-==============================================
-voms-2.1.0-0.31.rc3.2.osg36.el9
-
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-voms-2.1.0-0.31.rc3.2.osg23.el8
+xrootd-5.6.9-1.6.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-voms-2.1.0-0.31.rc3.2.osg23.el9
+xrootd-5.6.9-1.6.osg23.el9
 
