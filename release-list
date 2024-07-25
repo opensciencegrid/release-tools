@@ -3,18 +3,21 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-3.6-el7-testing
-==============================================
-igtf-ca-certs-1.130-1.osg36.el7
-osg-ca-certs-1.130-1.osg36.el7
+RPMs slated for release in osg-23-main-el8-testing
+==================================================
+glideinwms-3.10.7-2.osg23.el8
+hosted-ce-tools-2.1-1.osg23.el8
 
-RPMs slated for release in osg-3.6-el8-testing
-==============================================
-igtf-ca-certs-1.130-1.osg36.el8
-osg-ca-certs-1.130-1.osg36.el8
+RPMs slated for release in osg-23-main-el9-testing
+==================================================
+glideinwms-3.10.7-2.osg23.el9
+hosted-ce-tools-2.1-1.osg23.el9
 
-RPMs slated for release in osg-3.6-el9-testing
-==============================================
-igtf-ca-certs-1.130-1.osg36.el9
-osg-ca-certs-1.130-1.osg36.el9
+RPMs slated for release in osg-23-upcoming-el8-testing
+======================================================
+osdf-server-7.9.3-1.osg23up.el8
+
+RPMs slated for release in osg-23-upcoming-el9-testing
+======================================================
+osdf-server-7.9.3-1.osg23up.el9
 
