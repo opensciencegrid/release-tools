@@ -5,19 +5,9 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-glideinwms-3.10.7-2.osg23.el8
-hosted-ce-tools-2.1-1.osg23.el8
+xrootd-5.7.0-1.1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-glideinwms-3.10.7-2.osg23.el9
-hosted-ce-tools-2.1-1.osg23.el9
-
-RPMs slated for release in osg-23-upcoming-el8-testing
-======================================================
-osdf-server-7.9.3-1.osg23up.el8
-
-RPMs slated for release in osg-23-upcoming-el9-testing
-======================================================
-osdf-server-7.9.3-1.osg23up.el9
+xrootd-5.7.0-1.1.osg23.el9
 
