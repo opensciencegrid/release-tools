@@ -5,21 +5,11 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-cvmfs-2.11.5-1.osg23.el8
-htgettoken-2.0-2.osg23.el8
-htvault-config-1.18-1.osg23.el8
-osg-oasis-20-10.osg23.el8
-vault-1.17.2-2.osg23.el8
-xrdcl-pelican-0.9.3-2.1.osg23.el8
-xrootd-multiuser-2.2.0-1.1.osg23.el8
+xrdcl-pelican-0.9.4-1.osg23.el8
+xrootd-5.7.1-1.1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-cvmfs-2.11.5-1.osg23.el9
-htgettoken-2.0-2.osg23.el9
-htvault-config-1.18-1.osg23.el9
-osg-oasis-20-10.osg23.el9
-vault-1.17.2-2.osg23.el9
-xrdcl-pelican-0.9.3-2.1.osg23.el9
-xrootd-multiuser-2.2.0-1.1.osg23.el9
+xrdcl-pelican-0.9.4-1.osg23.el9
+xrootd-5.7.1-1.1.osg23.el9
 
