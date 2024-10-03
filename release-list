@@ -5,11 +5,11 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-xrdcl-pelican-0.9.4-1.osg23.el8
-xrootd-5.7.1-1.1.osg23.el8
+igtf-ca-certs-1.131-1.osg23.el8
+osg-ca-certs-1.131-1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-xrdcl-pelican-0.9.4-1.osg23.el9
-xrootd-5.7.1-1.1.osg23.el9
+igtf-ca-certs-1.131-1.osg23.el9
+osg-ca-certs-1.131-1.osg23.el9
 
