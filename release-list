@@ -3,11 +3,11 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-23-upcoming-el8-testing
-======================================================
-osdf-server-7.10.7-1.osg23up.el8
+RPMs slated for release in osg-23-main-el8-testing
+==================================================
+xrootd-5.7.1-1.3.osg23.el8
 
-RPMs slated for release in osg-23-upcoming-el9-testing
-======================================================
-osdf-server-7.10.7-1.osg23up.el9
+RPMs slated for release in osg-23-main-el9-testing
+==================================================
+xrootd-5.7.1-1.3.osg23.el9
 
