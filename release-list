@@ -3,11 +3,36 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-23-main-el8-testing
+RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-xrootd-5.7.1-1.3.osg23.el8
+cvmfs-2.11.5-1.osg24.el8
+json-schema-validator-devel-2.3.0-1.osg24.el8
+lotman-0.0.4-1.osg24.el8
+nlohmann-json-devel-3.11.2-2.osg24.el8
+osdf-server-7.10.7-1.osg24.el8
+osg-ce-24-1.osg24.el8
+osg-pki-tools-3.7.1-2.osg24.el8
+osg-wn-client-24-1.osg24.el8
+osg-xrootd-24-1.osg24.el8
+xcache-4.0.0-0.1.osg24.el8
+xrdcl-pelican-0.9.4-1.osg24.el8
+xrootd-monitoring-shoveler-1.1.2-3.osg24.el8
+xrootd-multiuser-2.2.0-1.1.osg24.el8
+xrootd-tcp-stats-1.0.0-2.osg24.el8
 
-RPMs slated for release in osg-23-main-el9-testing
+RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-xrootd-5.7.1-1.3.osg23.el9
-
+cvmfs-2.11.5-1.osg24.el9
+json-schema-validator-devel-2.3.0-1.osg24.el9
+lotman-0.0.4-1.osg24.el9
+nlohmann-json-devel-3.11.2-2.osg24.el9
+osdf-server-7.10.7-1.osg24.el9
+osg-ce-24-1.osg24.el9
+osg-pki-tools-3.7.1-2.osg24.el9
+osg-wn-client-24-1.osg24.el9
+osg-xrootd-24-1.osg24.el9
+xcache-4.0.0-0.1.osg24.el9
+xrdcl-pelican-0.9.4-1.osg24.el9
+xrootd-monitoring-shoveler-1.1.2-3.osg24.el9
+xrootd-multiuser-2.2.0-1.1.osg24.el9
+xrootd-tcp-stats-1.0.0-2.osg24.el9
