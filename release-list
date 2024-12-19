@@ -5,33 +5,27 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-glideinwms-3.10.8-1.osg23.el8
-xrootd-5.7.2-1.1.osg23.el8
+gratia-probe-2.8.5-1.osg23.el8
+igtf-ca-certs-1.132-1.osg23.el8
+osg-ca-certs-1.132-1.osg23.el8
+xcache-3.7.0-2.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-glideinwms-3.10.8-1.osg23.el9
-xrootd-5.7.2-1.1.osg23.el9
-
-RPMs slated for release in osg-23-upcoming-el8-testing
-======================================================
-osdf-server-7.11.7-1.osg23up.el8
-
-RPMs slated for release in osg-23-upcoming-el9-testing
-======================================================
-osdf-server-7.11.7-1.osg23up.el9
+gratia-probe-2.8.5-1.osg23.el9
+igtf-ca-certs-1.132-1.osg23.el9
+osg-ca-certs-1.132-1.osg23.el9
+xcache-3.7.0-2.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-glideinwms-3.10.8-1.osg24.el8
-osdf-server-7.11.7-1.osg24.el8
-osg-ce-24-2.osg24.el8
-xrootd-5.7.2-1.1.osg24.el8
+gratia-probe-2.8.5-1.osg24.el8
+igtf-ca-certs-1.132-1.osg24.el8
+osg-ca-certs-1.132-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-glideinwms-3.10.8-1.osg24.el9
-osdf-server-7.11.7-1.osg24.el9
-osg-ce-24-2.osg24.el9
-xrootd-5.7.2-1.1.osg24.el9
+gratia-probe-2.8.5-1.osg24.el9
+igtf-ca-certs-1.132-1.osg24.el9
+osg-ca-certs-1.132-1.osg24.el9
 
