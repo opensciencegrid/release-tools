@@ -5,17 +5,37 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-frontier-squid-5.9-3.2.osg23.el8
+osg-ce-23-3.osg23.el8
+osg-scitokens-mapfile-14-2.osg23.el8
+osg-wn-client-23-2.osg23.el8
+osg-xrootd-23-7.osg23.el8
+vo-client-137-4.osg23.el8
+xcache-3.7.0-3.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-frontier-squid-5.9-3.2.osg23.el9
+osg-ce-23-3.osg23.el9
+osg-scitokens-mapfile-14-2.osg23.el9
+osg-wn-client-23-2.osg23.el9
+osg-xrootd-23-7.osg23.el9
+vo-client-137-4.osg23.el9
+xcache-3.7.0-3.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-frontier-squid-5.9-3.2.osg24.el8
+osg-ce-23-3.osg24.el8
+osg-scitokens-mapfile-14-2.osg24.el8
+osg-wn-client-24-3.osg24.el8
+osg-xrootd-24-3.osg24.el8
+vo-client-137-4.osg24.el8
+xcache-4.0.0-0.2.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-frontier-squid-5.9-3.2.osg24.el9
+osg-ce-23-3.osg24.el9
+osg-scitokens-mapfile-14-2.osg24.el9
+osg-wn-client-24-3.osg24.el9
+osg-xrootd-24-3.osg24.el9
+vo-client-137-4.osg24.el9
+xcache-4.0.0-0.2.osg24.el9
 
