@@ -2,40 +2,30 @@
 # should be updated by the release manager after receiving input from the
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
-
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-osg-ce-23-3.osg23.el8
-osg-scitokens-mapfile-14-2.osg23.el8
-osg-wn-client-23-2.osg23.el8
-osg-xrootd-23-7.osg23.el8
-vo-client-137-4.osg23.el8
-xcache-3.7.0-3.osg23.el8
+glideinwms-3.10.10-1.osg23.el8
+vo-client-138-1.osg23.el8
+xrdcl-pelican-1.0.5-1.osg23.el8
+xrootd-monitoring-shoveler-1.4.0-1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-osg-ce-23-3.osg23.el9
-osg-scitokens-mapfile-14-2.osg23.el9
-osg-wn-client-23-2.osg23.el9
-osg-xrootd-23-7.osg23.el9
-vo-client-137-4.osg23.el9
-xcache-3.7.0-3.osg23.el9
+glideinwms-3.10.10-1.osg23.el9
+vo-client-138-1.osg23.el9
+xrdcl-pelican-1.0.5-1.osg23.el9
+xrootd-monitoring-shoveler-1.4.0-1.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-osg-ce-23-3.osg24.el8
-osg-scitokens-mapfile-14-2.osg24.el8
-osg-wn-client-24-3.osg24.el8
-osg-xrootd-24-3.osg24.el8
-vo-client-137-4.osg24.el8
-xcache-4.0.0-0.2.osg24.el8
+glideinwms-3.10.10-1.osg24.el8
+vo-client-138-1.osg24.el8
+xrdcl-pelican-1.0.5-1.osg24.el8
+xrootd-monitoring-shoveler-1.4.0-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-osg-ce-23-3.osg24.el9
-osg-scitokens-mapfile-14-2.osg24.el9
-osg-wn-client-24-3.osg24.el9
-osg-xrootd-24-3.osg24.el9
-vo-client-137-4.osg24.el9
-xcache-4.0.0-0.2.osg24.el9
-
+glideinwms-3.10.10-1.osg24.el9
+vo-client-138-1.osg24.el9
+xrdcl-pelican-1.0.5-1.osg24.el9
+xrootd-monitoring-shoveler-1.4.0-1.osg24.el9
