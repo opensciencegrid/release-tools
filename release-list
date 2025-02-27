@@ -4,28 +4,38 @@
 # same as the output from 0-generate-pkg-list.
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-glideinwms-3.10.10-1.osg23.el8
-vo-client-138-1.osg23.el8
-xrdcl-pelican-1.0.5-1.osg23.el8
-xrootd-monitoring-shoveler-1.4.0-1.osg23.el8
+cvmfs-2.12.6-1.osg23.el8
+igtf-ca-certs-1.133-1.osg23.el8
+osg-ca-certs-1.133-1.osg23.el8
+osg-oasis-20-15.osg23.el8
+ospool-ep-1.0-6.osg23.el8
+xrootd-5.7.3-1.2.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-glideinwms-3.10.10-1.osg23.el9
-vo-client-138-1.osg23.el9
-xrdcl-pelican-1.0.5-1.osg23.el9
-xrootd-monitoring-shoveler-1.4.0-1.osg23.el9
+cvmfs-2.12.6-1.osg23.el9
+igtf-ca-certs-1.133-1.osg23.el9
+osg-ca-certs-1.133-1.osg23.el9
+osg-oasis-20-15.osg23.el9
+ospool-ep-1.0-6.osg23.el9
+xrootd-5.7.3-1.2.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-glideinwms-3.10.10-1.osg24.el8
-vo-client-138-1.osg24.el8
-xrdcl-pelican-1.0.5-1.osg24.el8
-xrootd-monitoring-shoveler-1.4.0-1.osg24.el8
+cvmfs-2.12.6-1.osg24.el8
+igtf-ca-certs-1.133-1.osg24.el8
+osg-ca-certs-1.133-1.osg24.el8
+osg-oasis-20-15.osg24.el8
+osg-token-renewer-0.9.0-1.osg24.el8
+ospool-ep-24-2.osg24.el8
+xrootd-5.7.3-1.2.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-glideinwms-3.10.10-1.osg24.el9
-vo-client-138-1.osg24.el9
-xrdcl-pelican-1.0.5-1.osg24.el9
-xrootd-monitoring-shoveler-1.4.0-1.osg24.el9
+cvmfs-2.12.6-1.osg24.el9
+igtf-ca-certs-1.133-1.osg24.el9
+osg-ca-certs-1.133-1.osg24.el9
+osg-oasis-20-15.osg24.el9
+osg-token-renewer-0.9.0-1.osg24.el9
+ospool-ep-24-2.osg24.el9
+xrootd-5.7.3-1.2.osg24.el9
