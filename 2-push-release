@@ -48,6 +48,14 @@ for branch in ${versions[@]}; do
             echo
         done
 
+        print_header "Distributing $release_repo"
+        # Get the key that all packages in the repo should be signed with
+        run_cmd "KEY_ID=$(osg-koji taginfo $release_repo | grep 'tag2distrepo.keys' | awk '{print $3}')"
+        # Regenerate the repo
+        run_cmd "osg-koji regen-repo $release_repo"
+        # Run distrepo
+        run_cmd "osg-koji dist-repo $release_repo $KEY_ID --non-latest --nowait"
+
     done
 
 done
