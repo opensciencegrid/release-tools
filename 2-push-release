@@ -36,7 +36,10 @@ for branch in ${versions[@]}; do
             # Create new release repo for non-$data releases
             versioned_release_repo=osg-$branch-$dver-release-$(ver_tag $branch)
             print_header "Cloning $release_repo to $versioned_release_repo"
+            # Turn off tag2distrepo before cloning the tag, then turn it back on
+            run_cmd "osg-koji edit-tag -x tag2distrepo.enabled=False $release_repo"
             run_cmd "osg-koji clone-tag --all $release_repo $versioned_release_repo"
+            run_cmd "osg-koji edit-tag -x tag2distrepo.enabled=True $release_repo"
             echo
         fi
 
@@ -47,6 +50,14 @@ for branch in ${versions[@]}; do
             run_cmd "osg-koji edit-tag --lock $repo"
             echo
         done
+
+        print_header "Distributing $release_repo"
+        # Get the key that all packages in the repo should be signed with
+        run_cmd "KEY_ID=$(osg-koji taginfo $release_repo | grep 'tag2distrepo.keys' | awk '{print $3}')"
+        # Regenerate the repo
+        run_cmd "osg-koji regen-repo $release_repo"
+        # Run distrepo
+        run_cmd "osg-koji dist-repo $release_repo $KEY_ID --non-latest --nowait"
 
     done
 
