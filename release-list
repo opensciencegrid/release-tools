@@ -5,21 +5,18 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-htgettoken-2.2-1.osg23.el8
-xrootd-5.7.3-1.5.osg23.el8
+glideinwms-3.10.11-1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-htgettoken-2.2-1.osg23.el9
-xrootd-5.7.3-1.5.osg23.el9
+glideinwms-3.10.11-1.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-htgettoken-2.2-1.osg24.el8
-xrootd-5.7.3-1.5.osg24.el8
+glideinwms-3.10.11-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-htgettoken-2.2-1.osg24.el9
-xrootd-5.7.3-1.5.osg24.el9
+glideinwms-3.10.11-1.osg24.el9
+
 
