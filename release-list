@@ -5,18 +5,31 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-glideinwms-3.10.11-1.osg23.el8
+frontier-squid-5.9-3.3.osg23.el8
+osg-ca-certs-updater-2.2-1.osg23.el8
+osg-release-23-7.osg23.el8
+ospool-ep-23-7.osg23.el8
+vo-client-138-2.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-glideinwms-3.10.11-1.osg23.el9
+frontier-squid-5.9-3.3.osg23.el9
+osg-ca-certs-updater-2.2-1.osg23.el9
+osg-release-23-7.osg23.el9
+ospool-ep-23-7.osg23.el9
+vo-client-138-2.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-glideinwms-3.10.11-1.osg24.el8
+frontier-squid-5.9-3.3.osg24.el8
+osg-ca-certs-updater-2.2-1.osg24.el8
+ospool-ep-24-3.osg24.el8
+vo-client-138-2.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-glideinwms-3.10.11-1.osg24.el9
-
+frontier-squid-5.9-3.3.osg24.el9
+osg-ca-certs-updater-2.2-1.osg24.el9
+ospool-ep-24-3.osg24.el9
+vo-client-138-2.osg24.el9
 
