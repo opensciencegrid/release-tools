@@ -5,25 +5,45 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-glideinwms-3.10.15-1.osg23.el8
-osg-scitokens-mapfile-15-2.osg23.el8
-ospool-ep-23-9.osg23.el8
+cvmfs-2.13.2-2.1.osg23.el8
+osg-oasis-21-3.osg23.el8
+xrootd-5.8.4-1.3.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-glideinwms-3.10.15-1.osg23.el9
-osg-scitokens-mapfile-15-2.osg23.el9
-ospool-ep-23-9.osg23.el9
+cvmfs-2.13.2-2.1.osg23.el9
+osg-oasis-21-3.osg23.el9
+xrootd-5.8.4-1.3.osg23.el9
+
+RPMs slated for release in osg-23-upcoming-el8-testing
+======================================================
+frontier-squid-6.13-1.5.osg23up.el8
+glideinwms-3.11.1-1.osg23up.el8
+
+RPMs slated for release in osg-23-upcoming-el9-testing
+======================================================
+frontier-squid-6.13-1.5.osg23up.el9
+glideinwms-3.11.1-1.osg23up.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-glideinwms-3.10.15-1.osg24.el8
-osg-scitokens-mapfile-15-2.osg24.el8
-ospool-ep-24-5.osg24.el8
+cvmfs-2.13.2-2.1.osg24.el8
+osg-oasis-21-3.osg24.el8
+xrootd-5.8.4-1.3.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-glideinwms-3.10.15-1.osg24.el9
-osg-scitokens-mapfile-15-2.osg24.el9
-ospool-ep-24-5.osg24.el9
+cvmfs-2.13.2-2.1.osg24.el9
+osg-oasis-21-3.osg24.el9
+xrootd-5.8.4-1.3.osg24.el9
+
+RPMs slated for release in osg-24-upcoming-el8-testing
+======================================================
+frontier-squid-6.13-1.5.osg24up.el8
+glideinwms-3.11.1-1.osg24up.el8
+
+RPMs slated for release in osg-24-upcoming-el9-testing
+======================================================
+frontier-squid-6.13-1.5.osg24up.el9
+glideinwms-3.11.1-1.osg24up.el9
 
