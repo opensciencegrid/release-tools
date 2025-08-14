@@ -12,12 +12,13 @@ detect_rescue_file
 for branch in ${versions[@]}; do
     # drop upcoming from versions since they don't get their own tarballs
     # we don't use release-build for OSG 23
-    if [[ $branch = *-upcoming ]] || [[ $branch == 23-main ]]; then
+    if [[ $branch = *-upcoming ]]; then
         continue
     fi
     read -ra dvers <<< $(osg_dvers $branch) # create array of dvers
     for dver in ${dvers[@]}; do
-        run_cmd "osg-koji regen-repo osg-$branch-$dver-release-build" # avoid pkg 404 errors
+        run_cmd "osg-koji regen-repo osg-$branch-$dver-prerelease" # make sure repos are up to date
+        run_cmd "osg-koji regen-repo osg-$branch-$dver-release" # make sure repos are up to date
     done
 done
 
