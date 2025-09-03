@@ -5,17 +5,21 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-xrootd-5.8.4-1.4.osg23.el8
+osg-configure-4.3.0-1.osg23.el8
+pegasus-5.1.1-1.1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-xrootd-5.8.4-1.4.osg23.el9
+osg-configure-4.3.0-1.osg23.el9
+pegasus-5.1.1-1.1.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-xrootd-5.8.4-1.4.osg24.el8
+osg-configure-4.3.0-1.osg24.el8
+pegasus-5.1.1-1.1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-xrootd-5.8.4-1.4.osg24.el9
+osg-configure-4.3.0-1.osg24.el9
+pegasus-5.1.1-1.1.osg24.el9
 
