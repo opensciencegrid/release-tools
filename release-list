@@ -5,21 +5,29 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-osg-configure-4.3.0-1.osg23.el8
-pegasus-5.1.1-1.1.osg23.el8
+igtf-ca-certs-1.137-1.osg23.el8
+osg-ca-certs-1.137-1.osg23.el8
+xrdcl-pelican-1.5.4-1.osg23.el8
+xrootd-monitoring-shoveler-1.4.0-2.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-osg-configure-4.3.0-1.osg23.el9
-pegasus-5.1.1-1.1.osg23.el9
+igtf-ca-certs-1.137-1.osg23.el9
+osg-ca-certs-1.137-1.osg23.el9
+xrdcl-pelican-1.5.4-1.osg23.el9
+xrootd-monitoring-shoveler-1.4.0-2.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-osg-configure-4.3.0-1.osg24.el8
-pegasus-5.1.1-1.1.osg24.el8
+igtf-ca-certs-1.137-1.osg24.el8
+osg-ca-certs-1.137-1.osg24.el8
+xrdcl-pelican-1.5.4-1.osg24.el8
+xrootd-monitoring-shoveler-1.4.0-2.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-osg-configure-4.3.0-1.osg24.el9
-pegasus-5.1.1-1.1.osg24.el9
+igtf-ca-certs-1.137-1.osg24.el9
+osg-ca-certs-1.137-1.osg24.el9
+xrdcl-pelican-1.5.4-1.osg24.el9
+xrootd-monitoring-shoveler-1.4.0-2.osg24.el9
 
