@@ -5,19 +5,17 @@
 
 RPMs slated for release in osg-23-main-el8-testing
 ==================================================
-xrdcl-pelican-1.5.6-1.osg23.el8
+vo-client-139-1.osg23.el8
 
 RPMs slated for release in osg-23-main-el9-testing
 ==================================================
-xrdcl-pelican-1.5.6-1.osg23.el9
+vo-client-139-1.osg23.el9
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-xcache-4.1.0-1.osg24.el8
-xrdcl-pelican-1.5.6-1.osg24.el8
+vo-client-139-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-xcache-4.1.0-1.osg24.el9
-xrdcl-pelican-1.5.6-1.osg24.el9
+vo-client-139-1.osg24.el9
 
