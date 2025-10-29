@@ -3,15 +3,23 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
+RPMs slated for release in osg-24-main-el8-testing
+==================================================
+xrootd-5.9.0-1.1.osg24.el8
+
+RPMs slated for release in osg-24-main-el9-testing
+==================================================
+xrootd-5.9.0-1.1.osg24.el9
+
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-gratia-probe-2.9.0-1.osg25.el8
+xrootd-5.9.0-1.1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-gratia-probe-2.9.0-1.osg25.el9
+xrootd-5.9.0-1.1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-gratia-probe-2.9.0-1.osg25.el10
+xrootd-5.9.0-1.1.osg25.el10
 
