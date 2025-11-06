@@ -5,21 +5,54 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-xrootd-5.9.0-1.1.osg24.el8
+cvmfs-2.13.3-1.osg24.el8
+glideinwms-3.10.16-1.osg24.el8
+osg-oasis-21-4.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-xrootd-5.9.0-1.1.osg24.el9
+cvmfs-2.13.3-1.osg24.el9
+glideinwms-3.10.16-1.osg24.el9
+osg-oasis-21-4.osg24.el9
+
+RPMs slated for release in osg-24-upcoming-el8-testing
+======================================================
+glideinwms-3.11.2-1.osg24up.el8
+
+RPMs slated for release in osg-24-upcoming-el9-testing
+======================================================
+glideinwms-3.11.2-1.osg24up.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-xrootd-5.9.0-1.1.osg25.el8
+cvmfs-2.13.3-1.osg25.el8
+glideinwms-3.10.16-1.osg25.el8
+osg-configure-4.3.1-1.osg25.el8
+osg-oasis-21-4.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-xrootd-5.9.0-1.1.osg25.el9
+cvmfs-2.13.3-1.osg25.el9
+glideinwms-3.10.16-1.osg25.el9
+osg-configure-4.3.1-1.osg25.el9
+osg-oasis-21-4.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-xrootd-5.9.0-1.1.osg25.el10
+cvmfs-2.13.3-1.osg25.el10
+glideinwms-3.10.16-1.osg25.el10
+osg-configure-4.3.1-1.osg25.el10
+osg-oasis-21-4.osg25.el10
+
+RPMs slated for release in osg-25-upcoming-el8-testing
+======================================================
+glideinwms-3.11.2-1.osg25up.el8
+
+RPMs slated for release in osg-25-upcoming-el9-testing
+======================================================
+glideinwms-3.11.2-1.osg25up.el9
+
+RPMs slated for release in osg-25-upcoming-el10-testing
+=======================================================
+glideinwms-3.11.2-1.osg25up.el10
 
