@@ -24,6 +24,8 @@ dotest () {
                 packages="$packages python36"
             elif [ $rhel = el9 ]; then
                 image="almalinux:9"
+            elif [ $rhel = el10 ]; then
+                image="almalinux:10"
             else
                 echo "Unknown Red Hat version: $rhel"
                 exit 1
