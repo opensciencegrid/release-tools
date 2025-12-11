@@ -5,30 +5,31 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-glideinwms-3.10.17-1.osg24.el8
-igtf-ca-certs-1.138-1.osg24.el8
-osg-ca-certs-1.138-1.osg24.el8
+htgettoken-2.5-1.osg24.el8
+xrdhttp-pelican-0.0.8-1.osg24.el8
+xrootd-5.9.1-1.2.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-glideinwms-3.10.17-1.osg24.el9
-igtf-ca-certs-1.138-1.osg24.el9
-osg-ca-certs-1.138-1.osg24.el9
+htgettoken-2.5-1.osg24.el9
+xrdhttp-pelican-0.0.8-1.osg24.el9
+xrootd-5.9.1-1.2.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-glideinwms-3.10.17-1.osg25.el8
-igtf-ca-certs-1.138-1.osg25.el8
-osg-ca-certs-1.138-1.osg25.el8
+htgettoken-2.5-1.osg25.el8
+xrdhttp-pelican-0.0.8-1.osg25.el8
+xrootd-5.9.1-1.2.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-glideinwms-3.10.17-1.osg25.el9
-igtf-ca-certs-1.138-1.osg25.el9
-osg-ca-certs-1.138-1.osg25.el9
+htgettoken-2.5-1.osg25.el9
+xrdhttp-pelican-0.0.8-1.osg25.el9
+xrootd-5.9.1-1.2.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-igtf-ca-certs-1.138-1.osg25.el10
-osg-ca-certs-1.138-1.osg25.el10
+htgettoken-2.5-1.osg25.el10
+xrdhttp-pelican-0.0.8-1.osg25.el10
+xrootd-5.9.1-1.2.osg25.el10
 
