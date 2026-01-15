@@ -5,31 +5,24 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-htgettoken-2.5-1.osg24.el8
-xrdhttp-pelican-0.0.8-1.osg24.el8
-xrootd-5.9.1-1.2.osg24.el8
+vo-client-140-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-htgettoken-2.5-1.osg24.el9
-xrdhttp-pelican-0.0.8-1.osg24.el9
-xrootd-5.9.1-1.2.osg24.el9
+vo-client-140-1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-htgettoken-2.5-1.osg25.el8
-xrdhttp-pelican-0.0.8-1.osg25.el8
-xrootd-5.9.1-1.2.osg25.el8
+osdf-server-25-2.osg25.el8
+vo-client-140-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-htgettoken-2.5-1.osg25.el9
-xrdhttp-pelican-0.0.8-1.osg25.el9
-xrootd-5.9.1-1.2.osg25.el9
+osdf-server-25-2.osg25.el9
+vo-client-140-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-htgettoken-2.5-1.osg25.el10
-xrdhttp-pelican-0.0.8-1.osg25.el10
-xrootd-5.9.1-1.2.osg25.el10
+osdf-server-25-2.osg25.el10
+vo-client-140-1.osg25.el10
 
