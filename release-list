@@ -5,21 +5,37 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-xrootd-5.9.1-1.3.osg24.el8
+xrdhttp-pelican-0.0.10-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-xrootd-5.9.1-1.3.osg24.el9
+xrdhttp-pelican-0.0.10-1.osg24.el9
+
+RPMs slated for release in osg-24-upcoming-el8-testing
+======================================================
+glideinwms-3.11.3-3.osg24up.el8
+
+RPMs slated for release in osg-24-upcoming-el9-testing
+======================================================
+glideinwms-3.11.3-3.osg24up.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-xrootd-5.9.1-1.3.osg25.el8
+xrdhttp-pelican-0.0.10-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-xrootd-5.9.1-1.3.osg25.el9
+xrdhttp-pelican-0.0.10-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-xrootd-5.9.1-1.3.osg25.el10
+xrdhttp-pelican-0.0.10-1.osg25.el10
+
+RPMs slated for release in osg-25-upcoming-el8-testing
+======================================================
+glideinwms-3.11.3-3.osg25up.el8
+
+RPMs slated for release in osg-25-upcoming-el9-testing
+======================================================
+glideinwms-3.11.3-3.osg25up.el9
 
