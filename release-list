@@ -3,33 +3,31 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-PMs slated for release in osg-24-main-el8-testing
+RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-osg-pki-tools-3.7.4-1.osg24.el8
+igtf-ca-certs-1.140-1.osg24.el8
+osg-ca-certs-1.140-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-osg-pki-tools-3.7.4-1.osg24.el9
-
-RPMs slated for release in osg-24-upcoming-el8-testing
-======================================================
-frontier-squid-6.14-1.3.osg24up.el8
-
-RPMs slated for release in osg-24-upcoming-el9-testing
-======================================================
-frontier-squid-6.14-1.3.osg24up.el9
+igtf-ca-certs-1.140-1.osg24.el9
+osg-ca-certs-1.140-1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-frontier-squid-6.14-1.3.osg25.el8
-osg-pki-tools-3.7.4-1.osg25.el8
+igtf-ca-certs-1.140-1.osg25.el8
+osdf-server-25-3.osg25.el8
+osg-ca-certs-1.140-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-frontier-squid-6.14-1.3.osg25.el9
-osg-pki-tools-3.7.4-1.osg25.el9
+igtf-ca-certs-1.140-1.osg25.el9
+osdf-server-25-3.osg25.el9
+osg-ca-certs-1.140-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-frontier-squid-6.14-1.3.osg25.el10
+igtf-ca-certs-1.140-1.osg25.el10
+osdf-server-25-3.osg25.el10
+osg-ca-certs-1.140-1.osg25.el10
 
