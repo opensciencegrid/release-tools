@@ -5,29 +5,53 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-igtf-ca-certs-1.140-1.osg24.el8
-osg-ca-certs-1.140-1.osg24.el8
+htvault-config-2.2.0-1.osg24.el8
+openbao-2.5.2-1.osg24.el8
+osg-token-renewer-1.0.0-1.osg24.el8
+xrdcl-pelican-1.6.2-1.osg24.el8
+xrdhttp-pelican-0.0.11-1.osg24.el8
+xrootd-5.9.2-1.1.osg24.el8
+xrootd-multiuser-2.2.1-1.1.osg24.el8
+xrootd-s3-http-0.6.5-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-igtf-ca-certs-1.140-1.osg24.el9
-osg-ca-certs-1.140-1.osg24.el9
+htvault-config-2.2.0-1.osg24.el9
+openbao-2.5.2-1.osg24.el9
+osg-token-renewer-1.0.0-1.osg24.el9
+xrdcl-pelican-1.6.2-1.osg24.el9
+xrdhttp-pelican-0.0.11-1.osg24.el9
+xrootd-5.9.2-1.1.osg24.el9
+xrootd-multiuser-2.2.1-1.1.osg24.el9
+xrootd-s3-http-0.6.5-1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-igtf-ca-certs-1.140-1.osg25.el8
-osdf-server-25-3.osg25.el8
-osg-ca-certs-1.140-1.osg25.el8
+htvault-config-2.2.0-1.osg25.el8
+osg-token-renewer-1.0.0-1.osg25.el8
+xrdcl-pelican-1.6.2-1.osg25.el8
+xrdhttp-pelican-0.0.11-1.osg25.el8
+xrootd-5.9.2-1.1.osg25.el8
+xrootd-multiuser-2.2.1-1.1.osg25.el8
+xrootd-s3-http-0.6.5-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-igtf-ca-certs-1.140-1.osg25.el9
-osdf-server-25-3.osg25.el9
-osg-ca-certs-1.140-1.osg25.el9
+htvault-config-2.2.0-1.osg25.el9
+osg-token-renewer-1.0.0-1.osg25.el9
+xrdcl-pelican-1.6.2-1.osg25.el9
+xrdhttp-pelican-0.0.11-1.osg25.el9
+xrootd-5.9.2-1.1.osg25.el9
+xrootd-multiuser-2.2.1-1.1.osg25.el9
+xrootd-s3-http-0.6.5-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-igtf-ca-certs-1.140-1.osg25.el10
-osdf-server-25-3.osg25.el10
-osg-ca-certs-1.140-1.osg25.el10
+htvault-config-2.2.0-1.osg25.el10
+osg-token-renewer-1.0.0-1.osg25.el10
+xrdcl-pelican-1.6.2-1.osg25.el10
+xrdhttp-pelican-0.0.11-1.osg25.el10
+xrootd-5.9.2-1.1.osg25.el10
+xrootd-multiuser-2.2.1-1.1.osg25.el10
+xrootd-s3-http-0.6.5-1.osg25.el10
 
