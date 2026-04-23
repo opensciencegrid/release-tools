@@ -5,21 +5,26 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-osg-token-renewer-1.0.0-1.osg24.el8
+gratia-probe-2.9.1-2.osg24.el8
+ospool-ap-1.10-3.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-osg-token-renewer-1.0.0-1.osg24.el9
+gratia-probe-2.9.1-2.osg24.el9
+ospool-ap-1.10-3.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-osg-token-renewer-1.0.0-1.osg25.el8
+gratia-probe-2.9.1-2.osg25.el8
+ospool-ap-25-2.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-osg-token-renewer-1.0.0-1.osg25.el9
+gratia-probe-2.9.1-2.osg25.el9
+ospool-ap-25-2.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-osg-token-renewer-1.0.0-1.osg25.el10
+gratia-probe-2.9.1-2.osg25.el10
+ospool-ap-25-2.osg25.el10
 
