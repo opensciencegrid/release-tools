@@ -5,26 +5,9 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-gratia-probe-2.9.1-2.osg24.el8
-ospool-ap-1.10-3.osg24.el8
+openbao-2.5.3-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-gratia-probe-2.9.1-2.osg24.el9
-ospool-ap-1.10-3.osg24.el9
-
-RPMs slated for release in osg-25-main-el8-testing
-==================================================
-gratia-probe-2.9.1-2.osg25.el8
-ospool-ap-25-2.osg25.el8
-
-RPMs slated for release in osg-25-main-el9-testing
-==================================================
-gratia-probe-2.9.1-2.osg25.el9
-ospool-ap-25-2.osg25.el9
-
-RPMs slated for release in osg-25-main-el10-testing
-===================================================
-gratia-probe-2.9.1-2.osg25.el10
-ospool-ap-25-2.osg25.el10
+openbao-2.5.3-1.osg24.el9
 
