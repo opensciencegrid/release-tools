@@ -5,25 +5,21 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-igtf-ca-certs-1.141-1.osg24.el8
-osg-ca-certs-1.141-1.osg24.el8
+glideinwms-3.10.18-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-igtf-ca-certs-1.141-1.osg24.el9
-osg-ca-certs-1.141-1.osg24.el9
+glideinwms-3.10.18-1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-igtf-ca-certs-1.141-1.osg25.el8
-osg-ca-certs-1.141-1.osg25.el8
+glideinwms-3.10.18-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-igtf-ca-certs-1.141-1.osg25.el9
-osg-ca-certs-1.141-1.osg25.el9
+glideinwms-3.10.18-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-igtf-ca-certs-1.141-1.osg25.el10
-osg-ca-certs-1.141-1.osg25.el10
+glideinwms-3.10.18-1.osg25.el10
+
