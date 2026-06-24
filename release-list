@@ -3,23 +3,33 @@
 # software list. 1-verify-prerelease expects the format of this file to be the
 # same as the output from 0-generate-pkg-list.
 
-RPMs slated for release in osg-24-upcoming-el8-testing
-======================================================
-glideinwms-3.11.4-1.osg24up.el8
+RPMs slated for release in osg-24-main-el8-testing
+==================================================
+igtf-ca-certs-1.143-1.osg24.el8
+osg-ca-certs-1.143-1.osg24.el8
+osg-wn-client-24-4.osg24.el8
 
-RPMs slated for release in osg-24-upcoming-el9-testing
-======================================================
-glideinwms-3.11.4-1.osg24up.el9
+RPMs slated for release in osg-24-main-el9-testing
+==================================================
+igtf-ca-certs-1.143-1.osg24.el9
+osg-ca-certs-1.143-1.osg24.el9
+osg-wn-client-24-4.osg24.el9
 
-RPMs slated for release in osg-25-upcoming-el8-testing
-======================================================
-glideinwms-3.11.4-1.osg25up.el8
+RPMs slated for release in osg-25-main-el8-testing
+==================================================
+igtf-ca-certs-1.143-1.osg25.el8
+osg-ca-certs-1.143-1.osg25.el8
+osg-wn-client-25-4.osg25.el8
 
-RPMs slated for release in osg-25-upcoming-el9-testing
-======================================================
-glideinwms-3.11.4-1.osg25up.el9
+RPMs slated for release in osg-25-main-el9-testing
+==================================================
+igtf-ca-certs-1.143-1.osg25.el9
+osg-ca-certs-1.143-1.osg25.el9
+osg-wn-client-25-4.osg25.el9
 
-RPMs slated for release in osg-25-upcoming-el10-testing
-=======================================================
-glideinwms-3.11.4-1.osg25up.el10
+RPMs slated for release in osg-25-main-el10-testing
+===================================================
+igtf-ca-certs-1.143-1.osg25.el10
+osg-ca-certs-1.143-1.osg25.el10
+osg-wn-client-25-4.osg25.el10
 
