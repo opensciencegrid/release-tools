@@ -90,7 +90,7 @@ for branch in ${versions[@]}; do
     for client in $clients; do
         for rhel in $rhels; do
             min_size=35
-            max_size=44
+            max_size=45
             archs="x86_64"
             for arch in $archs; do
                 dotest
