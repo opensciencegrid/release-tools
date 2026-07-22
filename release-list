@@ -5,29 +5,31 @@
 
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
-osg-ca-certs-1.143-3.osg24.el8
-xrootd-5.9.6-1.1.osg24.el8
+gratia-probe-2.9.3-1.osg24.el8
+igtf-ca-certs-1.144-1.osg24.el8
+osg-ca-certs-1.144-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
-osg-ca-certs-1.143-3.osg24.el9
-xrootd-5.9.6-1.1.osg24.el9
+gratia-probe-2.9.3-1.osg24.el9
+igtf-ca-certs-1.144-1.osg24.el9
+osg-ca-certs-1.144-1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
-osg-ca-certs-1.143-3.osg25.el8
-osg-ce-25-4.osg25.el8
-xrootd-5.9.6-1.1.osg25.el8
+gratia-probe-2.9.3-1.osg25.el8
+igtf-ca-certs-1.144-1.osg25.el8
+osg-ca-certs-1.144-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
-osg-ca-certs-1.143-3.osg25.el9
-osg-ce-25-4.osg25.el9
-xrootd-5.9.6-1.1.osg25.el9
+gratia-probe-2.9.3-1.osg25.el9
+igtf-ca-certs-1.144-1.osg25.el9
+osg-ca-certs-1.144-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-osg-ca-certs-1.143-3.osg25.el10
-osg-ce-25-4.osg25.el10
-xrootd-5.9.6-1.1.osg25.el10
+gratia-probe-2.9.3-1.osg25.el10
+igtf-ca-certs-1.144-1.osg25.el10
+osg-ca-certs-1.144-1.osg25.el10
 
