@@ -34,6 +34,7 @@ osg_dvers () {
       23-main | 23-upcoming ) echo el8 el9 ;;
       24-main | 24-upcoming ) echo el8 el9 ;;
       25-main | 25-upcoming ) echo el8 el9 el10 ;;
+      26-main | 26-upcoming ) echo el8 el9 el10 ;;
     esac
 }
 
