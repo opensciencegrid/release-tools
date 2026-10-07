@@ -6,20 +6,25 @@
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
 openbao-2.6.4-1.osg24.el8
+vo-client-143-1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
 openbao-2.6.4-1.osg24.el9
+vo-client-143-1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
+vo-client-143-1.osg25.el8
 xcache-4.1.1-1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
+vo-client-143-1.osg25.el9
 xcache-4.1.1-1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
+vo-client-143-1.osg25.el10
 xcache-4.1.1-1.osg25.el10
 
