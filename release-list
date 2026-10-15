@@ -6,46 +6,24 @@
 RPMs slated for release in osg-24-main-el8-testing
 ==================================================
 glideinwms-3.10.19-1.osg24.el8
-lotman-0.1.0-1.1.osg24.el8
 osg-token-renewer-1.0.1-1.osg24.el8
-xrootd-lotman-0.1.0-1.1.osg24.el8
 
 RPMs slated for release in osg-24-main-el9-testing
 ==================================================
 glideinwms-3.10.19-1.osg24.el9
-lotman-0.1.0-1.1.osg24.el9
 osg-token-renewer-1.0.1-1.osg24.el9
-xrootd-lotman-0.1.0-1.1.osg24.el9
 
 RPMs slated for release in osg-25-main-el8-testing
 ==================================================
 glideinwms-3.10.19-1.osg25.el8
-lotman-0.1.0-1.1.osg25.el8
 osg-token-renewer-1.0.1-1.osg25.el8
-xrootd-lotman-0.1.0-1.1.osg25.el8
 
 RPMs slated for release in osg-25-main-el9-testing
 ==================================================
 glideinwms-3.10.19-1.osg25.el9
-lotman-0.1.0-1.1.osg25.el9
 osg-token-renewer-1.0.1-1.osg25.el9
-xrootd-lotman-0.1.0-1.1.osg25.el9
 
 RPMs slated for release in osg-25-main-el10-testing
 ===================================================
-lotman-0.1.0-1.1.osg25.el10
 osg-token-renewer-1.0.1-1.osg25.el10
-xrootd-lotman-0.1.0-1.1.osg25.el10
-
-RPMs slated for release in osg-25-upcoming-el8-testing
-======================================================
-xrootd-lotman-0.1.0-1.1.osg25up.el8
-
-RPMs slated for release in osg-25-upcoming-el9-testing
-======================================================
-xrootd-lotman-0.1.0-1.1.osg25up.el9
-
-RPMs slated for release in osg-25-upcoming-el10-testing
-=======================================================
-xrootd-lotman-0.1.0-1.1.osg25up.el10
 
